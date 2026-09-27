@@ -160,3 +160,7 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 .devenv
+
+# Local benchmark scratch output. Curated evidence is committed under
+# benchmarks/asc_large_cpu/evidence/ instead.
+/results/

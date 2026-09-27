@@ -5,7 +5,9 @@ import config
 import numpy as np
 import pytest
 import qibo
+from qibo import Circuit, gates
 from qibo.models import QFT
+from qibotn.backends.quimb import QuimbNumpyBackend
 
 
 def create_init_state(nqubits):
@@ -64,3 +66,24 @@ def test_eval(nqubits: int, tolerance: float, is_mps: bool):
     assert np.allclose(
         result_sv, result_tn, atol=tolerance
     ), "Resulting dense vectors do not match"
+
+
+def test_quimb_expectation_uses_configured_optimizer():
+    """Regression test for the Quimb CPU expectation contraction optimizer."""
+    circuit = Circuit(2)
+    circuit.add(gates.H(0))
+    circuit.add(gates.CNOT(0, 1))
+
+    backend = QuimbNumpyBackend(contraction_optimizer="auto-hq")
+    backend.configure_tn_simulation(
+        ansatz="mps", max_bond_dimension=16, svd_cutoff=1e-12
+    )
+    value = backend.exp_value_observable_symbolic(
+        circuit,
+        operators_list=["zz"],
+        sites_list=[(0, 1)],
+        coeffs_list=[1.0],
+        nqubits=2,
+    )
+
+    assert np.isclose(value, 1.0, atol=1e-10)

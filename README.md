@@ -2,6 +2,15 @@
 
 The tensor network translation module for Qibo to support large-scale simulation of quantum circuits and acceleration.
 
+## ASC large-workload CPU study
+
+The reproducible ASC submission material in this fork is under
+[`benchmarks/asc_large_cpu`](benchmarks/asc_large_cpu/README.md). It includes a
+30-qubit, 9,998-gate, depth-449 CPU workload, raw timing/environment evidence,
+state-fidelity validation, a thread-scaling optimization, and an offline
+evidence verifier. The measured formal comparison and limitations are reported
+in [`RESULTS.md`](benchmarks/asc_large_cpu/RESULTS.md).
+
 ## Supported Computation
 
 Tensor Network Types:

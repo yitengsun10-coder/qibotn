@@ -1,0 +1,40 @@
+{
+  "qubits": 30,
+  "layers": 112,
+  "gates": 9998,
+  "depth": 449,
+  "min_fidelity": 0.999,
+  "variants": {
+    "baseline": {
+      "fidelity_vs_baseline": 1.0,
+      "build_runtime_s": 50.057217800058424,
+      "max_bond_observed": 128,
+      "norm": 4.2367233491907075e-08,
+      "fidelity_pass": true
+    },
+    "cutoff_1e10_b128": {
+      "fidelity_vs_baseline": 0.4511714765505283,
+      "build_runtime_s": 52.07709990022704,
+      "overlap_runtime_s": 0.05393050005659461,
+      "max_bond_observed": 128,
+      "norm": 4.1557952319125663e-08,
+      "fidelity_pass": false
+    },
+    "cutoff_1e8_b128": {
+      "fidelity_vs_baseline": 0.3618432035660403,
+      "build_runtime_s": 49.36247970024124,
+      "overlap_runtime_s": 0.06077309977263212,
+      "max_bond_observed": 128,
+      "norm": 4.2445512947183104e-08,
+      "fidelity_pass": false
+    },
+    "cutoff_1e7_b128": {
+      "fidelity_vs_baseline": 0.2808950103776556,
+      "build_runtime_s": 47.004110699985176,
+      "overlap_runtime_s": 0.051226300187408924,
+      "max_bond_observed": 128,
+      "norm": 4.3376024542705906e-08,
+      "fidelity_pass": false
+    }
+  }
+}

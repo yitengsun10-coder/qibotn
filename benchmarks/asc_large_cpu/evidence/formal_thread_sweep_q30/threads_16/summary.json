@@ -1,0 +1,24 @@
+{
+  "q30_l112": {
+    "qubits": 30,
+    "layers": 112,
+    "gates": 9998,
+    "depth": 449,
+    "dense_state_gib": 16.0,
+    "qasm_sha256": "1ea5c95ebdcc651a1291dadfb7a193009377732bba8d03a01ac37ef7b82b37d4",
+    "variants": {
+      "baseline": {
+        "steady_mean_runtime_s": 324.60809990018606,
+        "steady_median_runtime_s": 324.60809990018606,
+        "steady_stdev_runtime_s": 13.571043377281311,
+        "cold_runtime_s": 316.1073099998757,
+        "peak_rss_mib": 288.9296875,
+        "mean_expectation": 3.6185197966808687e-11,
+        "max_abs_error_vs_baseline": 0.0,
+        "correct_within_tolerance": true,
+        "speedup_vs_baseline": 1.0,
+        "all_finite": true
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "qubits": 30,
+  "layers": 112,
+  "repeats": 3,
+  "optimizer": "auto-hq",
+  "tolerance": 1e-12,
+  "fixed_numerical_configuration": {
+    "cutoff": 1e-12,
+    "max_bond": 128,
+    "variant": "baseline"
+  },
+  "results": [
+    {
+      "threads": 1,
+      "steady_mean_runtime_s": 57.5064834500663,
+      "steady_median_runtime_s": 57.5064834500663,
+      "steady_stdev_runtime_s": 0.4357403411722969,
+      "cold_runtime_s": 106.14919509971514,
+      "peak_rss_mib": 267.36328125,
+      "expectation": 3.6184682272669374e-11,
+      "qasm_sha256": "1ea5c95ebdcc651a1291dadfb7a193009377732bba8d03a01ac37ef7b82b37d4",
+      "speedup_vs_1_thread": 1.0,
+      "abs_error_vs_1_thread": 0.0,
+      "correct_within_tolerance": true
+    },
+    {
+      "threads": 16,
+      "steady_mean_runtime_s": 324.60809990018606,
+      "steady_median_runtime_s": 324.60809990018606,
+      "steady_stdev_runtime_s": 13.571043377281311,
+      "cold_runtime_s": 316.1073099998757,
+      "peak_rss_mib": 288.9296875,
+      "expectation": 3.6185197966808687e-11,
+      "qasm_sha256": "1ea5c95ebdcc651a1291dadfb7a193009377732bba8d03a01ac37ef7b82b37d4",
+      "speedup_vs_1_thread": 0.17715664971930462,
+      "abs_error_vs_1_thread": 5.156941393126966e-16,
+      "correct_within_tolerance": true
+    }
+  ]
+}
