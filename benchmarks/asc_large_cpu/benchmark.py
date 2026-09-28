@@ -13,6 +13,7 @@ from __future__ import annotations
 import argparse
 import csv
 import hashlib
+import importlib.metadata
 import json
 import os
 import platform
@@ -400,6 +401,19 @@ def main() -> None:
     metadata = {
         "created_utc": datetime.now(timezone.utc).isoformat(),
         "python": platform.python_version(),
+        "package_versions": {
+            name: importlib.metadata.version(name)
+            for name in (
+                "qibo",
+                "qibotn",
+                "quimb",
+                "numpy",
+                "scipy",
+                "psutil",
+                "threadpoolctl",
+                "cotengra",
+            )
+        },
         "platform": platform.platform(),
         "cpu": platform.processor(),
         "physical_cpus": psutil.cpu_count(logical=False),

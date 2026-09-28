@@ -9,12 +9,16 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
 FORMAL = ROOT / "evidence" / "formal_thread_sweep_q30" / "thread_sweep_summary.json"
+DEFAULT20 = ROOT / "evidence" / "formal_default20_q30"
 FIDELITY = ROOT / "evidence" / "fidelity_scan_q30.json"
+PROVENANCE = ROOT / "evidence" / "provenance.json"
 
 
 def main() -> None:
     formal = json.loads(FORMAL.read_text(encoding="utf-8"))
+    default20 = json.loads((DEFAULT20 / "summary.json").read_text(encoding="utf-8"))
     fidelity = json.loads(FIDELITY.read_text(encoding="utf-8"))
+    provenance = json.loads(PROVENANCE.read_text(encoding="utf-8"))
 
     assert formal["qubits"] == 30
     assert formal["layers"] == 112
@@ -50,6 +54,29 @@ def main() -> None:
     speedup = sixteen["steady_mean_runtime_s"] / one["steady_mean_runtime_s"]
     assert speedup > 1.0
 
+    default_values = default20["q30_l112"]["variants"]["baseline"]
+    with (DEFAULT20 / "results.csv").open(newline="", encoding="utf-8") as stream:
+        default_rows = list(csv.DictReader(stream))
+    assert len(default_rows) == 3
+    assert {int(row["qubits"]) for row in default_rows} == {30}
+    assert {int(row["gates"]) for row in default_rows} == {9_998}
+    assert {int(row["depth"]) for row in default_rows} == {449}
+    assert {int(row["threads"]) for row in default_rows} == {20}
+    assert {float(row["cutoff"]) for row in default_rows} == {1e-12}
+    assert {int(row["max_bond"]) for row in default_rows} == {128}
+    assert {row["qasm_sha256"] for row in default_rows} == {
+        one["qasm_sha256"]
+    }
+    default_error = abs(default_values["mean_expectation"] - one["expectation"])
+    assert default_error <= formal["tolerance"]
+    default_speedup = (
+        default_values["steady_mean_runtime_s"]
+        / one["steady_mean_runtime_s"]
+    )
+    assert default_speedup > speedup
+    assert provenance["default_thread_probe"]["num_threads"] == 20
+    assert provenance["official_upstream_base_commit"].startswith("7ebbd4d")
+
     assert fidelity["qubits"] == 30
     assert fidelity["gates"] >= 9_000
     assert fidelity["depth"] >= 400
@@ -64,8 +91,9 @@ def main() -> None:
         f"Workload: {fidelity['qubits']} qubits, "
         f"{fidelity['gates']} gates, depth {fidelity['depth']}"
     )
-    print(f"Formal 16-thread -> 1-thread speedup: {speedup:.4f}x")
-    print(f"Absolute output difference: {sixteen['abs_error_vs_1_thread']:.3e}")
+    print(f"Scaling 16-thread -> 1-thread speedup: {speedup:.4f}x")
+    print(f"Formal default 20-thread -> 1-thread speedup: {default_speedup:.4f}x")
+    print(f"Formal absolute output difference: {default_error:.3e}")
 
 
 if __name__ == "__main__":

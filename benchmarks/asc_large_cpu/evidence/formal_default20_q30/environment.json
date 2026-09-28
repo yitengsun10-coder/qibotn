@@ -1,0 +1,53 @@
+{
+  "created_utc": "2026-09-27T15:24:47.231385+00:00",
+  "python": "3.11.16",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "cpu": "Intel64 Family 6 Model 183 Stepping 1, GenuineIntel",
+  "physical_cpus": 14,
+  "logical_cpus": 20,
+  "memory_gib": 15.692092895507812,
+  "profile": "custom",
+  "workloads": [
+    {
+      "qubits": 30,
+      "layers": 112
+    }
+  ],
+  "variants": [
+    {
+      "name": "baseline",
+      "cutoff": 1e-12,
+      "max_bond": 128
+    }
+  ],
+  "threads": 20,
+  "optimizer": "auto-hq",
+  "tolerance": 1e-05,
+  "min_fidelity": 0.999,
+  "backend": "QiboTN Quimb NumPy CPU",
+  "timing_scope": "official QiboTN circuit conversion, MPS gate application, and four-term ZZ expectation",
+  "framework_capability": "QiboTN Quimb CPU MPS execution",
+  "submitted_change": "fixed Quimb expectation optimizer attribute; benchmarked MPS accuracy candidates; formal optimization controls CPU threads",
+  "threadpools": [
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 20,
+      "prefix": "libscipy_openblas",
+      "filepath": "C:\\Users\\\u5b59\u9038\u817e\\Documents\\\u7b2c\u4e8c\u6b21\u4f5c\u4e1a\\asc_repo_repair\\ASC-QiboTN-SunYiteng\\.venv311\\Lib\\site-packages\\numpy.libs\\libscipy_openblas64_-13e2df515630b4a41f92893938845698.dll",
+      "version": "0.3.29",
+      "threading_layer": "pthreads",
+      "architecture": "Haswell"
+    },
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 20,
+      "prefix": "libscipy_openblas",
+      "filepath": "C:\\Users\\\u5b59\u9038\u817e\\Documents\\\u7b2c\u4e8c\u6b21\u4f5c\u4e1a\\asc_repo_repair\\ASC-QiboTN-SunYiteng\\.venv311\\Lib\\site-packages\\scipy.libs\\libscipy_openblas-64eda39e79589aedb16f58e5547eb599.dll",
+      "version": "0.3.30",
+      "threading_layer": "pthreads",
+      "architecture": "Haswell"
+    }
+  ]
+}

@@ -63,13 +63,14 @@ python benchmarks/asc_large_cpu/fidelity_scan.py \
 
 The accepted formal optimization keeps `cutoff=1e-12`, `max_bond=128`,
 precision, backend, circuit, observable, and contraction optimizer unchanged.
-It changes only the CPU math-library thread count. Each setting runs in a
-fresh process:
+An environment-variable-free probe reported a 20-thread OpenBLAS default; the
+optimized run controls the pool at one thread. Each setting runs in a fresh
+process:
 
 ```bash
 python benchmarks/asc_large_cpu/thread_sweep.py \
   --output results/formal_thread_sweep_q30 --qubits 30 --layers 112 \
-  --threads 1 16 --repeats 3
+  --threads 1 20 --repeats 3
 ```
 
 Each timing run writes `results.csv`, `summary.json`, `environment.json`, and

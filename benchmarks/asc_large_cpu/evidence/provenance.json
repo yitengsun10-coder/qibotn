@@ -1,0 +1,25 @@
+{
+  "official_upstream": "https://github.com/qiboteam/qibotn.git",
+  "official_upstream_base_commit": "7ebbd4d4a00f37b898c552922953591b78b0af7e",
+  "submission_commit_before_default20_update": "7ea2b23ca5987655ec54494ac110b87c480efef3",
+  "python": "3.11.16",
+  "packages": {
+    "qibo": "0.3.2",
+    "qibotn": "0.0.7",
+    "quimb": "1.13.0",
+    "numpy": "2.2.6",
+    "scipy": "1.17.1",
+    "psutil": "5.9.8",
+    "threadpoolctl": "3.7.0",
+    "cotengra": "0.8.2"
+  },
+  "default_thread_probe": {
+    "method": "fresh process after unsetting OMP/OPENBLAS/MKL/NUMEXPR/QUIMB thread variables",
+    "user_api": "blas",
+    "internal_api": "openblas",
+    "num_threads": 20,
+    "openblas_version": "0.3.29",
+    "threading_layer": "pthreads",
+    "architecture": "Haswell"
+  }
+}
