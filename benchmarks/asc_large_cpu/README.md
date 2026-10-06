@@ -1,5 +1,13 @@
 # ASC large-workload QiboTN CPU benchmark
 
+## Final report and offline review 2026-10-06
+
+The [final report](final_report/) includes the controlled 30-qubit CPU result,
+the complete WMA comparison, limitations, and requirement audit.
+Offline evidence verification passed again on 2026-10-06; the official-fork
+Quimb CPU regression tests passed 5/5. No additional paid GPU benchmark was run.
+Publication is not a receipt from the competition reviewer.
+
 This benchmark lives in the official `qiboteam/qibotn` source tree and uses
 the Quimb NumPy CPU backend for every timed variant. No GPU, cuQuantum,
 qibojit, or external state-vector execution path is used.

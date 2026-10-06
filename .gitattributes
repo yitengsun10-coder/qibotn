@@ -1,0 +1,2 @@
+# Delivered report hashes refer to exact bytes on all platforms.
+benchmarks/asc_large_cpu/final_report/** -text
