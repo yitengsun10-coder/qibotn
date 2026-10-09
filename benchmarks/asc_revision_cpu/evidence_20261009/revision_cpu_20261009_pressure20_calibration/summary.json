@@ -1,0 +1,13 @@
+{
+  "status": "pass",
+  "exit_code": 0,
+  "stop_reason": null,
+  "elapsed_s": 24.56299999996554,
+  "peak_process_tree_rss_mib": 425.9140625,
+  "calibration_only": true,
+  "formal_30q_acceptance_complete": false,
+  "budgets": {
+    "seconds": 180.0,
+    "memory_mib": 1800.0
+  }
+}

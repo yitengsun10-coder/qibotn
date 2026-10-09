@@ -1,0 +1,12 @@
+{
+  "started_at": "2026-10-09T16:13:37.461719+08:00",
+  "controller_pid": 40444,
+  "arguments": {
+    "source": "results\\revision_cpu_20261009_pressure20_9991",
+    "output": "results\\revision_cpu_20261009_pressure20_9991_resumed",
+    "worker": false,
+    "seconds": 5400.0,
+    "memory_mib": 1800.0
+  },
+  "original_segment_preserved": true
+}

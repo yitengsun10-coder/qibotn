@@ -1,0 +1,21 @@
+{
+  "started_at": "2026-10-09T13:59:20.548792+08:00",
+  "controller_pid": 14684,
+  "arguments": {
+    "worker": false,
+    "output": "results\\revision_cpu_20261009_phase_holdout16",
+    "qubits": 16,
+    "layers": 12,
+    "seed": 20261131,
+    "repeats": 3,
+    "affinity": [
+      2,
+      4,
+      6,
+      8
+    ],
+    "memory_mib": 900.0,
+    "seconds": 600.0
+  },
+  "policy": "one predeclared input, no retries or output-dependent candidate selection"
+}

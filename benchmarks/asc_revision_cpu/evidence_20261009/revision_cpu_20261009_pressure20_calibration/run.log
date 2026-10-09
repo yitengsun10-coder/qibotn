@@ -1,0 +1,4 @@
+C:\Users\孙逸腾\Documents\第二次作业\asc_repo_repair\ASC-QiboTN-SunYiteng\.venv311\Lib\site-packages\cotengra\hyperoptimizers\hyper.py:36: UserWarning: Couldn't import `kahypar` - skipping from default hyper optimizer and using basic `labels` method instead. `kahypar` is highly recommended for the best quality contraction paths.
+  warnings.warn(
+{"method": "upstream_typo_only", "repeat": 0, "runtime_s": 13.796833299973514, "abs_error": null}
+{"method": "integrated", "repeat": 0, "runtime_s": 7.37290810002014, "abs_error": null}

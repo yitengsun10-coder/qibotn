@@ -4,12 +4,21 @@ The tensor network translation module for Qibo to support large-scale simulation
 
 ## ASC large-workload CPU study
 
-The reproducible ASC submission material in this fork is under
-[`benchmarks/asc_large_cpu`](benchmarks/asc_large_cpu/README.md). It includes a
-30-qubit, 9,998-gate, depth-449 CPU workload, raw timing/environment evidence,
-state-fidelity validation, a thread-scaling optimization, and an offline
-evidence verifier. The measured formal comparison and limitations are reported
-in [`RESULTS.md`](benchmarks/asc_large_cpu/RESULTS.md).
+Current verified exact-CPU work is under
+[`benchmarks/asc_revision_cpu`](benchmarks/asc_revision_cpu/README.md).
+Matched one-thread, untruncated complex128 comparisons against pinned official
+source (one attribute typo repair only) give **4.868623693443177x** on a
+16q/1824-gate mixed input and **1.877080501192603x** on the completed
+20q/9991-gate/depth-677 pressure input. Both have independent complete-state
+checks. The 20q original time-budget stop and explicit recovery are disclosed.
+See the [current results and unfinished items](benchmarks/asc_revision_cpu/PRESSURE_RESULTS_20261009.md).
+
+**Exact 30q acceptance and the user's 7x target remain incomplete.**
+The old 30q thread comparison in
+[`benchmarks/asc_large_cpu`](benchmarks/asc_large_cpu/README.md) is preserved
+as history, not accepted accurate optimization: its common truncated state
+lost substantial norm. It must not be presented as a current successful 7x
+result. No paid resource or new 30q long run has been started.
 
 ## Supported Computation
 

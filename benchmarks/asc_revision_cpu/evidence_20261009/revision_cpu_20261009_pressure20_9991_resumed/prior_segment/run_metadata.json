@@ -1,0 +1,23 @@
+{
+  "started_at": "2026-10-09T14:29:00.817225+08:00",
+  "controller_pid": 33476,
+  "arguments": {
+    "worker": false,
+    "calibration": false,
+    "output": "results\\revision_cpu_20261009_pressure20_9991",
+    "qubits": 20,
+    "layers": 169,
+    "repeats": 3,
+    "affinity": [
+      2,
+      4,
+      6,
+      8
+    ],
+    "seconds": 2400.0,
+    "memory_mib": 1800.0
+  },
+  "host_total_memory_bytes": 16849256448,
+  "host_available_memory_bytes": 3651366912,
+  "policy": "fixed predeclared input, same CPU and precision, no candidate retry or output selection"
+}

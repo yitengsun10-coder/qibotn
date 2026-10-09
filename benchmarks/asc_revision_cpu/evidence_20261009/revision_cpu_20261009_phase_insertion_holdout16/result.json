@@ -1,0 +1,2484 @@
+{
+  "status": "pass",
+  "qubits": 16,
+  "layers": 12,
+  "seed": 20261250,
+  "gates": 1824,
+  "depth": 469,
+  "qasm_sha256": "6d4fc664857fb1a5896688cc373223fe6d6d2d1b91d4bc424c0295d354657d52",
+  "precision": "complex128",
+  "cutoff": 0,
+  "max_bond": null,
+  "threads": 1,
+  "affinity": [
+    2,
+    4,
+    6,
+    8
+  ],
+  "warmup_repeats": 1,
+  "measured_repeats": 3,
+  "reference": {
+    "commit": "7ebbd4d4a00f37b898c552922953591b78b0af7e",
+    "path": "src/qibotn/backends/quimb.py",
+    "original_sha256": "1e1ada931f9fb0f9228f7190cd46f5401328b1fbec9e42f40ba9dc7fca313aca",
+    "typo_only_sha256": "1a4e2e70c05e5015006ec2cdce3b81f6d2ba463ebbf604726fbb370fe4c9f472",
+    "sole_change": "contraction_optimizer -> contractions_optimizer at the observable contraction",
+    "extra_norm_contraction": false,
+    "state_preparations_per_call": 1,
+    "algorithm_or_backend_replacement": false
+  },
+  "rows": [
+    {
+      "method": "upstream_typo_only",
+      "repeat": 0,
+      "runtime_s": 41.43038689997047,
+      "value": -2.213013281868661e-06,
+      "exact_value": -2.213013281435675e-06,
+      "abs_error": 4.3298630197745325e-16
+    },
+    {
+      "method": "mixed_schedule",
+      "repeat": 0,
+      "runtime_s": 7.037969400000293,
+      "value": -2.2130132815282665e-06,
+      "exact_value": -2.213013281435675e-06,
+      "abs_error": 9.259171256320933e-17,
+      "diagnostics": {
+        "method": "shared_environments",
+        "state_norm_squared": 0.999999999999998,
+        "min_state_norm": 0.99,
+        "normalized": true,
+        "state_preparation": {
+          "engine": "routed_exact",
+          "linear_compiler": {
+            "enabled": true,
+            "synthesis_family": "gaussian_and_section_patterns",
+            "cnot_blocks": 340,
+            "rewritten_blocks": 3,
+            "original_cnot_gates": 497,
+            "compiled_cnot_gates": 491,
+            "static_cost_before": 5275,
+            "static_cost_after": 5241,
+            "original_total_gates": 1824,
+            "compiled_total_gates": 1818,
+            "commutation_schedule": [],
+            "schedule_uses_amplitudes_or_outputs": false,
+            "schedule_gate_count_change": 0,
+            "schedule_policy": "no compiled block reaches bounded-search floor",
+            "research_mixed_schedule": [
+              {
+                "searched": true,
+                "changed": true,
+                "noncommuting_precedences_verified": 820,
+                "estimated_score_before": 631.0,
+                "estimated_score_after": 456.0,
+                "estimated_swaps_before": 441,
+                "estimated_swaps_after": 370
+              },
+              {
+                "searched": true,
+                "changed": true,
+                "noncommuting_precedences_verified": 884,
+                "estimated_score_before": 685.5,
+                "estimated_score_after": 515.0,
+                "estimated_swaps_before": 460,
+                "estimated_swaps_after": 408
+              },
+              {
+                "searched": true,
+                "changed": true,
+                "noncommuting_precedences_verified": 933,
+                "estimated_score_before": 645.5,
+                "estimated_score_after": 473.0,
+                "estimated_swaps_before": 431,
+                "estimated_swaps_after": 369
+              },
+              {
+                "searched": true,
+                "changed": true,
+                "noncommuting_precedences_verified": 934,
+                "estimated_score_before": 681.0,
+                "estimated_score_after": 479.5,
+                "estimated_swaps_before": 462,
+                "estimated_swaps_after": 371
+              },
+              {
+                "searched": true,
+                "changed": true,
+                "noncommuting_precedences_verified": 952,
+                "estimated_score_before": 720.5,
+                "estimated_score_after": 468.0,
+                "estimated_swaps_before": 477,
+                "estimated_swaps_after": 349
+              },
+              {
+                "searched": true,
+                "changed": true,
+                "noncommuting_precedences_verified": 894,
+                "estimated_score_before": 697.0,
+                "estimated_score_after": 464.0,
+                "estimated_swaps_before": 485,
+                "estimated_swaps_after": 372
+              },
+              {
+                "searched": true,
+                "changed": true,
+                "noncommuting_precedences_verified": 900,
+                "estimated_score_before": 701.0,
+                "estimated_score_after": 506.5,
+                "estimated_swaps_before": 458,
+                "estimated_swaps_after": 370
+              },
+              {
+                "searched": true,
+                "changed": true,
+                "noncommuting_precedences_verified": 868,
+                "estimated_score_before": 704.5,
+                "estimated_score_after": 497.0,
+                "estimated_swaps_before": 500,
+                "estimated_swaps_after": 382
+              },
+              {
+                "searched": true,
+                "changed": true,
+                "noncommuting_precedences_verified": 887,
+                "estimated_score_before": 628.0,
+                "estimated_score_after": 496.0,
+                "estimated_swaps_before": 424,
+                "estimated_swaps_after": 361
+              },
+              {
+                "searched": true,
+                "changed": true,
+                "noncommuting_precedences_verified": 852,
+                "estimated_score_before": 721.0,
+                "estimated_score_after": 458.0,
+                "estimated_swaps_before": 489,
+                "estimated_swaps_after": 372
+              },
+              {
+                "searched": true,
+                "changed": true,
+                "noncommuting_precedences_verified": 766,
+                "estimated_score_before": 721.5,
+                "estimated_score_after": 486.5,
+                "estimated_swaps_before": 502,
+                "estimated_swaps_after": 388
+              },
+              {
+                "searched": true,
+                "changed": true,
+                "noncommuting_precedences_verified": 803,
+                "estimated_score_before": 697.0,
+                "estimated_score_after": 499.0,
+                "estimated_swaps_before": 467,
+                "estimated_swaps_after": 386
+              }
+            ],
+            "mixed_schedule_uses_amplitudes_or_outputs": false,
+            "mixed_schedule_gate_count_change": 0
+          },
+          "routing_swaps": 4494,
+          "restoration_swaps": 72,
+          "logical_to_position": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "max_bond_observed": 256,
+          "routing_policy": "six_gate_lookahead",
+          "kernel_policy": "size_adaptive_structured",
+          "leftward_routes": 565,
+          "rightward_routes": 595
+        }
+      }
+    },
+    {
+      "method": "parity_insertions",
+      "repeat": 0,
+      "runtime_s": 7.283684100024402,
+      "value": -2.2130132815111107e-06,
+      "exact_value": -2.213013281435675e-06,
+      "abs_error": 7.543590724952073e-17,
+      "diagnostics": {
+        "method": "shared_environments",
+        "state_norm_squared": 1.0000000000000095,
+        "min_state_norm": 0.99,
+        "normalized": true,
+        "state_preparation": {
+          "engine": "routed_exact",
+          "linear_compiler": {
+            "enabled": true,
+            "synthesis_family": "gaussian_and_section_patterns",
+            "cnot_blocks": 340,
+            "rewritten_blocks": 3,
+            "original_cnot_gates": 497,
+            "compiled_cnot_gates": 491,
+            "static_cost_before": 5275,
+            "static_cost_after": 5241,
+            "original_total_gates": 1824,
+            "compiled_total_gates": 1818,
+            "commutation_schedule": [],
+            "schedule_uses_amplitudes_or_outputs": false,
+            "schedule_gate_count_change": 0,
+            "schedule_policy": "no compiled block reaches bounded-search floor",
+            "research_mixed_schedule": [
+              {
+                "searched": true,
+                "changed": true,
+                "noncommuting_precedences_verified": 820,
+                "estimated_score_before": 631.0,
+                "estimated_score_after": 456.0,
+                "estimated_swaps_before": 441,
+                "estimated_swaps_after": 370
+              },
+              {
+                "searched": true,
+                "changed": true,
+                "noncommuting_precedences_verified": 884,
+                "estimated_score_before": 685.5,
+                "estimated_score_after": 515.0,
+                "estimated_swaps_before": 460,
+                "estimated_swaps_after": 408
+              },
+              {
+                "searched": true,
+                "changed": true,
+                "noncommuting_precedences_verified": 933,
+                "estimated_score_before": 645.5,
+                "estimated_score_after": 473.0,
+                "estimated_swaps_before": 431,
+                "estimated_swaps_after": 369
+              },
+              {
+                "searched": true,
+                "changed": true,
+                "noncommuting_precedences_verified": 934,
+                "estimated_score_before": 681.0,
+                "estimated_score_after": 479.5,
+                "estimated_swaps_before": 462,
+                "estimated_swaps_after": 371
+              },
+              {
+                "searched": true,
+                "changed": true,
+                "noncommuting_precedences_verified": 952,
+                "estimated_score_before": 720.5,
+                "estimated_score_after": 468.0,
+                "estimated_swaps_before": 477,
+                "estimated_swaps_after": 349
+              },
+              {
+                "searched": true,
+                "changed": true,
+                "noncommuting_precedences_verified": 894,
+                "estimated_score_before": 697.0,
+                "estimated_score_after": 464.0,
+                "estimated_swaps_before": 485,
+                "estimated_swaps_after": 372
+              },
+              {
+                "searched": true,
+                "changed": true,
+                "noncommuting_precedences_verified": 900,
+                "estimated_score_before": 701.0,
+                "estimated_score_after": 506.5,
+                "estimated_swaps_before": 458,
+                "estimated_swaps_after": 370
+              },
+              {
+                "searched": true,
+                "changed": true,
+                "noncommuting_precedences_verified": 868,
+                "estimated_score_before": 704.5,
+                "estimated_score_after": 497.0,
+                "estimated_swaps_before": 500,
+                "estimated_swaps_after": 382
+              },
+              {
+                "searched": true,
+                "changed": true,
+                "noncommuting_precedences_verified": 887,
+                "estimated_score_before": 628.0,
+                "estimated_score_after": 496.0,
+                "estimated_swaps_before": 424,
+                "estimated_swaps_after": 361
+              },
+              {
+                "searched": true,
+                "changed": true,
+                "noncommuting_precedences_verified": 852,
+                "estimated_score_before": 721.0,
+                "estimated_score_after": 458.0,
+                "estimated_swaps_before": 489,
+                "estimated_swaps_after": 372
+              },
+              {
+                "searched": true,
+                "changed": true,
+                "noncommuting_precedences_verified": 766,
+                "estimated_score_before": 721.5,
+                "estimated_score_after": 486.5,
+                "estimated_swaps_before": 502,
+                "estimated_swaps_after": 388
+              },
+              {
+                "searched": true,
+                "changed": true,
+                "noncommuting_precedences_verified": 803,
+                "estimated_score_before": 697.0,
+                "estimated_score_after": 499.0,
+                "estimated_swaps_before": 467,
+                "estimated_swaps_after": 386
+              }
+            ],
+            "mixed_schedule_uses_amplitudes_or_outputs": false,
+            "mixed_schedule_gate_count_change": 0,
+            "research_phase_insertions": [
+              {
+                "searched": true,
+                "accepted": true,
+                "original_gates": 120,
+                "proposed_gates": 153,
+                "score_before": 456.0,
+                "score_proposed": 432.0,
+                "available_quadratic_rank": 70,
+                "inserted_phase_gates": 36,
+                "residual_cz_gates": 23
+              },
+              {
+                "searched": true,
+                "accepted": true,
+                "original_gates": 118,
+                "proposed_gates": 143,
+                "score_before": 471.5,
+                "score_proposed": 451.0,
+                "available_quadratic_rank": 78,
+                "inserted_phase_gates": 33,
+                "residual_cz_gates": 16
+              },
+              {
+                "searched": true,
+                "accepted": true,
+                "original_gates": 120,
+                "proposed_gates": 159,
+                "score_before": 539.0,
+                "score_proposed": 481.0,
+                "available_quadratic_rank": 78,
+                "inserted_phase_gates": 42,
+                "residual_cz_gates": 18
+              },
+              {
+                "searched": true,
+                "accepted": true,
+                "original_gates": 120,
+                "proposed_gates": 165,
+                "score_before": 529.5,
+                "score_proposed": 465.5,
+                "available_quadratic_rank": 79,
+                "inserted_phase_gates": 42,
+                "residual_cz_gates": 18
+              },
+              {
+                "searched": true,
+                "accepted": true,
+                "original_gates": 120,
+                "proposed_gates": 155,
+                "score_before": 584.0,
+                "score_proposed": 442.0,
+                "available_quadratic_rank": 73,
+                "inserted_phase_gates": 38,
+                "residual_cz_gates": 19
+              },
+              {
+                "searched": true,
+                "accepted": false,
+                "original_gates": 118,
+                "proposed_gates": 147,
+                "score_before": 499.5,
+                "score_proposed": 508.0,
+                "available_quadratic_rank": 74,
+                "inserted_phase_gates": 32,
+                "residual_cz_gates": 21
+              },
+              {
+                "searched": true,
+                "accepted": true,
+                "original_gates": 120,
+                "proposed_gates": 151,
+                "score_before": 542.0,
+                "score_proposed": 515.5,
+                "available_quadratic_rank": 75,
+                "inserted_phase_gates": 39,
+                "residual_cz_gates": 20
+              },
+              {
+                "searched": true,
+                "accepted": true,
+                "original_gates": 120,
+                "proposed_gates": 158,
+                "score_before": 572.5,
+                "score_proposed": 497.0,
+                "available_quadratic_rank": 82,
+                "inserted_phase_gates": 39,
+                "residual_cz_gates": 13
+              },
+              {
+                "searched": true,
+                "accepted": true,
+                "original_gates": 118,
+                "proposed_gates": 162,
+                "score_before": 555.5,
+                "score_proposed": 500.0,
+                "available_quadratic_rank": 76,
+                "inserted_phase_gates": 38,
+                "residual_cz_gates": 25
+              },
+              {
+                "searched": true,
+                "accepted": true,
+                "original_gates": 120,
+                "proposed_gates": 145,
+                "score_before": 575.0,
+                "score_proposed": 483.5,
+                "available_quadratic_rank": 70,
+                "inserted_phase_gates": 29,
+                "residual_cz_gates": 25
+              },
+              {
+                "searched": true,
+                "accepted": false,
+                "original_gates": 120,
+                "proposed_gates": 149,
+                "score_before": 477.5,
+                "score_proposed": 533.0,
+                "available_quadratic_rank": 68,
+                "inserted_phase_gates": 30,
+                "residual_cz_gates": 25
+              },
+              {
+                "searched": true,
+                "accepted": true,
+                "original_gates": 120,
+                "proposed_gates": 146,
+                "score_before": 497.5,
+                "score_proposed": 482.5,
+                "available_quadratic_rank": 66,
+                "inserted_phase_gates": 34,
+                "residual_cz_gates": 24
+              }
+            ],
+            "phase_insertion_uses_amplitudes_or_outputs": false,
+            "phase_insertion_gate_count_change": 335
+          },
+          "routing_swaps": 4233,
+          "restoration_swaps": 43,
+          "logical_to_position": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "max_bond_observed": 256,
+          "routing_policy": "six_gate_lookahead",
+          "kernel_policy": "size_adaptive_structured",
+          "leftward_routes": 523,
+          "rightward_routes": 498
+        }
+      }
+    },
+    {
+      "method": "parity_insertions",
+      "repeat": 1,
+      "runtime_s": 7.447265300026629,
+      "value": -2.2130132815111107e-06,
+      "exact_value": -2.213013281435675e-06,
+      "abs_error": 7.543590724952073e-17,
+      "diagnostics": {
+        "method": "shared_environments",
+        "state_norm_squared": 1.0000000000000095,
+        "min_state_norm": 0.99,
+        "normalized": true,
+        "state_preparation": {
+          "engine": "routed_exact",
+          "linear_compiler": {
+            "enabled": true,
+            "synthesis_family": "gaussian_and_section_patterns",
+            "cnot_blocks": 340,
+            "rewritten_blocks": 3,
+            "original_cnot_gates": 497,
+            "compiled_cnot_gates": 491,
+            "static_cost_before": 5275,
+            "static_cost_after": 5241,
+            "original_total_gates": 1824,
+            "compiled_total_gates": 1818,
+            "commutation_schedule": [],
+            "schedule_uses_amplitudes_or_outputs": false,
+            "schedule_gate_count_change": 0,
+            "schedule_policy": "no compiled block reaches bounded-search floor",
+            "research_mixed_schedule": [
+              {
+                "searched": true,
+                "changed": true,
+                "noncommuting_precedences_verified": 820,
+                "estimated_score_before": 631.0,
+                "estimated_score_after": 456.0,
+                "estimated_swaps_before": 441,
+                "estimated_swaps_after": 370
+              },
+              {
+                "searched": true,
+                "changed": true,
+                "noncommuting_precedences_verified": 884,
+                "estimated_score_before": 685.5,
+                "estimated_score_after": 515.0,
+                "estimated_swaps_before": 460,
+                "estimated_swaps_after": 408
+              },
+              {
+                "searched": true,
+                "changed": true,
+                "noncommuting_precedences_verified": 933,
+                "estimated_score_before": 645.5,
+                "estimated_score_after": 473.0,
+                "estimated_swaps_before": 431,
+                "estimated_swaps_after": 369
+              },
+              {
+                "searched": true,
+                "changed": true,
+                "noncommuting_precedences_verified": 934,
+                "estimated_score_before": 681.0,
+                "estimated_score_after": 479.5,
+                "estimated_swaps_before": 462,
+                "estimated_swaps_after": 371
+              },
+              {
+                "searched": true,
+                "changed": true,
+                "noncommuting_precedences_verified": 952,
+                "estimated_score_before": 720.5,
+                "estimated_score_after": 468.0,
+                "estimated_swaps_before": 477,
+                "estimated_swaps_after": 349
+              },
+              {
+                "searched": true,
+                "changed": true,
+                "noncommuting_precedences_verified": 894,
+                "estimated_score_before": 697.0,
+                "estimated_score_after": 464.0,
+                "estimated_swaps_before": 485,
+                "estimated_swaps_after": 372
+              },
+              {
+                "searched": true,
+                "changed": true,
+                "noncommuting_precedences_verified": 900,
+                "estimated_score_before": 701.0,
+                "estimated_score_after": 506.5,
+                "estimated_swaps_before": 458,
+                "estimated_swaps_after": 370
+              },
+              {
+                "searched": true,
+                "changed": true,
+                "noncommuting_precedences_verified": 868,
+                "estimated_score_before": 704.5,
+                "estimated_score_after": 497.0,
+                "estimated_swaps_before": 500,
+                "estimated_swaps_after": 382
+              },
+              {
+                "searched": true,
+                "changed": true,
+                "noncommuting_precedences_verified": 887,
+                "estimated_score_before": 628.0,
+                "estimated_score_after": 496.0,
+                "estimated_swaps_before": 424,
+                "estimated_swaps_after": 361
+              },
+              {
+                "searched": true,
+                "changed": true,
+                "noncommuting_precedences_verified": 852,
+                "estimated_score_before": 721.0,
+                "estimated_score_after": 458.0,
+                "estimated_swaps_before": 489,
+                "estimated_swaps_after": 372
+              },
+              {
+                "searched": true,
+                "changed": true,
+                "noncommuting_precedences_verified": 766,
+                "estimated_score_before": 721.5,
+                "estimated_score_after": 486.5,
+                "estimated_swaps_before": 502,
+                "estimated_swaps_after": 388
+              },
+              {
+                "searched": true,
+                "changed": true,
+                "noncommuting_precedences_verified": 803,
+                "estimated_score_before": 697.0,
+                "estimated_score_after": 499.0,
+                "estimated_swaps_before": 467,
+                "estimated_swaps_after": 386
+              }
+            ],
+            "mixed_schedule_uses_amplitudes_or_outputs": false,
+            "mixed_schedule_gate_count_change": 0,
+            "research_phase_insertions": [
+              {
+                "searched": true,
+                "accepted": true,
+                "original_gates": 120,
+                "proposed_gates": 153,
+                "score_before": 456.0,
+                "score_proposed": 432.0,
+                "available_quadratic_rank": 70,
+                "inserted_phase_gates": 36,
+                "residual_cz_gates": 23
+              },
+              {
+                "searched": true,
+                "accepted": true,
+                "original_gates": 118,
+                "proposed_gates": 143,
+                "score_before": 471.5,
+                "score_proposed": 451.0,
+                "available_quadratic_rank": 78,
+                "inserted_phase_gates": 33,
+                "residual_cz_gates": 16
+              },
+              {
+                "searched": true,
+                "accepted": true,
+                "original_gates": 120,
+                "proposed_gates": 159,
+                "score_before": 539.0,
+                "score_proposed": 481.0,
+                "available_quadratic_rank": 78,
+                "inserted_phase_gates": 42,
+                "residual_cz_gates": 18
+              },
+              {
+                "searched": true,
+                "accepted": true,
+                "original_gates": 120,
+                "proposed_gates": 165,
+                "score_before": 529.5,
+                "score_proposed": 465.5,
+                "available_quadratic_rank": 79,
+                "inserted_phase_gates": 42,
+                "residual_cz_gates": 18
+              },
+              {
+                "searched": true,
+                "accepted": true,
+                "original_gates": 120,
+                "proposed_gates": 155,
+                "score_before": 584.0,
+                "score_proposed": 442.0,
+                "available_quadratic_rank": 73,
+                "inserted_phase_gates": 38,
+                "residual_cz_gates": 19
+              },
+              {
+                "searched": true,
+                "accepted": false,
+                "original_gates": 118,
+                "proposed_gates": 147,
+                "score_before": 499.5,
+                "score_proposed": 508.0,
+                "available_quadratic_rank": 74,
+                "inserted_phase_gates": 32,
+                "residual_cz_gates": 21
+              },
+              {
+                "searched": true,
+                "accepted": true,
+                "original_gates": 120,
+                "proposed_gates": 151,
+                "score_before": 542.0,
+                "score_proposed": 515.5,
+                "available_quadratic_rank": 75,
+                "inserted_phase_gates": 39,
+                "residual_cz_gates": 20
+              },
+              {
+                "searched": true,
+                "accepted": true,
+                "original_gates": 120,
+                "proposed_gates": 158,
+                "score_before": 572.5,
+                "score_proposed": 497.0,
+                "available_quadratic_rank": 82,
+                "inserted_phase_gates": 39,
+                "residual_cz_gates": 13
+              },
+              {
+                "searched": true,
+                "accepted": true,
+                "original_gates": 118,
+                "proposed_gates": 162,
+                "score_before": 555.5,
+                "score_proposed": 500.0,
+                "available_quadratic_rank": 76,
+                "inserted_phase_gates": 38,
+                "residual_cz_gates": 25
+              },
+              {
+                "searched": true,
+                "accepted": true,
+                "original_gates": 120,
+                "proposed_gates": 145,
+                "score_before": 575.0,
+                "score_proposed": 483.5,
+                "available_quadratic_rank": 70,
+                "inserted_phase_gates": 29,
+                "residual_cz_gates": 25
+              },
+              {
+                "searched": true,
+                "accepted": false,
+                "original_gates": 120,
+                "proposed_gates": 149,
+                "score_before": 477.5,
+                "score_proposed": 533.0,
+                "available_quadratic_rank": 68,
+                "inserted_phase_gates": 30,
+                "residual_cz_gates": 25
+              },
+              {
+                "searched": true,
+                "accepted": true,
+                "original_gates": 120,
+                "proposed_gates": 146,
+                "score_before": 497.5,
+                "score_proposed": 482.5,
+                "available_quadratic_rank": 66,
+                "inserted_phase_gates": 34,
+                "residual_cz_gates": 24
+              }
+            ],
+            "phase_insertion_uses_amplitudes_or_outputs": false,
+            "phase_insertion_gate_count_change": 335
+          },
+          "routing_swaps": 4233,
+          "restoration_swaps": 43,
+          "logical_to_position": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "max_bond_observed": 256,
+          "routing_policy": "six_gate_lookahead",
+          "kernel_policy": "size_adaptive_structured",
+          "leftward_routes": 523,
+          "rightward_routes": 498
+        }
+      }
+    },
+    {
+      "method": "mixed_schedule",
+      "repeat": 1,
+      "runtime_s": 7.145630399987567,
+      "value": -2.2130132815282665e-06,
+      "exact_value": -2.213013281435675e-06,
+      "abs_error": 9.259171256320933e-17,
+      "diagnostics": {
+        "method": "shared_environments",
+        "state_norm_squared": 0.999999999999998,
+        "min_state_norm": 0.99,
+        "normalized": true,
+        "state_preparation": {
+          "engine": "routed_exact",
+          "linear_compiler": {
+            "enabled": true,
+            "synthesis_family": "gaussian_and_section_patterns",
+            "cnot_blocks": 340,
+            "rewritten_blocks": 3,
+            "original_cnot_gates": 497,
+            "compiled_cnot_gates": 491,
+            "static_cost_before": 5275,
+            "static_cost_after": 5241,
+            "original_total_gates": 1824,
+            "compiled_total_gates": 1818,
+            "commutation_schedule": [],
+            "schedule_uses_amplitudes_or_outputs": false,
+            "schedule_gate_count_change": 0,
+            "schedule_policy": "no compiled block reaches bounded-search floor",
+            "research_mixed_schedule": [
+              {
+                "searched": true,
+                "changed": true,
+                "noncommuting_precedences_verified": 820,
+                "estimated_score_before": 631.0,
+                "estimated_score_after": 456.0,
+                "estimated_swaps_before": 441,
+                "estimated_swaps_after": 370
+              },
+              {
+                "searched": true,
+                "changed": true,
+                "noncommuting_precedences_verified": 884,
+                "estimated_score_before": 685.5,
+                "estimated_score_after": 515.0,
+                "estimated_swaps_before": 460,
+                "estimated_swaps_after": 408
+              },
+              {
+                "searched": true,
+                "changed": true,
+                "noncommuting_precedences_verified": 933,
+                "estimated_score_before": 645.5,
+                "estimated_score_after": 473.0,
+                "estimated_swaps_before": 431,
+                "estimated_swaps_after": 369
+              },
+              {
+                "searched": true,
+                "changed": true,
+                "noncommuting_precedences_verified": 934,
+                "estimated_score_before": 681.0,
+                "estimated_score_after": 479.5,
+                "estimated_swaps_before": 462,
+                "estimated_swaps_after": 371
+              },
+              {
+                "searched": true,
+                "changed": true,
+                "noncommuting_precedences_verified": 952,
+                "estimated_score_before": 720.5,
+                "estimated_score_after": 468.0,
+                "estimated_swaps_before": 477,
+                "estimated_swaps_after": 349
+              },
+              {
+                "searched": true,
+                "changed": true,
+                "noncommuting_precedences_verified": 894,
+                "estimated_score_before": 697.0,
+                "estimated_score_after": 464.0,
+                "estimated_swaps_before": 485,
+                "estimated_swaps_after": 372
+              },
+              {
+                "searched": true,
+                "changed": true,
+                "noncommuting_precedences_verified": 900,
+                "estimated_score_before": 701.0,
+                "estimated_score_after": 506.5,
+                "estimated_swaps_before": 458,
+                "estimated_swaps_after": 370
+              },
+              {
+                "searched": true,
+                "changed": true,
+                "noncommuting_precedences_verified": 868,
+                "estimated_score_before": 704.5,
+                "estimated_score_after": 497.0,
+                "estimated_swaps_before": 500,
+                "estimated_swaps_after": 382
+              },
+              {
+                "searched": true,
+                "changed": true,
+                "noncommuting_precedences_verified": 887,
+                "estimated_score_before": 628.0,
+                "estimated_score_after": 496.0,
+                "estimated_swaps_before": 424,
+                "estimated_swaps_after": 361
+              },
+              {
+                "searched": true,
+                "changed": true,
+                "noncommuting_precedences_verified": 852,
+                "estimated_score_before": 721.0,
+                "estimated_score_after": 458.0,
+                "estimated_swaps_before": 489,
+                "estimated_swaps_after": 372
+              },
+              {
+                "searched": true,
+                "changed": true,
+                "noncommuting_precedences_verified": 766,
+                "estimated_score_before": 721.5,
+                "estimated_score_after": 486.5,
+                "estimated_swaps_before": 502,
+                "estimated_swaps_after": 388
+              },
+              {
+                "searched": true,
+                "changed": true,
+                "noncommuting_precedences_verified": 803,
+                "estimated_score_before": 697.0,
+                "estimated_score_after": 499.0,
+                "estimated_swaps_before": 467,
+                "estimated_swaps_after": 386
+              }
+            ],
+            "mixed_schedule_uses_amplitudes_or_outputs": false,
+            "mixed_schedule_gate_count_change": 0
+          },
+          "routing_swaps": 4494,
+          "restoration_swaps": 72,
+          "logical_to_position": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "max_bond_observed": 256,
+          "routing_policy": "six_gate_lookahead",
+          "kernel_policy": "size_adaptive_structured",
+          "leftward_routes": 565,
+          "rightward_routes": 595
+        }
+      }
+    },
+    {
+      "method": "upstream_typo_only",
+      "repeat": 1,
+      "runtime_s": 42.00904139998602,
+      "value": -2.213013281868661e-06,
+      "exact_value": -2.213013281435675e-06,
+      "abs_error": 4.3298630197745325e-16
+    },
+    {
+      "method": "upstream_typo_only",
+      "repeat": 2,
+      "runtime_s": 44.273484500008635,
+      "value": -2.213013281868661e-06,
+      "exact_value": -2.213013281435675e-06,
+      "abs_error": 4.3298630197745325e-16
+    },
+    {
+      "method": "mixed_schedule",
+      "repeat": 2,
+      "runtime_s": 7.410966199997347,
+      "value": -2.2130132815282665e-06,
+      "exact_value": -2.213013281435675e-06,
+      "abs_error": 9.259171256320933e-17,
+      "diagnostics": {
+        "method": "shared_environments",
+        "state_norm_squared": 0.999999999999998,
+        "min_state_norm": 0.99,
+        "normalized": true,
+        "state_preparation": {
+          "engine": "routed_exact",
+          "linear_compiler": {
+            "enabled": true,
+            "synthesis_family": "gaussian_and_section_patterns",
+            "cnot_blocks": 340,
+            "rewritten_blocks": 3,
+            "original_cnot_gates": 497,
+            "compiled_cnot_gates": 491,
+            "static_cost_before": 5275,
+            "static_cost_after": 5241,
+            "original_total_gates": 1824,
+            "compiled_total_gates": 1818,
+            "commutation_schedule": [],
+            "schedule_uses_amplitudes_or_outputs": false,
+            "schedule_gate_count_change": 0,
+            "schedule_policy": "no compiled block reaches bounded-search floor",
+            "research_mixed_schedule": [
+              {
+                "searched": true,
+                "changed": true,
+                "noncommuting_precedences_verified": 820,
+                "estimated_score_before": 631.0,
+                "estimated_score_after": 456.0,
+                "estimated_swaps_before": 441,
+                "estimated_swaps_after": 370
+              },
+              {
+                "searched": true,
+                "changed": true,
+                "noncommuting_precedences_verified": 884,
+                "estimated_score_before": 685.5,
+                "estimated_score_after": 515.0,
+                "estimated_swaps_before": 460,
+                "estimated_swaps_after": 408
+              },
+              {
+                "searched": true,
+                "changed": true,
+                "noncommuting_precedences_verified": 933,
+                "estimated_score_before": 645.5,
+                "estimated_score_after": 473.0,
+                "estimated_swaps_before": 431,
+                "estimated_swaps_after": 369
+              },
+              {
+                "searched": true,
+                "changed": true,
+                "noncommuting_precedences_verified": 934,
+                "estimated_score_before": 681.0,
+                "estimated_score_after": 479.5,
+                "estimated_swaps_before": 462,
+                "estimated_swaps_after": 371
+              },
+              {
+                "searched": true,
+                "changed": true,
+                "noncommuting_precedences_verified": 952,
+                "estimated_score_before": 720.5,
+                "estimated_score_after": 468.0,
+                "estimated_swaps_before": 477,
+                "estimated_swaps_after": 349
+              },
+              {
+                "searched": true,
+                "changed": true,
+                "noncommuting_precedences_verified": 894,
+                "estimated_score_before": 697.0,
+                "estimated_score_after": 464.0,
+                "estimated_swaps_before": 485,
+                "estimated_swaps_after": 372
+              },
+              {
+                "searched": true,
+                "changed": true,
+                "noncommuting_precedences_verified": 900,
+                "estimated_score_before": 701.0,
+                "estimated_score_after": 506.5,
+                "estimated_swaps_before": 458,
+                "estimated_swaps_after": 370
+              },
+              {
+                "searched": true,
+                "changed": true,
+                "noncommuting_precedences_verified": 868,
+                "estimated_score_before": 704.5,
+                "estimated_score_after": 497.0,
+                "estimated_swaps_before": 500,
+                "estimated_swaps_after": 382
+              },
+              {
+                "searched": true,
+                "changed": true,
+                "noncommuting_precedences_verified": 887,
+                "estimated_score_before": 628.0,
+                "estimated_score_after": 496.0,
+                "estimated_swaps_before": 424,
+                "estimated_swaps_after": 361
+              },
+              {
+                "searched": true,
+                "changed": true,
+                "noncommuting_precedences_verified": 852,
+                "estimated_score_before": 721.0,
+                "estimated_score_after": 458.0,
+                "estimated_swaps_before": 489,
+                "estimated_swaps_after": 372
+              },
+              {
+                "searched": true,
+                "changed": true,
+                "noncommuting_precedences_verified": 766,
+                "estimated_score_before": 721.5,
+                "estimated_score_after": 486.5,
+                "estimated_swaps_before": 502,
+                "estimated_swaps_after": 388
+              },
+              {
+                "searched": true,
+                "changed": true,
+                "noncommuting_precedences_verified": 803,
+                "estimated_score_before": 697.0,
+                "estimated_score_after": 499.0,
+                "estimated_swaps_before": 467,
+                "estimated_swaps_after": 386
+              }
+            ],
+            "mixed_schedule_uses_amplitudes_or_outputs": false,
+            "mixed_schedule_gate_count_change": 0
+          },
+          "routing_swaps": 4494,
+          "restoration_swaps": 72,
+          "logical_to_position": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "max_bond_observed": 256,
+          "routing_policy": "six_gate_lookahead",
+          "kernel_policy": "size_adaptive_structured",
+          "leftward_routes": 565,
+          "rightward_routes": 595
+        }
+      }
+    },
+    {
+      "method": "parity_insertions",
+      "repeat": 2,
+      "runtime_s": 7.470002999994904,
+      "value": -2.2130132815111107e-06,
+      "exact_value": -2.213013281435675e-06,
+      "abs_error": 7.543590724952073e-17,
+      "diagnostics": {
+        "method": "shared_environments",
+        "state_norm_squared": 1.0000000000000095,
+        "min_state_norm": 0.99,
+        "normalized": true,
+        "state_preparation": {
+          "engine": "routed_exact",
+          "linear_compiler": {
+            "enabled": true,
+            "synthesis_family": "gaussian_and_section_patterns",
+            "cnot_blocks": 340,
+            "rewritten_blocks": 3,
+            "original_cnot_gates": 497,
+            "compiled_cnot_gates": 491,
+            "static_cost_before": 5275,
+            "static_cost_after": 5241,
+            "original_total_gates": 1824,
+            "compiled_total_gates": 1818,
+            "commutation_schedule": [],
+            "schedule_uses_amplitudes_or_outputs": false,
+            "schedule_gate_count_change": 0,
+            "schedule_policy": "no compiled block reaches bounded-search floor",
+            "research_mixed_schedule": [
+              {
+                "searched": true,
+                "changed": true,
+                "noncommuting_precedences_verified": 820,
+                "estimated_score_before": 631.0,
+                "estimated_score_after": 456.0,
+                "estimated_swaps_before": 441,
+                "estimated_swaps_after": 370
+              },
+              {
+                "searched": true,
+                "changed": true,
+                "noncommuting_precedences_verified": 884,
+                "estimated_score_before": 685.5,
+                "estimated_score_after": 515.0,
+                "estimated_swaps_before": 460,
+                "estimated_swaps_after": 408
+              },
+              {
+                "searched": true,
+                "changed": true,
+                "noncommuting_precedences_verified": 933,
+                "estimated_score_before": 645.5,
+                "estimated_score_after": 473.0,
+                "estimated_swaps_before": 431,
+                "estimated_swaps_after": 369
+              },
+              {
+                "searched": true,
+                "changed": true,
+                "noncommuting_precedences_verified": 934,
+                "estimated_score_before": 681.0,
+                "estimated_score_after": 479.5,
+                "estimated_swaps_before": 462,
+                "estimated_swaps_after": 371
+              },
+              {
+                "searched": true,
+                "changed": true,
+                "noncommuting_precedences_verified": 952,
+                "estimated_score_before": 720.5,
+                "estimated_score_after": 468.0,
+                "estimated_swaps_before": 477,
+                "estimated_swaps_after": 349
+              },
+              {
+                "searched": true,
+                "changed": true,
+                "noncommuting_precedences_verified": 894,
+                "estimated_score_before": 697.0,
+                "estimated_score_after": 464.0,
+                "estimated_swaps_before": 485,
+                "estimated_swaps_after": 372
+              },
+              {
+                "searched": true,
+                "changed": true,
+                "noncommuting_precedences_verified": 900,
+                "estimated_score_before": 701.0,
+                "estimated_score_after": 506.5,
+                "estimated_swaps_before": 458,
+                "estimated_swaps_after": 370
+              },
+              {
+                "searched": true,
+                "changed": true,
+                "noncommuting_precedences_verified": 868,
+                "estimated_score_before": 704.5,
+                "estimated_score_after": 497.0,
+                "estimated_swaps_before": 500,
+                "estimated_swaps_after": 382
+              },
+              {
+                "searched": true,
+                "changed": true,
+                "noncommuting_precedences_verified": 887,
+                "estimated_score_before": 628.0,
+                "estimated_score_after": 496.0,
+                "estimated_swaps_before": 424,
+                "estimated_swaps_after": 361
+              },
+              {
+                "searched": true,
+                "changed": true,
+                "noncommuting_precedences_verified": 852,
+                "estimated_score_before": 721.0,
+                "estimated_score_after": 458.0,
+                "estimated_swaps_before": 489,
+                "estimated_swaps_after": 372
+              },
+              {
+                "searched": true,
+                "changed": true,
+                "noncommuting_precedences_verified": 766,
+                "estimated_score_before": 721.5,
+                "estimated_score_after": 486.5,
+                "estimated_swaps_before": 502,
+                "estimated_swaps_after": 388
+              },
+              {
+                "searched": true,
+                "changed": true,
+                "noncommuting_precedences_verified": 803,
+                "estimated_score_before": 697.0,
+                "estimated_score_after": 499.0,
+                "estimated_swaps_before": 467,
+                "estimated_swaps_after": 386
+              }
+            ],
+            "mixed_schedule_uses_amplitudes_or_outputs": false,
+            "mixed_schedule_gate_count_change": 0,
+            "research_phase_insertions": [
+              {
+                "searched": true,
+                "accepted": true,
+                "original_gates": 120,
+                "proposed_gates": 153,
+                "score_before": 456.0,
+                "score_proposed": 432.0,
+                "available_quadratic_rank": 70,
+                "inserted_phase_gates": 36,
+                "residual_cz_gates": 23
+              },
+              {
+                "searched": true,
+                "accepted": true,
+                "original_gates": 118,
+                "proposed_gates": 143,
+                "score_before": 471.5,
+                "score_proposed": 451.0,
+                "available_quadratic_rank": 78,
+                "inserted_phase_gates": 33,
+                "residual_cz_gates": 16
+              },
+              {
+                "searched": true,
+                "accepted": true,
+                "original_gates": 120,
+                "proposed_gates": 159,
+                "score_before": 539.0,
+                "score_proposed": 481.0,
+                "available_quadratic_rank": 78,
+                "inserted_phase_gates": 42,
+                "residual_cz_gates": 18
+              },
+              {
+                "searched": true,
+                "accepted": true,
+                "original_gates": 120,
+                "proposed_gates": 165,
+                "score_before": 529.5,
+                "score_proposed": 465.5,
+                "available_quadratic_rank": 79,
+                "inserted_phase_gates": 42,
+                "residual_cz_gates": 18
+              },
+              {
+                "searched": true,
+                "accepted": true,
+                "original_gates": 120,
+                "proposed_gates": 155,
+                "score_before": 584.0,
+                "score_proposed": 442.0,
+                "available_quadratic_rank": 73,
+                "inserted_phase_gates": 38,
+                "residual_cz_gates": 19
+              },
+              {
+                "searched": true,
+                "accepted": false,
+                "original_gates": 118,
+                "proposed_gates": 147,
+                "score_before": 499.5,
+                "score_proposed": 508.0,
+                "available_quadratic_rank": 74,
+                "inserted_phase_gates": 32,
+                "residual_cz_gates": 21
+              },
+              {
+                "searched": true,
+                "accepted": true,
+                "original_gates": 120,
+                "proposed_gates": 151,
+                "score_before": 542.0,
+                "score_proposed": 515.5,
+                "available_quadratic_rank": 75,
+                "inserted_phase_gates": 39,
+                "residual_cz_gates": 20
+              },
+              {
+                "searched": true,
+                "accepted": true,
+                "original_gates": 120,
+                "proposed_gates": 158,
+                "score_before": 572.5,
+                "score_proposed": 497.0,
+                "available_quadratic_rank": 82,
+                "inserted_phase_gates": 39,
+                "residual_cz_gates": 13
+              },
+              {
+                "searched": true,
+                "accepted": true,
+                "original_gates": 118,
+                "proposed_gates": 162,
+                "score_before": 555.5,
+                "score_proposed": 500.0,
+                "available_quadratic_rank": 76,
+                "inserted_phase_gates": 38,
+                "residual_cz_gates": 25
+              },
+              {
+                "searched": true,
+                "accepted": true,
+                "original_gates": 120,
+                "proposed_gates": 145,
+                "score_before": 575.0,
+                "score_proposed": 483.5,
+                "available_quadratic_rank": 70,
+                "inserted_phase_gates": 29,
+                "residual_cz_gates": 25
+              },
+              {
+                "searched": true,
+                "accepted": false,
+                "original_gates": 120,
+                "proposed_gates": 149,
+                "score_before": 477.5,
+                "score_proposed": 533.0,
+                "available_quadratic_rank": 68,
+                "inserted_phase_gates": 30,
+                "residual_cz_gates": 25
+              },
+              {
+                "searched": true,
+                "accepted": true,
+                "original_gates": 120,
+                "proposed_gates": 146,
+                "score_before": 497.5,
+                "score_proposed": 482.5,
+                "available_quadratic_rank": 66,
+                "inserted_phase_gates": 34,
+                "residual_cz_gates": 24
+              }
+            ],
+            "phase_insertion_uses_amplitudes_or_outputs": false,
+            "phase_insertion_gate_count_change": 335
+          },
+          "routing_swaps": 4233,
+          "restoration_swaps": 43,
+          "logical_to_position": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "max_bond_observed": 256,
+          "routing_policy": "six_gate_lookahead",
+          "kernel_policy": "size_adaptive_structured",
+          "leftward_routes": 523,
+          "rightward_routes": 498
+        }
+      }
+    },
+    {
+      "method": "parity_insertions",
+      "repeat": 3,
+      "runtime_s": 7.571049300022423,
+      "value": -2.2130132815111107e-06,
+      "exact_value": -2.213013281435675e-06,
+      "abs_error": 7.543590724952073e-17,
+      "diagnostics": {
+        "method": "shared_environments",
+        "state_norm_squared": 1.0000000000000095,
+        "min_state_norm": 0.99,
+        "normalized": true,
+        "state_preparation": {
+          "engine": "routed_exact",
+          "linear_compiler": {
+            "enabled": true,
+            "synthesis_family": "gaussian_and_section_patterns",
+            "cnot_blocks": 340,
+            "rewritten_blocks": 3,
+            "original_cnot_gates": 497,
+            "compiled_cnot_gates": 491,
+            "static_cost_before": 5275,
+            "static_cost_after": 5241,
+            "original_total_gates": 1824,
+            "compiled_total_gates": 1818,
+            "commutation_schedule": [],
+            "schedule_uses_amplitudes_or_outputs": false,
+            "schedule_gate_count_change": 0,
+            "schedule_policy": "no compiled block reaches bounded-search floor",
+            "research_mixed_schedule": [
+              {
+                "searched": true,
+                "changed": true,
+                "noncommuting_precedences_verified": 820,
+                "estimated_score_before": 631.0,
+                "estimated_score_after": 456.0,
+                "estimated_swaps_before": 441,
+                "estimated_swaps_after": 370
+              },
+              {
+                "searched": true,
+                "changed": true,
+                "noncommuting_precedences_verified": 884,
+                "estimated_score_before": 685.5,
+                "estimated_score_after": 515.0,
+                "estimated_swaps_before": 460,
+                "estimated_swaps_after": 408
+              },
+              {
+                "searched": true,
+                "changed": true,
+                "noncommuting_precedences_verified": 933,
+                "estimated_score_before": 645.5,
+                "estimated_score_after": 473.0,
+                "estimated_swaps_before": 431,
+                "estimated_swaps_after": 369
+              },
+              {
+                "searched": true,
+                "changed": true,
+                "noncommuting_precedences_verified": 934,
+                "estimated_score_before": 681.0,
+                "estimated_score_after": 479.5,
+                "estimated_swaps_before": 462,
+                "estimated_swaps_after": 371
+              },
+              {
+                "searched": true,
+                "changed": true,
+                "noncommuting_precedences_verified": 952,
+                "estimated_score_before": 720.5,
+                "estimated_score_after": 468.0,
+                "estimated_swaps_before": 477,
+                "estimated_swaps_after": 349
+              },
+              {
+                "searched": true,
+                "changed": true,
+                "noncommuting_precedences_verified": 894,
+                "estimated_score_before": 697.0,
+                "estimated_score_after": 464.0,
+                "estimated_swaps_before": 485,
+                "estimated_swaps_after": 372
+              },
+              {
+                "searched": true,
+                "changed": true,
+                "noncommuting_precedences_verified": 900,
+                "estimated_score_before": 701.0,
+                "estimated_score_after": 506.5,
+                "estimated_swaps_before": 458,
+                "estimated_swaps_after": 370
+              },
+              {
+                "searched": true,
+                "changed": true,
+                "noncommuting_precedences_verified": 868,
+                "estimated_score_before": 704.5,
+                "estimated_score_after": 497.0,
+                "estimated_swaps_before": 500,
+                "estimated_swaps_after": 382
+              },
+              {
+                "searched": true,
+                "changed": true,
+                "noncommuting_precedences_verified": 887,
+                "estimated_score_before": 628.0,
+                "estimated_score_after": 496.0,
+                "estimated_swaps_before": 424,
+                "estimated_swaps_after": 361
+              },
+              {
+                "searched": true,
+                "changed": true,
+                "noncommuting_precedences_verified": 852,
+                "estimated_score_before": 721.0,
+                "estimated_score_after": 458.0,
+                "estimated_swaps_before": 489,
+                "estimated_swaps_after": 372
+              },
+              {
+                "searched": true,
+                "changed": true,
+                "noncommuting_precedences_verified": 766,
+                "estimated_score_before": 721.5,
+                "estimated_score_after": 486.5,
+                "estimated_swaps_before": 502,
+                "estimated_swaps_after": 388
+              },
+              {
+                "searched": true,
+                "changed": true,
+                "noncommuting_precedences_verified": 803,
+                "estimated_score_before": 697.0,
+                "estimated_score_after": 499.0,
+                "estimated_swaps_before": 467,
+                "estimated_swaps_after": 386
+              }
+            ],
+            "mixed_schedule_uses_amplitudes_or_outputs": false,
+            "mixed_schedule_gate_count_change": 0,
+            "research_phase_insertions": [
+              {
+                "searched": true,
+                "accepted": true,
+                "original_gates": 120,
+                "proposed_gates": 153,
+                "score_before": 456.0,
+                "score_proposed": 432.0,
+                "available_quadratic_rank": 70,
+                "inserted_phase_gates": 36,
+                "residual_cz_gates": 23
+              },
+              {
+                "searched": true,
+                "accepted": true,
+                "original_gates": 118,
+                "proposed_gates": 143,
+                "score_before": 471.5,
+                "score_proposed": 451.0,
+                "available_quadratic_rank": 78,
+                "inserted_phase_gates": 33,
+                "residual_cz_gates": 16
+              },
+              {
+                "searched": true,
+                "accepted": true,
+                "original_gates": 120,
+                "proposed_gates": 159,
+                "score_before": 539.0,
+                "score_proposed": 481.0,
+                "available_quadratic_rank": 78,
+                "inserted_phase_gates": 42,
+                "residual_cz_gates": 18
+              },
+              {
+                "searched": true,
+                "accepted": true,
+                "original_gates": 120,
+                "proposed_gates": 165,
+                "score_before": 529.5,
+                "score_proposed": 465.5,
+                "available_quadratic_rank": 79,
+                "inserted_phase_gates": 42,
+                "residual_cz_gates": 18
+              },
+              {
+                "searched": true,
+                "accepted": true,
+                "original_gates": 120,
+                "proposed_gates": 155,
+                "score_before": 584.0,
+                "score_proposed": 442.0,
+                "available_quadratic_rank": 73,
+                "inserted_phase_gates": 38,
+                "residual_cz_gates": 19
+              },
+              {
+                "searched": true,
+                "accepted": false,
+                "original_gates": 118,
+                "proposed_gates": 147,
+                "score_before": 499.5,
+                "score_proposed": 508.0,
+                "available_quadratic_rank": 74,
+                "inserted_phase_gates": 32,
+                "residual_cz_gates": 21
+              },
+              {
+                "searched": true,
+                "accepted": true,
+                "original_gates": 120,
+                "proposed_gates": 151,
+                "score_before": 542.0,
+                "score_proposed": 515.5,
+                "available_quadratic_rank": 75,
+                "inserted_phase_gates": 39,
+                "residual_cz_gates": 20
+              },
+              {
+                "searched": true,
+                "accepted": true,
+                "original_gates": 120,
+                "proposed_gates": 158,
+                "score_before": 572.5,
+                "score_proposed": 497.0,
+                "available_quadratic_rank": 82,
+                "inserted_phase_gates": 39,
+                "residual_cz_gates": 13
+              },
+              {
+                "searched": true,
+                "accepted": true,
+                "original_gates": 118,
+                "proposed_gates": 162,
+                "score_before": 555.5,
+                "score_proposed": 500.0,
+                "available_quadratic_rank": 76,
+                "inserted_phase_gates": 38,
+                "residual_cz_gates": 25
+              },
+              {
+                "searched": true,
+                "accepted": true,
+                "original_gates": 120,
+                "proposed_gates": 145,
+                "score_before": 575.0,
+                "score_proposed": 483.5,
+                "available_quadratic_rank": 70,
+                "inserted_phase_gates": 29,
+                "residual_cz_gates": 25
+              },
+              {
+                "searched": true,
+                "accepted": false,
+                "original_gates": 120,
+                "proposed_gates": 149,
+                "score_before": 477.5,
+                "score_proposed": 533.0,
+                "available_quadratic_rank": 68,
+                "inserted_phase_gates": 30,
+                "residual_cz_gates": 25
+              },
+              {
+                "searched": true,
+                "accepted": true,
+                "original_gates": 120,
+                "proposed_gates": 146,
+                "score_before": 497.5,
+                "score_proposed": 482.5,
+                "available_quadratic_rank": 66,
+                "inserted_phase_gates": 34,
+                "residual_cz_gates": 24
+              }
+            ],
+            "phase_insertion_uses_amplitudes_or_outputs": false,
+            "phase_insertion_gate_count_change": 335
+          },
+          "routing_swaps": 4233,
+          "restoration_swaps": 43,
+          "logical_to_position": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "max_bond_observed": 256,
+          "routing_policy": "six_gate_lookahead",
+          "kernel_policy": "size_adaptive_structured",
+          "leftward_routes": 523,
+          "rightward_routes": 498
+        }
+      }
+    },
+    {
+      "method": "mixed_schedule",
+      "repeat": 3,
+      "runtime_s": 7.979517099971417,
+      "value": -2.2130132815282665e-06,
+      "exact_value": -2.213013281435675e-06,
+      "abs_error": 9.259171256320933e-17,
+      "diagnostics": {
+        "method": "shared_environments",
+        "state_norm_squared": 0.999999999999998,
+        "min_state_norm": 0.99,
+        "normalized": true,
+        "state_preparation": {
+          "engine": "routed_exact",
+          "linear_compiler": {
+            "enabled": true,
+            "synthesis_family": "gaussian_and_section_patterns",
+            "cnot_blocks": 340,
+            "rewritten_blocks": 3,
+            "original_cnot_gates": 497,
+            "compiled_cnot_gates": 491,
+            "static_cost_before": 5275,
+            "static_cost_after": 5241,
+            "original_total_gates": 1824,
+            "compiled_total_gates": 1818,
+            "commutation_schedule": [],
+            "schedule_uses_amplitudes_or_outputs": false,
+            "schedule_gate_count_change": 0,
+            "schedule_policy": "no compiled block reaches bounded-search floor",
+            "research_mixed_schedule": [
+              {
+                "searched": true,
+                "changed": true,
+                "noncommuting_precedences_verified": 820,
+                "estimated_score_before": 631.0,
+                "estimated_score_after": 456.0,
+                "estimated_swaps_before": 441,
+                "estimated_swaps_after": 370
+              },
+              {
+                "searched": true,
+                "changed": true,
+                "noncommuting_precedences_verified": 884,
+                "estimated_score_before": 685.5,
+                "estimated_score_after": 515.0,
+                "estimated_swaps_before": 460,
+                "estimated_swaps_after": 408
+              },
+              {
+                "searched": true,
+                "changed": true,
+                "noncommuting_precedences_verified": 933,
+                "estimated_score_before": 645.5,
+                "estimated_score_after": 473.0,
+                "estimated_swaps_before": 431,
+                "estimated_swaps_after": 369
+              },
+              {
+                "searched": true,
+                "changed": true,
+                "noncommuting_precedences_verified": 934,
+                "estimated_score_before": 681.0,
+                "estimated_score_after": 479.5,
+                "estimated_swaps_before": 462,
+                "estimated_swaps_after": 371
+              },
+              {
+                "searched": true,
+                "changed": true,
+                "noncommuting_precedences_verified": 952,
+                "estimated_score_before": 720.5,
+                "estimated_score_after": 468.0,
+                "estimated_swaps_before": 477,
+                "estimated_swaps_after": 349
+              },
+              {
+                "searched": true,
+                "changed": true,
+                "noncommuting_precedences_verified": 894,
+                "estimated_score_before": 697.0,
+                "estimated_score_after": 464.0,
+                "estimated_swaps_before": 485,
+                "estimated_swaps_after": 372
+              },
+              {
+                "searched": true,
+                "changed": true,
+                "noncommuting_precedences_verified": 900,
+                "estimated_score_before": 701.0,
+                "estimated_score_after": 506.5,
+                "estimated_swaps_before": 458,
+                "estimated_swaps_after": 370
+              },
+              {
+                "searched": true,
+                "changed": true,
+                "noncommuting_precedences_verified": 868,
+                "estimated_score_before": 704.5,
+                "estimated_score_after": 497.0,
+                "estimated_swaps_before": 500,
+                "estimated_swaps_after": 382
+              },
+              {
+                "searched": true,
+                "changed": true,
+                "noncommuting_precedences_verified": 887,
+                "estimated_score_before": 628.0,
+                "estimated_score_after": 496.0,
+                "estimated_swaps_before": 424,
+                "estimated_swaps_after": 361
+              },
+              {
+                "searched": true,
+                "changed": true,
+                "noncommuting_precedences_verified": 852,
+                "estimated_score_before": 721.0,
+                "estimated_score_after": 458.0,
+                "estimated_swaps_before": 489,
+                "estimated_swaps_after": 372
+              },
+              {
+                "searched": true,
+                "changed": true,
+                "noncommuting_precedences_verified": 766,
+                "estimated_score_before": 721.5,
+                "estimated_score_after": 486.5,
+                "estimated_swaps_before": 502,
+                "estimated_swaps_after": 388
+              },
+              {
+                "searched": true,
+                "changed": true,
+                "noncommuting_precedences_verified": 803,
+                "estimated_score_before": 697.0,
+                "estimated_score_after": 499.0,
+                "estimated_swaps_before": 467,
+                "estimated_swaps_after": 386
+              }
+            ],
+            "mixed_schedule_uses_amplitudes_or_outputs": false,
+            "mixed_schedule_gate_count_change": 0
+          },
+          "routing_swaps": 4494,
+          "restoration_swaps": 72,
+          "logical_to_position": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "max_bond_observed": 256,
+          "routing_policy": "six_gate_lookahead",
+          "kernel_policy": "size_adaptive_structured",
+          "leftward_routes": 565,
+          "rightward_routes": 595
+        }
+      }
+    },
+    {
+      "method": "upstream_typo_only",
+      "repeat": 3,
+      "runtime_s": 42.72548480000114,
+      "value": -2.213013281868661e-06,
+      "exact_value": -2.213013281435675e-06,
+      "abs_error": 4.3298630197745325e-16
+    }
+  ],
+  "full_state": {
+    "mixed_schedule": {
+      "norm_squared": 0.9999999999999986,
+      "fidelity": 0.9999999999999999,
+      "max_state_error": 3.786915651751184e-16,
+      "max_bond_observed": 256,
+      "preparation": {
+        "engine": "routed_exact",
+        "linear_compiler": {
+          "enabled": true,
+          "synthesis_family": "gaussian_and_section_patterns",
+          "cnot_blocks": 340,
+          "rewritten_blocks": 3,
+          "original_cnot_gates": 497,
+          "compiled_cnot_gates": 491,
+          "static_cost_before": 5275,
+          "static_cost_after": 5241,
+          "original_total_gates": 1824,
+          "compiled_total_gates": 1818,
+          "commutation_schedule": [],
+          "schedule_uses_amplitudes_or_outputs": false,
+          "schedule_gate_count_change": 0,
+          "schedule_policy": "no compiled block reaches bounded-search floor",
+          "research_mixed_schedule": [
+            {
+              "searched": true,
+              "changed": true,
+              "noncommuting_precedences_verified": 820,
+              "estimated_score_before": 631.0,
+              "estimated_score_after": 456.0,
+              "estimated_swaps_before": 441,
+              "estimated_swaps_after": 370
+            },
+            {
+              "searched": true,
+              "changed": true,
+              "noncommuting_precedences_verified": 884,
+              "estimated_score_before": 685.5,
+              "estimated_score_after": 515.0,
+              "estimated_swaps_before": 460,
+              "estimated_swaps_after": 408
+            },
+            {
+              "searched": true,
+              "changed": true,
+              "noncommuting_precedences_verified": 933,
+              "estimated_score_before": 645.5,
+              "estimated_score_after": 473.0,
+              "estimated_swaps_before": 431,
+              "estimated_swaps_after": 369
+            },
+            {
+              "searched": true,
+              "changed": true,
+              "noncommuting_precedences_verified": 934,
+              "estimated_score_before": 681.0,
+              "estimated_score_after": 479.5,
+              "estimated_swaps_before": 462,
+              "estimated_swaps_after": 371
+            },
+            {
+              "searched": true,
+              "changed": true,
+              "noncommuting_precedences_verified": 952,
+              "estimated_score_before": 720.5,
+              "estimated_score_after": 468.0,
+              "estimated_swaps_before": 477,
+              "estimated_swaps_after": 349
+            },
+            {
+              "searched": true,
+              "changed": true,
+              "noncommuting_precedences_verified": 894,
+              "estimated_score_before": 697.0,
+              "estimated_score_after": 464.0,
+              "estimated_swaps_before": 485,
+              "estimated_swaps_after": 372
+            },
+            {
+              "searched": true,
+              "changed": true,
+              "noncommuting_precedences_verified": 900,
+              "estimated_score_before": 701.0,
+              "estimated_score_after": 506.5,
+              "estimated_swaps_before": 458,
+              "estimated_swaps_after": 370
+            },
+            {
+              "searched": true,
+              "changed": true,
+              "noncommuting_precedences_verified": 868,
+              "estimated_score_before": 704.5,
+              "estimated_score_after": 497.0,
+              "estimated_swaps_before": 500,
+              "estimated_swaps_after": 382
+            },
+            {
+              "searched": true,
+              "changed": true,
+              "noncommuting_precedences_verified": 887,
+              "estimated_score_before": 628.0,
+              "estimated_score_after": 496.0,
+              "estimated_swaps_before": 424,
+              "estimated_swaps_after": 361
+            },
+            {
+              "searched": true,
+              "changed": true,
+              "noncommuting_precedences_verified": 852,
+              "estimated_score_before": 721.0,
+              "estimated_score_after": 458.0,
+              "estimated_swaps_before": 489,
+              "estimated_swaps_after": 372
+            },
+            {
+              "searched": true,
+              "changed": true,
+              "noncommuting_precedences_verified": 766,
+              "estimated_score_before": 721.5,
+              "estimated_score_after": 486.5,
+              "estimated_swaps_before": 502,
+              "estimated_swaps_after": 388
+            },
+            {
+              "searched": true,
+              "changed": true,
+              "noncommuting_precedences_verified": 803,
+              "estimated_score_before": 697.0,
+              "estimated_score_after": 499.0,
+              "estimated_swaps_before": 467,
+              "estimated_swaps_after": 386
+            }
+          ],
+          "mixed_schedule_uses_amplitudes_or_outputs": false,
+          "mixed_schedule_gate_count_change": 0
+        },
+        "routing_swaps": 4494,
+        "restoration_swaps": 72,
+        "logical_to_position": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "max_bond_observed": 256,
+        "routing_policy": "six_gate_lookahead",
+        "kernel_policy": "size_adaptive_structured",
+        "leftward_routes": 565,
+        "rightward_routes": 595
+      }
+    },
+    "parity_insertions": {
+      "norm_squared": 1.0000000000000098,
+      "fidelity": 1.0000000000000007,
+      "max_state_error": 3.8743512184929347e-16,
+      "max_bond_observed": 256,
+      "preparation": {
+        "engine": "routed_exact",
+        "linear_compiler": {
+          "enabled": true,
+          "synthesis_family": "gaussian_and_section_patterns",
+          "cnot_blocks": 340,
+          "rewritten_blocks": 3,
+          "original_cnot_gates": 497,
+          "compiled_cnot_gates": 491,
+          "static_cost_before": 5275,
+          "static_cost_after": 5241,
+          "original_total_gates": 1824,
+          "compiled_total_gates": 1818,
+          "commutation_schedule": [],
+          "schedule_uses_amplitudes_or_outputs": false,
+          "schedule_gate_count_change": 0,
+          "schedule_policy": "no compiled block reaches bounded-search floor",
+          "research_mixed_schedule": [
+            {
+              "searched": true,
+              "changed": true,
+              "noncommuting_precedences_verified": 820,
+              "estimated_score_before": 631.0,
+              "estimated_score_after": 456.0,
+              "estimated_swaps_before": 441,
+              "estimated_swaps_after": 370
+            },
+            {
+              "searched": true,
+              "changed": true,
+              "noncommuting_precedences_verified": 884,
+              "estimated_score_before": 685.5,
+              "estimated_score_after": 515.0,
+              "estimated_swaps_before": 460,
+              "estimated_swaps_after": 408
+            },
+            {
+              "searched": true,
+              "changed": true,
+              "noncommuting_precedences_verified": 933,
+              "estimated_score_before": 645.5,
+              "estimated_score_after": 473.0,
+              "estimated_swaps_before": 431,
+              "estimated_swaps_after": 369
+            },
+            {
+              "searched": true,
+              "changed": true,
+              "noncommuting_precedences_verified": 934,
+              "estimated_score_before": 681.0,
+              "estimated_score_after": 479.5,
+              "estimated_swaps_before": 462,
+              "estimated_swaps_after": 371
+            },
+            {
+              "searched": true,
+              "changed": true,
+              "noncommuting_precedences_verified": 952,
+              "estimated_score_before": 720.5,
+              "estimated_score_after": 468.0,
+              "estimated_swaps_before": 477,
+              "estimated_swaps_after": 349
+            },
+            {
+              "searched": true,
+              "changed": true,
+              "noncommuting_precedences_verified": 894,
+              "estimated_score_before": 697.0,
+              "estimated_score_after": 464.0,
+              "estimated_swaps_before": 485,
+              "estimated_swaps_after": 372
+            },
+            {
+              "searched": true,
+              "changed": true,
+              "noncommuting_precedences_verified": 900,
+              "estimated_score_before": 701.0,
+              "estimated_score_after": 506.5,
+              "estimated_swaps_before": 458,
+              "estimated_swaps_after": 370
+            },
+            {
+              "searched": true,
+              "changed": true,
+              "noncommuting_precedences_verified": 868,
+              "estimated_score_before": 704.5,
+              "estimated_score_after": 497.0,
+              "estimated_swaps_before": 500,
+              "estimated_swaps_after": 382
+            },
+            {
+              "searched": true,
+              "changed": true,
+              "noncommuting_precedences_verified": 887,
+              "estimated_score_before": 628.0,
+              "estimated_score_after": 496.0,
+              "estimated_swaps_before": 424,
+              "estimated_swaps_after": 361
+            },
+            {
+              "searched": true,
+              "changed": true,
+              "noncommuting_precedences_verified": 852,
+              "estimated_score_before": 721.0,
+              "estimated_score_after": 458.0,
+              "estimated_swaps_before": 489,
+              "estimated_swaps_after": 372
+            },
+            {
+              "searched": true,
+              "changed": true,
+              "noncommuting_precedences_verified": 766,
+              "estimated_score_before": 721.5,
+              "estimated_score_after": 486.5,
+              "estimated_swaps_before": 502,
+              "estimated_swaps_after": 388
+            },
+            {
+              "searched": true,
+              "changed": true,
+              "noncommuting_precedences_verified": 803,
+              "estimated_score_before": 697.0,
+              "estimated_score_after": 499.0,
+              "estimated_swaps_before": 467,
+              "estimated_swaps_after": 386
+            }
+          ],
+          "mixed_schedule_uses_amplitudes_or_outputs": false,
+          "mixed_schedule_gate_count_change": 0,
+          "research_phase_insertions": [
+            {
+              "searched": true,
+              "accepted": true,
+              "original_gates": 120,
+              "proposed_gates": 153,
+              "score_before": 456.0,
+              "score_proposed": 432.0,
+              "available_quadratic_rank": 70,
+              "inserted_phase_gates": 36,
+              "residual_cz_gates": 23
+            },
+            {
+              "searched": true,
+              "accepted": true,
+              "original_gates": 118,
+              "proposed_gates": 143,
+              "score_before": 471.5,
+              "score_proposed": 451.0,
+              "available_quadratic_rank": 78,
+              "inserted_phase_gates": 33,
+              "residual_cz_gates": 16
+            },
+            {
+              "searched": true,
+              "accepted": true,
+              "original_gates": 120,
+              "proposed_gates": 159,
+              "score_before": 539.0,
+              "score_proposed": 481.0,
+              "available_quadratic_rank": 78,
+              "inserted_phase_gates": 42,
+              "residual_cz_gates": 18
+            },
+            {
+              "searched": true,
+              "accepted": true,
+              "original_gates": 120,
+              "proposed_gates": 165,
+              "score_before": 529.5,
+              "score_proposed": 465.5,
+              "available_quadratic_rank": 79,
+              "inserted_phase_gates": 42,
+              "residual_cz_gates": 18
+            },
+            {
+              "searched": true,
+              "accepted": true,
+              "original_gates": 120,
+              "proposed_gates": 155,
+              "score_before": 584.0,
+              "score_proposed": 442.0,
+              "available_quadratic_rank": 73,
+              "inserted_phase_gates": 38,
+              "residual_cz_gates": 19
+            },
+            {
+              "searched": true,
+              "accepted": false,
+              "original_gates": 118,
+              "proposed_gates": 147,
+              "score_before": 499.5,
+              "score_proposed": 508.0,
+              "available_quadratic_rank": 74,
+              "inserted_phase_gates": 32,
+              "residual_cz_gates": 21
+            },
+            {
+              "searched": true,
+              "accepted": true,
+              "original_gates": 120,
+              "proposed_gates": 151,
+              "score_before": 542.0,
+              "score_proposed": 515.5,
+              "available_quadratic_rank": 75,
+              "inserted_phase_gates": 39,
+              "residual_cz_gates": 20
+            },
+            {
+              "searched": true,
+              "accepted": true,
+              "original_gates": 120,
+              "proposed_gates": 158,
+              "score_before": 572.5,
+              "score_proposed": 497.0,
+              "available_quadratic_rank": 82,
+              "inserted_phase_gates": 39,
+              "residual_cz_gates": 13
+            },
+            {
+              "searched": true,
+              "accepted": true,
+              "original_gates": 118,
+              "proposed_gates": 162,
+              "score_before": 555.5,
+              "score_proposed": 500.0,
+              "available_quadratic_rank": 76,
+              "inserted_phase_gates": 38,
+              "residual_cz_gates": 25
+            },
+            {
+              "searched": true,
+              "accepted": true,
+              "original_gates": 120,
+              "proposed_gates": 145,
+              "score_before": 575.0,
+              "score_proposed": 483.5,
+              "available_quadratic_rank": 70,
+              "inserted_phase_gates": 29,
+              "residual_cz_gates": 25
+            },
+            {
+              "searched": true,
+              "accepted": false,
+              "original_gates": 120,
+              "proposed_gates": 149,
+              "score_before": 477.5,
+              "score_proposed": 533.0,
+              "available_quadratic_rank": 68,
+              "inserted_phase_gates": 30,
+              "residual_cz_gates": 25
+            },
+            {
+              "searched": true,
+              "accepted": true,
+              "original_gates": 120,
+              "proposed_gates": 146,
+              "score_before": 497.5,
+              "score_proposed": 482.5,
+              "available_quadratic_rank": 66,
+              "inserted_phase_gates": 34,
+              "residual_cz_gates": 24
+            }
+          ],
+          "phase_insertion_uses_amplitudes_or_outputs": false,
+          "phase_insertion_gate_count_change": 335
+        },
+        "routing_swaps": 4233,
+        "restoration_swaps": 43,
+        "logical_to_position": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "max_bond_observed": 256,
+        "routing_policy": "six_gate_lookahead",
+        "kernel_policy": "size_adaptive_structured",
+        "leftward_routes": 523,
+        "rightward_routes": 498
+      }
+    }
+  },
+  "source_hashes": {
+    "src\\qibotn\\backends\\quimb.py": "829d4b94f5b630e34ee09c75d27f09b375ed6fbd3a6a95d573a13a94c0fecc5b",
+    "src\\qibotn\\backends\\_exact_numpy.py": "953de2012c268d85965ca33176c41e3f6f6e48ed76f5575ef3200a1e13da70fa",
+    "src\\qibotn\\backends\\_linear_cnot.py": "3c38cf9c91a8136798f8909dd841e2f66f85cf3b1d41c1916d50fa18fc3537c3",
+    "src\\qibotn\\backends\\_structured_numpy.py": "e8c68fc4ac3d490d8acae48e7bfff603353d5a50de014fe09ebe297656d4bf08",
+    "src\\qibotn\\backends\\_cnot_schedule.py": "49807da9550061c0f52a6e2d25a4441a0eabb1089371fd75db54a4714e7d0065",
+    "benchmarks\\asc_revision_cpu\\paired_phase_insertions.py": "fcf57885061ffe81c97de9d08a7a371b7417ea035e3a934cbd90ce9d02aaf55a",
+    "benchmarks\\asc_revision_cpu\\upstream_reference.py": "c7501c667f65509c7b375fd7c5291b3add074edfe3b6c5d0b76e5a7ae4d87aaa",
+    "benchmarks\\asc_revision_cpu\\candidate_mixed_schedule.py": "31ede5adf21ff251d0b033ba1f9f4fd49d37097234fa64cd374594a70734434c",
+    "benchmarks\\asc_revision_cpu\\candidate_phase_blocks.py": "4c6d69bbe3ff937cf51e651c2808db3de1c2005ec846cd35fa50f9601f857a60",
+    "benchmarks\\asc_revision_cpu\\candidate_phase_insertions.py": "4bf44c7c18c033b999d6b5bd93d91263facd6c9e6976e3cb06f63ae7720b3361",
+    "benchmarks\\asc_revision_cpu\\evaluate.py": "bf61e8afac8242be4e68444b0a3b2302d2008ff0ffebbd2a7dd35c35aecf5b63",
+    "benchmarks\\asc_revision_cpu\\probe_linear_holdout.py": "ce4232ec873569ed506c7d89d4244aa491f647c417e45b43fedfa24543c6c5a9"
+  },
+  "scope": "fresh mixed-gate research holdout, not a formal 30q acceptance",
+  "timing_scope": "conversion/compiler, all gates and original four ZZ terms; excludes imports and independent oracle",
+  "threadpools": [
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 1,
+      "prefix": "libscipy_openblas",
+      "filepath": "C:\\Users\\孙逸腾\\Documents\\第二次作业\\asc_repo_repair\\ASC-QiboTN-SunYiteng\\.venv311\\Lib\\site-packages\\numpy.libs\\libscipy_openblas64_-13e2df515630b4a41f92893938845698.dll",
+      "version": "0.3.29",
+      "threading_layer": "pthreads",
+      "architecture": "Haswell"
+    },
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 1,
+      "prefix": "libscipy_openblas",
+      "filepath": "C:\\Users\\孙逸腾\\Documents\\第二次作业\\asc_repo_repair\\ASC-QiboTN-SunYiteng\\.venv311\\Lib\\site-packages\\scipy.libs\\libscipy_openblas-64eda39e79589aedb16f58e5547eb599.dll",
+      "version": "0.3.30",
+      "threading_layer": "pthreads",
+      "architecture": "Haswell"
+    }
+  ],
+  "means_s": {
+    "upstream_typo_only": 43.00267023333193,
+    "mixed_schedule": 7.512037899985444,
+    "parity_insertions": 7.496105866681319
+  },
+  "stdev_s": {
+    "upstream_typo_only": 1.1573890709904315,
+    "mixed_schedule": 0.42603212731712126,
+    "parity_insertions": 0.06589111776769502
+  },
+  "speedups_vs_upstream": {
+    "mixed_schedule": 5.724501234666995,
+    "parity_insertions": 5.736667944414998
+  },
+  "insertion_speedup_vs_mixed": 1.0021253746395098
+}

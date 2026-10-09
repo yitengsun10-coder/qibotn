@@ -1,0 +1,21 @@
+{
+  "started_at": "2026-10-09T14:13:59.785557+08:00",
+  "controller_pid": 40672,
+  "arguments": {
+    "worker": false,
+    "output": "results\\revision_cpu_20261009_integrated_mixed16",
+    "qubits": 16,
+    "layers": 12,
+    "seed": 20261301,
+    "repeats": 3,
+    "affinity": [
+      2,
+      4,
+      6,
+      8
+    ],
+    "seconds": 600.0,
+    "memory_mib": 900.0
+  },
+  "policy": "one unseen input, no retries, no old timing rows, no output-based choice"
+}

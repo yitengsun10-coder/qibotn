@@ -1,0 +1,91 @@
+{
+  "status": "verified_stage_only",
+  "pressure20": {
+    "recorded_at": "2026-10-09T17:11:03.653357+08:00",
+    "status": "verified",
+    "directory": "C:\\Users\\孙逸腾\\Documents\\第二次作业\\qibotn-official-fork\\results\\revision_cpu_20261009_pressure20_9991_resumed",
+    "means_s": {
+      "upstream_typo_only": 531.2482918999934,
+      "integrated": 283.01838496668887
+    },
+    "speedups_vs_upstream_typo_only": {
+      "integrated": 1.877080501192603
+    },
+    "rows_verified": 8,
+    "full_state_methods_verified": 2,
+    "speedup": 1.877080501192603,
+    "segmented_run": true,
+    "preserved_rows": 3,
+    "resumed_rows": 5,
+    "additional_restart_warmups": 2,
+    "original_stop_reason": "wall_clock_budget_exceeded",
+    "original_exit_code": 1,
+    "qubits": 20,
+    "gates": 9991,
+    "depth": 677,
+    "source_snapshots_verified": 10,
+    "current_source_matches_required": true,
+    "hardware_limited_deep20_pressure_complete": true,
+    "formal_30q_acceptance_complete": false,
+    "seven_x_on_this_input": false,
+    "all_requirements_complete": false,
+    "scope": "20q reduced-qubit but full-depth/gate-count CPU pressure evidence; not a 30q or universal speed claim"
+  },
+  "mixed16": {
+    "recorded_at": "2026-10-09T17:11:03.765898+08:00",
+    "status": "verified",
+    "directory": "C:\\Users\\孙逸腾\\Documents\\第二次作业\\qibotn-official-fork\\results\\revision_cpu_20261009_integrated_mixed16",
+    "means_s": {
+      "upstream_typo_only": 38.811612566642,
+      "prior_default": 10.818613033334259,
+      "integrated": 7.971783200026645
+    },
+    "speedups_vs_upstream_typo_only": {
+      "prior_default": 3.5874850544201777,
+      "integrated": 4.868623693443177
+    },
+    "rows_verified": 12,
+    "full_state_methods_verified": 2,
+    "qubits": 16,
+    "gates": 1824,
+    "depth": 507,
+    "source_snapshots_verified": 10,
+    "current_source_matches_required": true,
+    "reference_extra_norm_contraction": false,
+    "formal_30q_acceptance_complete": false,
+    "all_requirements_complete": false,
+    "scope": "one new mixed-gate input, not a universal or formal 30-qubit speed claim"
+  },
+  "tests": {
+    "benchmarks\\asc_revision_cpu\\validation_tests_integrated_mixed_20261009.xml": {
+      "tests": 322,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "benchmarks\\asc_revision_cpu\\validation_tests_research_and_audit_20261009.xml": {
+      "tests": 73,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "benchmarks\\asc_revision_cpu\\validation_pressure_resume_cached_qr_20261009.xml": {
+      "tests": 50,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "results\\validation_exact30_preparation_20261009.xml": {
+      "tests": 18,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "formal_30q_acceptance_complete": false,
+  "seven_x_achieved": false,
+  "word_pdf_synchronized": false,
+  "all_contest_tasks_complete": false,
+  "github_publication_status": "separate publication receipt required",
+  "submission_sent": false
+}

@@ -1,0 +1,25 @@
+{
+  "recorded_at": "2026-10-09T14:19:42.923594+08:00",
+  "status": "verified",
+  "directory": "C:\\Users\\孙逸腾\\Documents\\第二次作业\\qibotn-official-fork\\results\\revision_cpu_20261009_phase_insertion_holdout16",
+  "means_s": {
+    "upstream_typo_only": 43.00267023333193,
+    "mixed_schedule": 7.512037899985444,
+    "parity_insertions": 7.496105866681319
+  },
+  "speedups_vs_upstream_typo_only": {
+    "mixed_schedule": 5.724501234666995,
+    "parity_insertions": 5.736667944414998
+  },
+  "rows_verified": 12,
+  "full_state_methods_verified": 2,
+  "qubits": 16,
+  "gates": 1824,
+  "depth": 469,
+  "source_snapshots_verified": 12,
+  "current_source_matches_required": false,
+  "reference_extra_norm_contraction": false,
+  "formal_30q_acceptance_complete": false,
+  "all_requirements_complete": false,
+  "scope": "one new mixed-gate input, not a universal or formal 30-qubit speed claim"
+}

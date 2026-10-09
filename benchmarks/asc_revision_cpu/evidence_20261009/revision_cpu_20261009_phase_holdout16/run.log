@@ -1,0 +1,19 @@
+C:\Users\孙逸腾\Documents\第二次作业\asc_repo_repair\ASC-QiboTN-SunYiteng\.venv311\Lib\site-packages\cotengra\hyperoptimizers\hyper.py:36: UserWarning: Couldn't import `kahypar` - skipping from default hyper optimizer and using basic `labels` method instead. `kahypar` is highly recommended for the best quality contraction paths.
+  warnings.warn(
+{"method": "upstream_typo_only", "repeat": 0, "runtime_s": 39.125503799994476, "abs_error": 8.131516293641283e-17}
+{"method": "frozen", "repeat": 0, "runtime_s": 10.852530899981502, "abs_error": 2.0686577451023425e-16}
+{"method": "candidate", "repeat": 0, "runtime_s": 7.969230099988636, "abs_error": 1.1904539853890839e-16}
+{"method": "phase_candidate", "repeat": 0, "runtime_s": 7.662891199986916, "abs_error": 1.0169816377914032e-16}
+{"method": "phase_candidate", "repeat": 1, "runtime_s": 7.607618000009097, "abs_error": 1.0169816377914032e-16}
+{"method": "candidate", "repeat": 1, "runtime_s": 7.31508249999024, "abs_error": 1.1904539853890839e-16}
+{"method": "frozen", "repeat": 1, "runtime_s": 11.02629110001726, "abs_error": 2.0686577451023425e-16}
+{"method": "upstream_typo_only", "repeat": 1, "runtime_s": 40.183179799991194, "abs_error": 8.131516293641283e-17}
+{"method": "upstream_typo_only", "repeat": 2, "runtime_s": 39.174134799977764, "abs_error": 8.131516293641283e-17}
+{"method": "frozen", "repeat": 2, "runtime_s": 10.809978900011629, "abs_error": 2.0686577451023425e-16}
+{"method": "candidate", "repeat": 2, "runtime_s": 7.411058800003957, "abs_error": 1.1904539853890839e-16}
+{"method": "phase_candidate", "repeat": 2, "runtime_s": 7.603799999982584, "abs_error": 1.0169816377914032e-16}
+{"method": "phase_candidate", "repeat": 3, "runtime_s": 7.906783699989319, "abs_error": 1.0169816377914032e-16}
+{"method": "candidate", "repeat": 3, "runtime_s": 7.789495400036685, "abs_error": 1.1904539853890839e-16}
+{"method": "frozen", "repeat": 3, "runtime_s": 10.940670499985572, "abs_error": 2.0686577451023425e-16}
+{"method": "upstream_typo_only", "repeat": 3, "runtime_s": 40.63619409996318, "abs_error": 8.131516293641283e-17}
+{"status": "pass", "means_s": {"upstream_typo_only": 39.997836233310714, "frozen": 10.925646833338154, "candidate": 7.505212233343627, "phase_candidate": 7.706067233327}, "speedups": {"frozen_vs_upstream_typo_only": 3.660912424082998, "candidate_vs_upstream_typo_only": 5.329341128504154, "candidate_vs_frozen": 1.4557412227196536, "phase_candidate_vs_upstream_typo_only": 5.190434371027689, "phase_candidate_vs_frozen": 1.417798015839675}}

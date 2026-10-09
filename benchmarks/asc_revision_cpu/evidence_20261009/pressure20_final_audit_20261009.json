@@ -1,0 +1,31 @@
+{
+  "recorded_at": "2026-10-09T17:04:24.641984+08:00",
+  "status": "verified",
+  "directory": "C:\\Users\\孙逸腾\\Documents\\第二次作业\\qibotn-official-fork\\results\\revision_cpu_20261009_pressure20_9991_resumed",
+  "means_s": {
+    "upstream_typo_only": 531.2482918999934,
+    "integrated": 283.01838496668887
+  },
+  "speedups_vs_upstream_typo_only": {
+    "integrated": 1.877080501192603
+  },
+  "rows_verified": 8,
+  "full_state_methods_verified": 2,
+  "speedup": 1.877080501192603,
+  "segmented_run": true,
+  "preserved_rows": 3,
+  "resumed_rows": 5,
+  "additional_restart_warmups": 2,
+  "original_stop_reason": "wall_clock_budget_exceeded",
+  "original_exit_code": 1,
+  "qubits": 20,
+  "gates": 9991,
+  "depth": 677,
+  "source_snapshots_verified": 10,
+  "current_source_matches_required": true,
+  "hardware_limited_deep20_pressure_complete": true,
+  "formal_30q_acceptance_complete": false,
+  "seven_x_on_this_input": false,
+  "all_requirements_complete": false,
+  "scope": "20q reduced-qubit but full-depth/gate-count CPU pressure evidence; not a 30q or universal speed claim"
+}

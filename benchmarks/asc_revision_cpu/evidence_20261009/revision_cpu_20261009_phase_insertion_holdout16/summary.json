@@ -1,0 +1,11 @@
+{
+  "status": "pass",
+  "exit_code": 0,
+  "stop_reason": null,
+  "elapsed_s": 249.90600000001723,
+  "peak_process_tree_rss_mib": 253.2578125,
+  "budgets": {
+    "seconds": 600.0,
+    "memory_mib": 900.0
+  }
+}

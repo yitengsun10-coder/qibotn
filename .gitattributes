@@ -1,2 +1,11 @@
 # Delivered report hashes refer to exact bytes on all platforms.
 benchmarks/asc_large_cpu/final_report/** -text
+# Benchmark snapshots and current production hashes refer to raw measured bytes.
+benchmarks/asc_revision_cpu/** -text
+benchmarks/asc_large_cpu/benchmark.py -text
+src/qibotn/backends/quimb.py -text
+src/qibotn/backends/_exact_numpy.py -text
+src/qibotn/backends/_linear_cnot.py -text
+src/qibotn/backends/_structured_numpy.py -text
+src/qibotn/backends/_cnot_schedule.py -text
+src/qibotn/backends/_mixed_schedule.py -text

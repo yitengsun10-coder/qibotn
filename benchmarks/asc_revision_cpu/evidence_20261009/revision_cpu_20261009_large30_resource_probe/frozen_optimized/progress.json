@@ -1,0 +1,7 @@
+{
+  "completed_quimb_apply_gate_calls": 282,
+  "observed_max_bond": 2048,
+  "latest_mps_array_bytes": 413837952,
+  "elapsed_instrumented_s": 12.561713399947621,
+  "in_flight_gate": "CX"
+}

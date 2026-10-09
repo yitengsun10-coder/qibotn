@@ -1,0 +1,13 @@
+{
+  "status": "incomplete_or_failed",
+  "exit_code": 1,
+  "stop_reason": "wall_clock_budget_exceeded",
+  "elapsed_s": 2400.079000000027,
+  "peak_process_tree_rss_mib": 469.875,
+  "calibration_only": false,
+  "formal_30q_acceptance_complete": false,
+  "budgets": {
+    "seconds": 2400.0,
+    "memory_mib": 1800.0
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "python": "3.11.16 (main, Sep  1 2026, 14:15:24) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "cpu": "Intel Core i7-13650HX (14 physical / 20 logical)",
+  "total_memory_bytes": 16849256448,
+  "blas_threads": 1,
+  "affinity": [
+    2,
+    4,
+    6,
+    8
+  ],
+  "packages": {
+    "qibo": "0.3.2",
+    "qibotn": "0.0.7",
+    "quimb": "1.13.0",
+    "numpy": "2.2.6",
+    "scipy": "1.17.1",
+    "psutil": "5.9.8",
+    "threadpoolctl": "3.7.0",
+    "pytest": "9.1.1",
+    "cotengra": "0.8.2"
+  }
+}

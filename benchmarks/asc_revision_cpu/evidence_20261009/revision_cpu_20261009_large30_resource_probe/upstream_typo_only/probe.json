@@ -1,0 +1,52 @@
+{
+  "status": "running",
+  "instrumented_resource_probe_not_formal_timing": true,
+  "qubits": 30,
+  "gates": 9998,
+  "depth": 449,
+  "qasm_sha256": "1ea5c95ebdcc651a1291dadfb7a193009377732bba8d03a01ac37ef7b82b37d4",
+  "method": "upstream_typo_only",
+  "precision": "complex128",
+  "cutoff": 0,
+  "max_bond": null,
+  "threads": 1,
+  "affinity": [
+    2,
+    4,
+    6,
+    8
+  ],
+  "original_workload": "existing asc_large_cpu Workload(30,112), not a new specially easy circuit",
+  "reference": {
+    "commit": "7ebbd4d4a00f37b898c552922953591b78b0af7e",
+    "path": "src/qibotn/backends/quimb.py",
+    "original_sha256": "1e1ada931f9fb0f9228f7190cd46f5401328b1fbec9e42f40ba9dc7fca313aca",
+    "typo_only_sha256": "1a4e2e70c05e5015006ec2cdce3b81f6d2ba463ebbf604726fbb370fe4c9f472",
+    "sole_change": "contraction_optimizer -> contractions_optimizer at the observable contraction",
+    "extra_norm_contraction": false,
+    "state_preparations_per_call": 1,
+    "algorithm_or_backend_replacement": false
+  },
+  "threadpools": [
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 1,
+      "prefix": "libscipy_openblas",
+      "filepath": "C:\\Users\\孙逸腾\\Documents\\第二次作业\\asc_repo_repair\\ASC-QiboTN-SunYiteng\\.venv311\\Lib\\site-packages\\numpy.libs\\libscipy_openblas64_-13e2df515630b4a41f92893938845698.dll",
+      "version": "0.3.29",
+      "threading_layer": "pthreads",
+      "architecture": "Haswell"
+    },
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 1,
+      "prefix": "libscipy_openblas",
+      "filepath": "C:\\Users\\孙逸腾\\Documents\\第二次作业\\asc_repo_repair\\ASC-QiboTN-SunYiteng\\.venv311\\Lib\\site-packages\\scipy.libs\\libscipy_openblas-64eda39e79589aedb16f58e5547eb599.dll",
+      "version": "0.3.30",
+      "threading_layer": "pthreads",
+      "architecture": "Haswell"
+    }
+  ]
+}

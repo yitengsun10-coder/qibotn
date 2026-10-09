@@ -1,0 +1,589 @@
+{
+  "status": "pass",
+  "calibration_only": false,
+  "scope": "hardware-limited 20q deep pressure acceptance, not a 30q speed claim",
+  "workload": "existing asc_large_cpu hardware-efficient RX/RY plus entangling brickwork",
+  "qubits": 20,
+  "layers": 169,
+  "gates": 9991,
+  "depth": 677,
+  "qasm_sha256": "3165bcb8d498fc2d6354afdf7a1526e8ebabd19a3c2ca8307142e8d10006e803",
+  "precision": "complex128",
+  "cutoff": 0,
+  "max_bond": null,
+  "threads": 1,
+  "affinity": [
+    2,
+    4,
+    6,
+    8
+  ],
+  "warmup_repeats": 1,
+  "measured_repeats": 3,
+  "reference": {
+    "commit": "7ebbd4d4a00f37b898c552922953591b78b0af7e",
+    "path": "src/qibotn/backends/quimb.py",
+    "original_sha256": "1e1ada931f9fb0f9228f7190cd46f5401328b1fbec9e42f40ba9dc7fca313aca",
+    "typo_only_sha256": "1a4e2e70c05e5015006ec2cdce3b81f6d2ba463ebbf604726fbb370fe4c9f472",
+    "sole_change": "contraction_optimizer -> contractions_optimizer at the observable contraction",
+    "extra_norm_contraction": false,
+    "state_preparations_per_call": 1,
+    "algorithm_or_backend_replacement": false
+  },
+  "rows": [
+    {
+      "method": "upstream_typo_only",
+      "repeat": 0,
+      "runtime_s": 523.8601372999838,
+      "value": 0.00018450534690212336,
+      "exact_value": 0.00018450534690262125,
+      "abs_error": 4.978927426596558e-16
+    },
+    {
+      "method": "integrated",
+      "repeat": 0,
+      "runtime_s": 274.8775713000214,
+      "value": 0.00018450534690212704,
+      "exact_value": 0.00018450534690262125,
+      "abs_error": 4.942064552732051e-16,
+      "diagnostics": {
+        "method": "shared_environments",
+        "state_norm_squared": 0.999999999999996,
+        "min_state_norm": 0.99,
+        "normalized": true,
+        "state_preparation": {
+          "engine": "routed_exact",
+          "linear_compiler": {
+            "enabled": true,
+            "synthesis_family": "gaussian_and_section_patterns",
+            "cnot_blocks": 169,
+            "rewritten_blocks": 0,
+            "original_cnot_gates": 3211,
+            "compiled_cnot_gates": 3211,
+            "static_cost_before": 3211,
+            "static_cost_after": 3211,
+            "original_total_gates": 9991,
+            "compiled_total_gates": 9991,
+            "commutation_schedule": [],
+            "schedule_uses_amplitudes_or_outputs": false,
+            "schedule_gate_count_change": 0,
+            "schedule_policy": "no compiled block reaches bounded-search floor",
+            "mixed_commutation_schedule": [],
+            "mixed_schedule_uses_amplitudes_or_outputs": false,
+            "mixed_schedule_gate_count_change": 0,
+            "mixed_schedule_policy": "no eligible mixed block at the bounded-search size"
+          },
+          "routing_swaps": 0,
+          "restoration_swaps": 0,
+          "logical_to_position": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19
+          ],
+          "max_bond_observed": 1024,
+          "routing_policy": "six_gate_lookahead",
+          "kernel_policy": "size_adaptive_structured",
+          "leftward_routes": 0,
+          "rightward_routes": 0
+        }
+      }
+    },
+    {
+      "method": "integrated",
+      "repeat": 1,
+      "runtime_s": 274.4826616999926,
+      "value": 0.00018450534690212704,
+      "exact_value": 0.00018450534690262125,
+      "abs_error": 4.942064552732051e-16,
+      "diagnostics": {
+        "method": "shared_environments",
+        "state_norm_squared": 0.999999999999996,
+        "min_state_norm": 0.99,
+        "normalized": true,
+        "state_preparation": {
+          "engine": "routed_exact",
+          "linear_compiler": {
+            "enabled": true,
+            "synthesis_family": "gaussian_and_section_patterns",
+            "cnot_blocks": 169,
+            "rewritten_blocks": 0,
+            "original_cnot_gates": 3211,
+            "compiled_cnot_gates": 3211,
+            "static_cost_before": 3211,
+            "static_cost_after": 3211,
+            "original_total_gates": 9991,
+            "compiled_total_gates": 9991,
+            "commutation_schedule": [],
+            "schedule_uses_amplitudes_or_outputs": false,
+            "schedule_gate_count_change": 0,
+            "schedule_policy": "no compiled block reaches bounded-search floor",
+            "mixed_commutation_schedule": [],
+            "mixed_schedule_uses_amplitudes_or_outputs": false,
+            "mixed_schedule_gate_count_change": 0,
+            "mixed_schedule_policy": "no eligible mixed block at the bounded-search size"
+          },
+          "routing_swaps": 0,
+          "restoration_swaps": 0,
+          "logical_to_position": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19
+          ],
+          "max_bond_observed": 1024,
+          "routing_policy": "six_gate_lookahead",
+          "kernel_policy": "size_adaptive_structured",
+          "leftward_routes": 0,
+          "rightward_routes": 0
+        }
+      }
+    },
+    {
+      "method": "upstream_typo_only",
+      "repeat": 1,
+      "runtime_s": 529.6876008999534,
+      "value": 0.00018450534690212336,
+      "exact_value": 0.00018450534690262125,
+      "abs_error": 4.978927426596558e-16,
+      "segment": "resumed_process"
+    },
+    {
+      "method": "upstream_typo_only",
+      "repeat": 2,
+      "runtime_s": 531.5143938000547,
+      "value": 0.00018450534690212336,
+      "exact_value": 0.00018450534690262125,
+      "abs_error": 4.978927426596558e-16,
+      "segment": "resumed_process"
+    },
+    {
+      "method": "integrated",
+      "repeat": 2,
+      "runtime_s": 286.76279470010195,
+      "value": 0.00018450534690212704,
+      "exact_value": 0.00018450534690262125,
+      "abs_error": 4.942064552732051e-16,
+      "segment": "resumed_process",
+      "diagnostics": {
+        "method": "shared_environments",
+        "state_norm_squared": 0.999999999999996,
+        "min_state_norm": 0.99,
+        "normalized": true,
+        "state_preparation": {
+          "engine": "routed_exact",
+          "linear_compiler": {
+            "enabled": true,
+            "synthesis_family": "gaussian_and_section_patterns",
+            "cnot_blocks": 169,
+            "rewritten_blocks": 0,
+            "original_cnot_gates": 3211,
+            "compiled_cnot_gates": 3211,
+            "static_cost_before": 3211,
+            "static_cost_after": 3211,
+            "original_total_gates": 9991,
+            "compiled_total_gates": 9991,
+            "commutation_schedule": [],
+            "schedule_uses_amplitudes_or_outputs": false,
+            "schedule_gate_count_change": 0,
+            "schedule_policy": "no compiled block reaches bounded-search floor",
+            "mixed_commutation_schedule": [],
+            "mixed_schedule_uses_amplitudes_or_outputs": false,
+            "mixed_schedule_gate_count_change": 0,
+            "mixed_schedule_policy": "no eligible mixed block at the bounded-search size"
+          },
+          "routing_swaps": 0,
+          "restoration_swaps": 0,
+          "logical_to_position": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19
+          ],
+          "max_bond_observed": 1024,
+          "routing_policy": "six_gate_lookahead",
+          "kernel_policy": "size_adaptive_structured",
+          "leftward_routes": 0,
+          "rightward_routes": 0
+        }
+      }
+    },
+    {
+      "method": "integrated",
+      "repeat": 3,
+      "runtime_s": 287.809698499972,
+      "value": 0.00018450534690212704,
+      "exact_value": 0.00018450534690262125,
+      "abs_error": 4.942064552732051e-16,
+      "segment": "resumed_process",
+      "diagnostics": {
+        "method": "shared_environments",
+        "state_norm_squared": 0.999999999999996,
+        "min_state_norm": 0.99,
+        "normalized": true,
+        "state_preparation": {
+          "engine": "routed_exact",
+          "linear_compiler": {
+            "enabled": true,
+            "synthesis_family": "gaussian_and_section_patterns",
+            "cnot_blocks": 169,
+            "rewritten_blocks": 0,
+            "original_cnot_gates": 3211,
+            "compiled_cnot_gates": 3211,
+            "static_cost_before": 3211,
+            "static_cost_after": 3211,
+            "original_total_gates": 9991,
+            "compiled_total_gates": 9991,
+            "commutation_schedule": [],
+            "schedule_uses_amplitudes_or_outputs": false,
+            "schedule_gate_count_change": 0,
+            "schedule_policy": "no compiled block reaches bounded-search floor",
+            "mixed_commutation_schedule": [],
+            "mixed_schedule_uses_amplitudes_or_outputs": false,
+            "mixed_schedule_gate_count_change": 0,
+            "mixed_schedule_policy": "no eligible mixed block at the bounded-search size"
+          },
+          "routing_swaps": 0,
+          "restoration_swaps": 0,
+          "logical_to_position": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19
+          ],
+          "max_bond_observed": 1024,
+          "routing_policy": "six_gate_lookahead",
+          "kernel_policy": "size_adaptive_structured",
+          "leftward_routes": 0,
+          "rightward_routes": 0
+        }
+      }
+    },
+    {
+      "method": "upstream_typo_only",
+      "repeat": 3,
+      "runtime_s": 532.5428809999721,
+      "value": 0.00018450534690212336,
+      "exact_value": 0.00018450534690262125,
+      "abs_error": 4.978927426596558e-16,
+      "segment": "resumed_process"
+    }
+  ],
+  "full_state": {
+    "upstream_typo_only": {
+      "norm_squared": 1.0000000000000253,
+      "fidelity": 0.9999999999999998,
+      "max_state_error": 3.3441189174775886e-16,
+      "max_bond_observed": 1024,
+      "preparation": {
+        "engine": "official_native"
+      }
+    },
+    "integrated": {
+      "norm_squared": 0.9999999999999962,
+      "fidelity": 1.0000000000000002,
+      "max_state_error": 1.4567869085833218e-16,
+      "max_bond_observed": 1024,
+      "preparation": {
+        "engine": "routed_exact",
+        "linear_compiler": {
+          "enabled": true,
+          "synthesis_family": "gaussian_and_section_patterns",
+          "cnot_blocks": 169,
+          "rewritten_blocks": 0,
+          "original_cnot_gates": 3211,
+          "compiled_cnot_gates": 3211,
+          "static_cost_before": 3211,
+          "static_cost_after": 3211,
+          "original_total_gates": 9991,
+          "compiled_total_gates": 9991,
+          "commutation_schedule": [],
+          "schedule_uses_amplitudes_or_outputs": false,
+          "schedule_gate_count_change": 0,
+          "schedule_policy": "no compiled block reaches bounded-search floor",
+          "mixed_commutation_schedule": [],
+          "mixed_schedule_uses_amplitudes_or_outputs": false,
+          "mixed_schedule_gate_count_change": 0,
+          "mixed_schedule_policy": "no eligible mixed block at the bounded-search size"
+        },
+        "routing_swaps": 0,
+        "restoration_swaps": 0,
+        "logical_to_position": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ],
+        "max_bond_observed": 1024,
+        "routing_policy": "six_gate_lookahead",
+        "kernel_policy": "size_adaptive_structured",
+        "leftward_routes": 0,
+        "rightward_routes": 0
+      }
+    }
+  },
+  "source_hashes": {
+    "src\\qibotn\\backends\\quimb.py": "9e2f24828e12f567fa8d23d35f4971b99390876ec8a8fc0c87de0b7dee201092",
+    "src\\qibotn\\backends\\_exact_numpy.py": "953de2012c268d85965ca33176c41e3f6f6e48ed76f5575ef3200a1e13da70fa",
+    "src\\qibotn\\backends\\_linear_cnot.py": "3c38cf9c91a8136798f8909dd841e2f66f85cf3b1d41c1916d50fa18fc3537c3",
+    "src\\qibotn\\backends\\_structured_numpy.py": "e8c68fc4ac3d490d8acae48e7bfff603353d5a50de014fe09ebe297656d4bf08",
+    "src\\qibotn\\backends\\_cnot_schedule.py": "49807da9550061c0f52a6e2d25a4441a0eabb1089371fd75db54a4714e7d0065",
+    "src\\qibotn\\backends\\_mixed_schedule.py": "29217f62093d2d2f741cfedb011052c2da40a2def1f70bf6c41549c1f02d0fbd",
+    "benchmarks\\asc_revision_cpu\\paired_pressure_chain.py": "1349e16bf0f842bc2cf7eb07bf41d0dbe47d6875d3ed85acfb9aef1cfeba87a8",
+    "benchmarks\\asc_revision_cpu\\upstream_reference.py": "c7501c667f65509c7b375fd7c5291b3add074edfe3b6c5d0b76e5a7ae4d87aaa",
+    "benchmarks\\asc_revision_cpu\\evaluate.py": "bf61e8afac8242be4e68444b0a3b2302d2008ff0ffebbd2a7dd35c35aecf5b63",
+    "benchmarks\\asc_large_cpu\\benchmark.py": "0da3e76c12e8bebb964a1fe3bd9097fabae8919e07f88def506d9842d9d95c29"
+  },
+  "timing_scope": "all circuit conversion/compiler, state preparation and original four ZZ terms; excludes imports and independent oracle",
+  "gate_counts": {
+    "CNOT": 3211,
+    "H": 20,
+    "RX": 3380,
+    "RY": 3380
+  },
+  "threadpools": [
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 1,
+      "prefix": "libscipy_openblas",
+      "filepath": "C:\\Users\\孙逸腾\\Documents\\第二次作业\\asc_repo_repair\\ASC-QiboTN-SunYiteng\\.venv311\\Lib\\site-packages\\numpy.libs\\libscipy_openblas64_-13e2df515630b4a41f92893938845698.dll",
+      "version": "0.3.29",
+      "threading_layer": "pthreads",
+      "architecture": "Haswell"
+    },
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 1,
+      "prefix": "libscipy_openblas",
+      "filepath": "C:\\Users\\孙逸腾\\Documents\\第二次作业\\asc_repo_repair\\ASC-QiboTN-SunYiteng\\.venv311\\Lib\\site-packages\\scipy.libs\\libscipy_openblas-64eda39e79589aedb16f58e5547eb599.dll",
+      "version": "0.3.30",
+      "threading_layer": "pthreads",
+      "architecture": "Haswell"
+    }
+  ],
+  "continuation": {
+    "original_directory": "C:\\Users\\孙逸腾\\Documents\\第二次作业\\qibotn-official-fork\\results\\revision_cpu_20261009_pressure20_9991",
+    "original_result_sha256": "e2bbd43c755e7b4e7e0f61757d135c729e7decc22d1b92fa1d4b460613532b58",
+    "original_summary_sha256": "57bd158d0bbac923a64cfaa4b0b942630d00c6e6481b95d1756027ee2c1c9765",
+    "resume_script_sha256": "e965127e7ad987925f7ddee7bd08205eee7ca36ca59ec278a9a4f19ead560413",
+    "preserved_row_count": 3,
+    "remaining_plan": [
+      [
+        "upstream_typo_only",
+        1
+      ],
+      [
+        "upstream_typo_only",
+        2
+      ],
+      [
+        "integrated",
+        2
+      ],
+      [
+        "integrated",
+        3
+      ],
+      [
+        "upstream_typo_only",
+        3
+      ]
+    ],
+    "original_stop_reason": "wall_clock_budget_exceeded",
+    "original_exit_code": 1,
+    "same_production_bytes_and_input": true,
+    "fresh_process_warmups_per_method": 1,
+    "policy": "resume missing planned calls only; preserve failed/time-stopped original segment; no result selection"
+  },
+  "restart_warmups": [
+    {
+      "method": "upstream_typo_only",
+      "repeat": -1,
+      "runtime_s": 534.1051351999631,
+      "value": 0.00018450534690212336,
+      "exact_value": 0.00018450534690262125,
+      "abs_error": 4.978927426596558e-16,
+      "segment": "resumed_process"
+    },
+    {
+      "method": "integrated",
+      "repeat": -1,
+      "runtime_s": 286.073868400068,
+      "value": 0.00018450534690212704,
+      "exact_value": 0.00018450534690262125,
+      "abs_error": 4.942064552732051e-16,
+      "segment": "resumed_process",
+      "diagnostics": {
+        "method": "shared_environments",
+        "state_norm_squared": 0.999999999999996,
+        "min_state_norm": 0.99,
+        "normalized": true,
+        "state_preparation": {
+          "engine": "routed_exact",
+          "linear_compiler": {
+            "enabled": true,
+            "synthesis_family": "gaussian_and_section_patterns",
+            "cnot_blocks": 169,
+            "rewritten_blocks": 0,
+            "original_cnot_gates": 3211,
+            "compiled_cnot_gates": 3211,
+            "static_cost_before": 3211,
+            "static_cost_after": 3211,
+            "original_total_gates": 9991,
+            "compiled_total_gates": 9991,
+            "commutation_schedule": [],
+            "schedule_uses_amplitudes_or_outputs": false,
+            "schedule_gate_count_change": 0,
+            "schedule_policy": "no compiled block reaches bounded-search floor",
+            "mixed_commutation_schedule": [],
+            "mixed_schedule_uses_amplitudes_or_outputs": false,
+            "mixed_schedule_gate_count_change": 0,
+            "mixed_schedule_policy": "no eligible mixed block at the bounded-search size"
+          },
+          "routing_swaps": 0,
+          "restoration_swaps": 0,
+          "logical_to_position": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19
+          ],
+          "max_bond_observed": 1024,
+          "routing_policy": "six_gate_lookahead",
+          "kernel_policy": "size_adaptive_structured",
+          "leftward_routes": 0,
+          "rightward_routes": 0
+        }
+      }
+    }
+  ],
+  "resumed_threadpools": [
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 1,
+      "prefix": "libscipy_openblas",
+      "filepath": "C:\\Users\\孙逸腾\\Documents\\第二次作业\\asc_repo_repair\\ASC-QiboTN-SunYiteng\\.venv311\\Lib\\site-packages\\numpy.libs\\libscipy_openblas64_-13e2df515630b4a41f92893938845698.dll",
+      "version": "0.3.29",
+      "threading_layer": "pthreads",
+      "architecture": "Haswell"
+    },
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 1,
+      "prefix": "libscipy_openblas",
+      "filepath": "C:\\Users\\孙逸腾\\Documents\\第二次作业\\asc_repo_repair\\ASC-QiboTN-SunYiteng\\.venv311\\Lib\\site-packages\\scipy.libs\\libscipy_openblas-64eda39e79589aedb16f58e5547eb599.dll",
+      "version": "0.3.30",
+      "threading_layer": "pthreads",
+      "architecture": "Haswell"
+    }
+  ],
+  "means_s": {
+    "upstream_typo_only": 531.2482918999934,
+    "integrated": 283.01838496668887
+  },
+  "stdev_s": {
+    "upstream_typo_only": 1.4461202502914108,
+    "integrated": 7.410663307407801
+  },
+  "speedup": 1.877080501192603
+}

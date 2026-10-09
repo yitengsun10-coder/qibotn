@@ -1,0 +1,153 @@
+{
+  "recorded_at": "2026-10-09T14:06:06.450380+08:00",
+  "instrumented_resource_probe_not_formal_timing": true,
+  "formal_30q_acceptance_complete": false,
+  "publishable_speedup": null,
+  "policy": "one attempt per path, no truncation, no dense 30q allocation, bounded diagnosis",
+  "budgets_per_path": {
+    "seconds": 60.0,
+    "memory_mib": 900.0,
+    "minimum_system_available_mib": 800
+  },
+  "source_hashes": {
+    "benchmarks\\asc_revision_cpu\\probe_large_bounded.py": "2b0757fb92254606fa2901933da9f8e17bda27cebb3d375b58627db588b97e14",
+    "benchmarks\\asc_revision_cpu\\upstream_reference.py": "c7501c667f65509c7b375fd7c5291b3add074edfe3b6c5d0b76e5a7ae4d87aaa",
+    "benchmarks\\asc_large_cpu\\benchmark.py": "0da3e76c12e8bebb964a1fe3bd9097fabae8919e07f88def506d9842d9d95c29",
+    "src\\qibotn\\backends\\quimb.py": "829d4b94f5b630e34ee09c75d27f09b375ed6fbd3a6a95d573a13a94c0fecc5b",
+    "src\\qibotn\\backends\\_exact_numpy.py": "953de2012c268d85965ca33176c41e3f6f6e48ed76f5575ef3200a1e13da70fa",
+    "src\\qibotn\\backends\\_linear_cnot.py": "3c38cf9c91a8136798f8909dd841e2f66f85cf3b1d41c1916d50fa18fc3537c3",
+    "src\\qibotn\\backends\\_structured_numpy.py": "e8c68fc4ac3d490d8acae48e7bfff603353d5a50de014fe09ebe297656d4bf08",
+    "src\\qibotn\\backends\\_cnot_schedule.py": "49807da9550061c0f52a6e2d25a4441a0eabb1089371fd75db54a4714e7d0065"
+  },
+  "host": {
+    "total_memory_bytes": 16849256448,
+    "available_memory_bytes_at_start": 4594061312
+  },
+  "paths": [
+    {
+      "method": "upstream_typo_only",
+      "status": "budget_stopped",
+      "exit_code": 1,
+      "stop_reason": "process_tree_memory_budget_exceeded",
+      "elapsed_s": 30.31300000002375,
+      "peak_process_tree_rss_mib": 911.12109375,
+      "progress": {
+        "completed_quimb_apply_gate_calls": 912,
+        "observed_max_bond": 2048,
+        "latest_mps_array_bytes": 413837952,
+        "elapsed_instrumented_s": 24.70952779997606,
+        "in_flight_gate": "CX"
+      },
+      "probe": {
+        "status": "running",
+        "instrumented_resource_probe_not_formal_timing": true,
+        "qubits": 30,
+        "gates": 9998,
+        "depth": 449,
+        "qasm_sha256": "1ea5c95ebdcc651a1291dadfb7a193009377732bba8d03a01ac37ef7b82b37d4",
+        "method": "upstream_typo_only",
+        "precision": "complex128",
+        "cutoff": 0,
+        "max_bond": null,
+        "threads": 1,
+        "affinity": [
+          2,
+          4,
+          6,
+          8
+        ],
+        "original_workload": "existing asc_large_cpu Workload(30,112), not a new specially easy circuit",
+        "reference": {
+          "commit": "7ebbd4d4a00f37b898c552922953591b78b0af7e",
+          "path": "src/qibotn/backends/quimb.py",
+          "original_sha256": "1e1ada931f9fb0f9228f7190cd46f5401328b1fbec9e42f40ba9dc7fca313aca",
+          "typo_only_sha256": "1a4e2e70c05e5015006ec2cdce3b81f6d2ba463ebbf604726fbb370fe4c9f472",
+          "sole_change": "contraction_optimizer -> contractions_optimizer at the observable contraction",
+          "extra_norm_contraction": false,
+          "state_preparations_per_call": 1,
+          "algorithm_or_backend_replacement": false
+        },
+        "threadpools": [
+          {
+            "user_api": "blas",
+            "internal_api": "openblas",
+            "num_threads": 1,
+            "prefix": "libscipy_openblas",
+            "filepath": "C:\\Users\\孙逸腾\\Documents\\第二次作业\\asc_repo_repair\\ASC-QiboTN-SunYiteng\\.venv311\\Lib\\site-packages\\numpy.libs\\libscipy_openblas64_-13e2df515630b4a41f92893938845698.dll",
+            "version": "0.3.29",
+            "threading_layer": "pthreads",
+            "architecture": "Haswell"
+          },
+          {
+            "user_api": "blas",
+            "internal_api": "openblas",
+            "num_threads": 1,
+            "prefix": "libscipy_openblas",
+            "filepath": "C:\\Users\\孙逸腾\\Documents\\第二次作业\\asc_repo_repair\\ASC-QiboTN-SunYiteng\\.venv311\\Lib\\site-packages\\scipy.libs\\libscipy_openblas-64eda39e79589aedb16f58e5547eb599.dll",
+            "version": "0.3.30",
+            "threading_layer": "pthreads",
+            "architecture": "Haswell"
+          }
+        ]
+      }
+    },
+    {
+      "method": "frozen_optimized",
+      "status": "budget_stopped",
+      "exit_code": 1,
+      "stop_reason": "process_tree_memory_budget_exceeded",
+      "elapsed_s": 15.51600000000326,
+      "peak_process_tree_rss_mib": 947.60546875,
+      "progress": {
+        "completed_quimb_apply_gate_calls": 282,
+        "observed_max_bond": 2048,
+        "latest_mps_array_bytes": 413837952,
+        "elapsed_instrumented_s": 12.561713399947621,
+        "in_flight_gate": "CX"
+      },
+      "probe": {
+        "status": "running",
+        "instrumented_resource_probe_not_formal_timing": true,
+        "qubits": 30,
+        "gates": 9998,
+        "depth": 449,
+        "qasm_sha256": "1ea5c95ebdcc651a1291dadfb7a193009377732bba8d03a01ac37ef7b82b37d4",
+        "method": "frozen_optimized",
+        "precision": "complex128",
+        "cutoff": 0,
+        "max_bond": null,
+        "threads": 1,
+        "affinity": [
+          2,
+          4,
+          6,
+          8
+        ],
+        "original_workload": "existing asc_large_cpu Workload(30,112), not a new specially easy circuit",
+        "threadpools": [
+          {
+            "user_api": "blas",
+            "internal_api": "openblas",
+            "num_threads": 1,
+            "prefix": "libscipy_openblas",
+            "filepath": "C:\\Users\\孙逸腾\\Documents\\第二次作业\\asc_repo_repair\\ASC-QiboTN-SunYiteng\\.venv311\\Lib\\site-packages\\numpy.libs\\libscipy_openblas64_-13e2df515630b4a41f92893938845698.dll",
+            "version": "0.3.29",
+            "threading_layer": "pthreads",
+            "architecture": "Haswell"
+          },
+          {
+            "user_api": "blas",
+            "internal_api": "openblas",
+            "num_threads": 1,
+            "prefix": "libscipy_openblas",
+            "filepath": "C:\\Users\\孙逸腾\\Documents\\第二次作业\\asc_repo_repair\\ASC-QiboTN-SunYiteng\\.venv311\\Lib\\site-packages\\scipy.libs\\libscipy_openblas-64eda39e79589aedb16f58e5547eb599.dll",
+            "version": "0.3.30",
+            "threading_layer": "pthreads",
+            "architecture": "Haswell"
+          }
+        ]
+      }
+    }
+  ],
+  "status": "diagnosis_complete_not_acceptance"
+}

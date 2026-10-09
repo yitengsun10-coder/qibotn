@@ -1,0 +1,15 @@
+C:\Users\孙逸腾\Documents\第二次作业\asc_repo_repair\ASC-QiboTN-SunYiteng\.venv311\Lib\site-packages\cotengra\hyperoptimizers\hyper.py:36: UserWarning: Couldn't import `kahypar` - skipping from default hyper optimizer and using basic `labels` method instead. `kahypar` is highly recommended for the best quality contraction paths.
+  warnings.warn(
+{"method": "upstream_typo_only", "repeat": 0, "runtime_s": 38.764486100000795, "abs_error": 2.417770844642675e-16}
+{"method": "prior_default", "repeat": 0, "runtime_s": 10.79941710003186, "abs_error": 2.6042536183101817e-16}
+{"method": "integrated", "repeat": 0, "runtime_s": 7.850223099987488, "abs_error": 1.689186984732416e-16}
+{"method": "integrated", "repeat": 1, "runtime_s": 8.140786600008141, "abs_error": 1.689186984732416e-16}
+{"method": "prior_default", "repeat": 1, "runtime_s": 11.070863400003873, "abs_error": 2.6042536183101817e-16}
+{"method": "upstream_typo_only", "repeat": 1, "runtime_s": 38.69256909994874, "abs_error": 2.417770844642675e-16}
+{"method": "upstream_typo_only", "repeat": 2, "runtime_s": 38.87172300001839, "abs_error": 2.417770844642675e-16}
+{"method": "prior_default", "repeat": 2, "runtime_s": 10.752731800021138, "abs_error": 2.6042536183101817e-16}
+{"method": "integrated", "repeat": 2, "runtime_s": 7.95264940004563, "abs_error": 1.689186984732416e-16}
+{"method": "integrated", "repeat": 3, "runtime_s": 7.821913600026164, "abs_error": 1.689186984732416e-16}
+{"method": "prior_default", "repeat": 3, "runtime_s": 10.632243899977766, "abs_error": 2.6042536183101817e-16}
+{"method": "upstream_typo_only", "repeat": 3, "runtime_s": 38.87054559995886, "abs_error": 2.417770844642675e-16}
+{"status": "pass", "means_s": {"upstream_typo_only": 38.811612566642, "prior_default": 10.818613033334259, "integrated": 7.971783200026645}, "speedups_vs_upstream": {"prior_default": 3.5874850544201777, "integrated": 4.868623693443177}}

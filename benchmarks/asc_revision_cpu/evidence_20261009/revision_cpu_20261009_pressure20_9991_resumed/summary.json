@@ -1,0 +1,16 @@
+{
+  "status": "pass",
+  "exit_code": 0,
+  "stop_reason": null,
+  "elapsed_s": 2993.2970000000205,
+  "peak_process_tree_rss_mib": 405.40625,
+  "calibration_only": false,
+  "original_segment_exit_code": 1,
+  "original_segment_stop_reason": "wall_clock_budget_exceeded",
+  "segmented_run_disclosed": true,
+  "formal_30q_acceptance_complete": false,
+  "budgets": {
+    "seconds": 5400.0,
+    "memory_mib": 1800.0
+  }
+}
