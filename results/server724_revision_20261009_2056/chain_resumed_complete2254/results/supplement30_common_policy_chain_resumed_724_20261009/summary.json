@@ -1,0 +1,180 @@
+{
+  "recorded_at": "2026-10-09T21:52:29.718290+08:00",
+  "status": "complete_chain_only",
+  "smoke_only": false,
+  "execute_requested": true,
+  "original30_complete": false,
+  "all_contest_tasks_complete": false,
+  "supplement30_suite_complete": false,
+  "source_hashes": {
+    "src/qibotn/backends/quimb.py": "9e2f24828e12f567fa8d23d35f4971b99390876ec8a8fc0c87de0b7dee201092",
+    "src/qibotn/backends/_exact_numpy.py": "953de2012c268d85965ca33176c41e3f6f6e48ed76f5575ef3200a1e13da70fa",
+    "src/qibotn/backends/_linear_cnot.py": "3c38cf9c91a8136798f8909dd841e2f66f85cf3b1d41c1916d50fa18fc3537c3",
+    "src/qibotn/backends/_structured_numpy.py": "e8c68fc4ac3d490d8acae48e7bfff603353d5a50de014fe09ebe297656d4bf08",
+    "src/qibotn/backends/_cnot_schedule.py": "49807da9550061c0f52a6e2d25a4441a0eabb1089371fd75db54a4714e7d0065",
+    "src/qibotn/backends/_mixed_schedule.py": "29217f62093d2d2f741cfedb011052c2da40a2def1f70bf6c41549c1f02d0fbd",
+    "benchmarks/asc_revision_cpu/paired_supplement30_common_policy.py": "5e79791931d9f5e927504e51788ddc84bfdda3cf3fe53edf369769211963d401",
+    "benchmarks/asc_revision_cpu/common_qr_thread_policy.py": "38e8a86a70402be38f771b1317258a0f81da0c6a987ddba45c1cbbf2b43a77f9",
+    "benchmarks/asc_revision_cpu/candidate_controlled_rank2.py": "623d590ba7ff529b2026eaea5fe85bf40cd733225d7c6d70a66c8279c3ea8466",
+    "benchmarks/asc_revision_cpu/supplement30_workloads.py": "12140e8d9a1bb6f89b0543e4ddbdd2b4008754f504eabf7ef735edd503ec112d",
+    "benchmarks/asc_revision_cpu/upstream_reference.py": "c7501c667f65509c7b375fd7c5291b3add074edfe3b6c5d0b76e5a7ae4d87aaa",
+    "benchmarks/asc_revision_cpu/profile_fixed30_bounded.py": "d04dadb4da7e3236496bfa5010736be106d5daced5d4963b5dadae3e660ce5c4",
+    "benchmarks/asc_revision_cpu/paired_supplement30.py": "5f6b3d3f0c144017d08181f0f8531868dde4f349a75f7057003ef6fac4e7bf1a",
+    "benchmarks/asc_large_cpu/benchmark.py": "0da3e76c12e8bebb964a1fe3bd9097fabae8919e07f88def506d9842d9d95c29",
+    "benchmarks/asc_revision_cpu/resume_common_policy_chain.py": "d0491d0c982983896d86d2e7f4b6f7756508b80e30545729c57665d33a534562"
+  },
+  "workloads": [
+    {
+      "kind": "chain",
+      "seed": 20261101,
+      "qubits": 30,
+      "gates": 9693,
+      "depth": 445,
+      "input_sha256": "242c3a4c686f8c1e193ec1babb908c3af8b9d9d8729ebfcd27576ae1196cb7d9",
+      "input_format": "canonical JSON gate record; fSim is not supported by Qibo OpenQASM exporter",
+      "gate_counts": {
+        "h": 30,
+        "rx": 3330,
+        "ry": 3330,
+        "cx": 2999,
+        "cy": 2,
+        "cz": 2
+      },
+      "distinct_two_qubit_edges": 29,
+      "bridge_gate_count": 6,
+      "group_size": 10,
+      "structure_limit": "three regions with six controlled bridge gates; bounded inter-region entanglement, not generic30",
+      "precision": "complex128",
+      "cutoff": 0,
+      "max_bond": null,
+      "replaces_original30": false
+    },
+    {
+      "kind": "ring",
+      "seed": 20261102,
+      "qubits": 30,
+      "gates": 10026,
+      "depth": 448,
+      "input_sha256": "8038654fef846632ac598f46315515c697c0f353274413f1229a02236b654bb2",
+      "input_format": "canonical JSON gate record; fSim is not supported by Qibo OpenQASM exporter",
+      "gate_counts": {
+        "h": 30,
+        "rx": 3330,
+        "ry": 3330,
+        "cx": 1667,
+        "cz": 1667,
+        "cy": 2
+      },
+      "distinct_two_qubit_edges": 32,
+      "bridge_gate_count": 6,
+      "group_size": 10,
+      "structure_limit": "three regions with six controlled bridge gates; bounded inter-region entanglement, not generic30",
+      "precision": "complex128",
+      "cutoff": 0,
+      "max_bond": null,
+      "replaces_original30": false
+    },
+    {
+      "kind": "nonlocal_mixed",
+      "seed": 20261103,
+      "qubits": 30,
+      "gates": 10026,
+      "depth": 448,
+      "input_sha256": "7fb378448ca1f24cf9321216a17048bee5bc28668ba569f620911f38e0a84500",
+      "input_format": "canonical JSON gate record; fSim is not supported by Qibo OpenQASM exporter",
+      "gate_counts": {
+        "h": 30,
+        "rx": 3330,
+        "ry": 3330,
+        "cx": 696,
+        "iswap": 671,
+        "cz": 664,
+        "cy": 687,
+        "fsim": 618
+      },
+      "distinct_two_qubit_edges": 137,
+      "bridge_gate_count": 6,
+      "group_size": 10,
+      "structure_limit": "three regions with six controlled bridge gates; bounded inter-region entanglement, not generic30",
+      "precision": "complex128",
+      "cutoff": 0,
+      "max_bond": null,
+      "replaces_original30": false
+    }
+  ],
+  "common_policy": "same size-only QR policy for native official, integrated, rank2; other BLAS=1; affinity first16",
+  "budgets_per_case": {
+    "seconds": 7200.0,
+    "rss_mib": 12288.0,
+    "reserve_mib": 2048
+  },
+  "environment": {
+    "python": "3.12.3 | packaged by Anaconda, Inc. | (main, May  6 2024, 19:46:43) [GCC 11.2.0]",
+    "platform": "Linux-5.15.0-78-generic-x86_64-with-glibc2.35",
+    "memory": {
+      "available_bytes": 62937464832,
+      "cgroup_limit_bytes": 64424509440,
+      "cgroup_used_bytes": 1487044608,
+      "host_available_bytes": 338866741248
+    },
+    "affinity": [
+      160,
+      161,
+      162,
+      163,
+      164,
+      165,
+      166,
+      167,
+      168,
+      169,
+      170,
+      171,
+      172,
+      173,
+      174,
+      175,
+      176,
+      177,
+      178,
+      179,
+      180,
+      181,
+      182,
+      183,
+      184,
+      185,
+      186,
+      187,
+      188,
+      189,
+      190,
+      191
+    ],
+    "versions": {
+      "qibo": "0.3.2",
+      "quimb": "1.13.0",
+      "numpy": "2.2.6",
+      "scipy": "1.17.1",
+      "threadpoolctl": "3.7.0",
+      "psutil": "5.9.8"
+    }
+  },
+  "cases": [
+    {
+      "kind": "chain",
+      "exit_code": 0,
+      "stop_reason": null,
+      "wall_s": 3468.809409879148,
+      "peak_process_tree_rss_bytes": 1161949184,
+      "pass": true
+    }
+  ],
+  "not_run_after_failure": [
+    "ring",
+    "nonlocal_mixed"
+  ],
+  "source_unchanged": true,
+  "segmented_run_disclosed": true,
+  "chain_continuation_complete": true
+}

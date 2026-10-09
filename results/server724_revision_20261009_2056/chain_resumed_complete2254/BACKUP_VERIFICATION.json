@@ -1,0 +1,298 @@
+{
+  "status": "transport_and_raw_snapshot_verification_only",
+  "archive_sha256": "7b79b9e78d2b694c5439b5dd69fc5d48d31a7711a7d636899895eed954bb3b0a",
+  "archive_bytes": 285205,
+  "files_verified": 42,
+  "source_snapshots_verified": 29,
+  "members": {
+    "results/supplement30_common_policy_chain_resumed_724_20261009/prior_segment/source_snapshot/src/qibotn/backends/quimb.py": {
+      "bytes": 26325,
+      "sha256": "9e2f24828e12f567fa8d23d35f4971b99390876ec8a8fc0c87de0b7dee201092"
+    },
+    "results/supplement30_common_policy_chain_resumed_724_20261009/prior_segment/source_snapshot/src/qibotn/backends/_exact_numpy.py": {
+      "bytes": 15052,
+      "sha256": "953de2012c268d85965ca33176c41e3f6f6e48ed76f5575ef3200a1e13da70fa"
+    },
+    "results/supplement30_common_policy_chain_resumed_724_20261009/prior_segment/source_snapshot/src/qibotn/backends/_linear_cnot.py": {
+      "bytes": 7999,
+      "sha256": "3c38cf9c91a8136798f8909dd841e2f66f85cf3b1d41c1916d50fa18fc3537c3"
+    },
+    "results/supplement30_common_policy_chain_resumed_724_20261009/prior_segment/source_snapshot/src/qibotn/backends/_structured_numpy.py": {
+      "bytes": 6861,
+      "sha256": "e8c68fc4ac3d490d8acae48e7bfff603353d5a50de014fe09ebe297656d4bf08"
+    },
+    "results/supplement30_common_policy_chain_resumed_724_20261009/prior_segment/source_snapshot/src/qibotn/backends/_cnot_schedule.py": {
+      "bytes": 6145,
+      "sha256": "49807da9550061c0f52a6e2d25a4441a0eabb1089371fd75db54a4714e7d0065"
+    },
+    "results/supplement30_common_policy_chain_resumed_724_20261009/prior_segment/source_snapshot/src/qibotn/backends/_mixed_schedule.py": {
+      "bytes": 6561,
+      "sha256": "29217f62093d2d2f741cfedb011052c2da40a2def1f70bf6c41549c1f02d0fbd"
+    },
+    "results/supplement30_common_policy_chain_resumed_724_20261009/prior_segment/source_snapshot/benchmarks/asc_revision_cpu/paired_supplement30_common_policy.py": {
+      "bytes": 12665,
+      "sha256": "5e79791931d9f5e927504e51788ddc84bfdda3cf3fe53edf369769211963d401"
+    },
+    "results/supplement30_common_policy_chain_resumed_724_20261009/prior_segment/source_snapshot/benchmarks/asc_revision_cpu/common_qr_thread_policy.py": {
+      "bytes": 1395,
+      "sha256": "38e8a86a70402be38f771b1317258a0f81da0c6a987ddba45c1cbbf2b43a77f9"
+    },
+    "results/supplement30_common_policy_chain_resumed_724_20261009/prior_segment/source_snapshot/benchmarks/asc_revision_cpu/candidate_controlled_rank2.py": {
+      "bytes": 3651,
+      "sha256": "623d590ba7ff529b2026eaea5fe85bf40cd733225d7c6d70a66c8279c3ea8466"
+    },
+    "results/supplement30_common_policy_chain_resumed_724_20261009/prior_segment/source_snapshot/benchmarks/asc_revision_cpu/supplement30_workloads.py": {
+      "bytes": 9851,
+      "sha256": "12140e8d9a1bb6f89b0543e4ddbdd2b4008754f504eabf7ef735edd503ec112d"
+    },
+    "results/supplement30_common_policy_chain_resumed_724_20261009/prior_segment/source_snapshot/benchmarks/asc_revision_cpu/upstream_reference.py": {
+      "bytes": 1885,
+      "sha256": "c7501c667f65509c7b375fd7c5291b3add074edfe3b6c5d0b76e5a7ae4d87aaa"
+    },
+    "results/supplement30_common_policy_chain_resumed_724_20261009/prior_segment/source_snapshot/benchmarks/asc_revision_cpu/profile_fixed30_bounded.py": {
+      "bytes": 20141,
+      "sha256": "d04dadb4da7e3236496bfa5010736be106d5daced5d4963b5dadae3e660ce5c4"
+    },
+    "results/supplement30_common_policy_chain_resumed_724_20261009/prior_segment/source_snapshot/benchmarks/asc_revision_cpu/paired_supplement30.py": {
+      "bytes": 14776,
+      "sha256": "5f6b3d3f0c144017d08181f0f8531868dde4f349a75f7057003ef6fac4e7bf1a"
+    },
+    "results/supplement30_common_policy_chain_resumed_724_20261009/prior_segment/source_snapshot/benchmarks/asc_large_cpu/benchmark.py": {
+      "bytes": 19063,
+      "sha256": "0da3e76c12e8bebb964a1fe3bd9097fabae8919e07f88def506d9842d9d95c29"
+    },
+    "results/supplement30_common_policy_chain_resumed_724_20261009/prior_segment/summary.json": {
+      "bytes": 5859,
+      "sha256": "9aabc5acc09ba7826e6fad3b2c3a333799f4121129510bff6271f00f0bafc87d"
+    },
+    "results/supplement30_common_policy_chain_resumed_724_20261009/prior_segment/chain/run.log": {
+      "bytes": 1446,
+      "sha256": "8e93db315a6553d1b0cf78d7957447fa0403c77103dcc0771f49a0398d91c521"
+    },
+    "results/supplement30_common_policy_chain_resumed_724_20261009/prior_segment/chain/input.json": {
+      "bytes": 553214,
+      "sha256": "242c3a4c686f8c1e193ec1babb908c3af8b9d9d8729ebfcd27576ae1196cb7d9"
+    },
+    "results/supplement30_common_policy_chain_resumed_724_20261009/prior_segment/chain/upstream_quimb_original.py": {
+      "bytes": 12228,
+      "sha256": "1e1ada931f9fb0f9228f7190cd46f5401328b1fbec9e42f40ba9dc7fca313aca"
+    },
+    "results/supplement30_common_policy_chain_resumed_724_20261009/prior_segment/chain/upstream_quimb_typo_only.py": {
+      "bytes": 12229,
+      "sha256": "1a4e2e70c05e5015006ec2cdce3b81f6d2ba463ebbf604726fbb370fe4c9f472"
+    },
+    "results/supplement30_common_policy_chain_resumed_724_20261009/prior_segment/chain/result.json": {
+      "bytes": 9370,
+      "sha256": "4fa79f4fb9d15f0ee14d2be3c93bcc3c82e407e15b313c5619104abe5825ab09"
+    },
+    "results/supplement30_common_policy_chain_resumed_724_20261009/source_snapshot/src/qibotn/backends/quimb.py": {
+      "bytes": 26325,
+      "sha256": "9e2f24828e12f567fa8d23d35f4971b99390876ec8a8fc0c87de0b7dee201092"
+    },
+    "results/supplement30_common_policy_chain_resumed_724_20261009/source_snapshot/src/qibotn/backends/_exact_numpy.py": {
+      "bytes": 15052,
+      "sha256": "953de2012c268d85965ca33176c41e3f6f6e48ed76f5575ef3200a1e13da70fa"
+    },
+    "results/supplement30_common_policy_chain_resumed_724_20261009/source_snapshot/src/qibotn/backends/_linear_cnot.py": {
+      "bytes": 7999,
+      "sha256": "3c38cf9c91a8136798f8909dd841e2f66f85cf3b1d41c1916d50fa18fc3537c3"
+    },
+    "results/supplement30_common_policy_chain_resumed_724_20261009/source_snapshot/src/qibotn/backends/_structured_numpy.py": {
+      "bytes": 6861,
+      "sha256": "e8c68fc4ac3d490d8acae48e7bfff603353d5a50de014fe09ebe297656d4bf08"
+    },
+    "results/supplement30_common_policy_chain_resumed_724_20261009/source_snapshot/src/qibotn/backends/_cnot_schedule.py": {
+      "bytes": 6145,
+      "sha256": "49807da9550061c0f52a6e2d25a4441a0eabb1089371fd75db54a4714e7d0065"
+    },
+    "results/supplement30_common_policy_chain_resumed_724_20261009/source_snapshot/src/qibotn/backends/_mixed_schedule.py": {
+      "bytes": 6561,
+      "sha256": "29217f62093d2d2f741cfedb011052c2da40a2def1f70bf6c41549c1f02d0fbd"
+    },
+    "results/supplement30_common_policy_chain_resumed_724_20261009/source_snapshot/benchmarks/asc_revision_cpu/paired_supplement30_common_policy.py": {
+      "bytes": 12665,
+      "sha256": "5e79791931d9f5e927504e51788ddc84bfdda3cf3fe53edf369769211963d401"
+    },
+    "results/supplement30_common_policy_chain_resumed_724_20261009/source_snapshot/benchmarks/asc_revision_cpu/common_qr_thread_policy.py": {
+      "bytes": 1395,
+      "sha256": "38e8a86a70402be38f771b1317258a0f81da0c6a987ddba45c1cbbf2b43a77f9"
+    },
+    "results/supplement30_common_policy_chain_resumed_724_20261009/source_snapshot/benchmarks/asc_revision_cpu/candidate_controlled_rank2.py": {
+      "bytes": 3651,
+      "sha256": "623d590ba7ff529b2026eaea5fe85bf40cd733225d7c6d70a66c8279c3ea8466"
+    },
+    "results/supplement30_common_policy_chain_resumed_724_20261009/source_snapshot/benchmarks/asc_revision_cpu/supplement30_workloads.py": {
+      "bytes": 9851,
+      "sha256": "12140e8d9a1bb6f89b0543e4ddbdd2b4008754f504eabf7ef735edd503ec112d"
+    },
+    "results/supplement30_common_policy_chain_resumed_724_20261009/source_snapshot/benchmarks/asc_revision_cpu/upstream_reference.py": {
+      "bytes": 1885,
+      "sha256": "c7501c667f65509c7b375fd7c5291b3add074edfe3b6c5d0b76e5a7ae4d87aaa"
+    },
+    "results/supplement30_common_policy_chain_resumed_724_20261009/source_snapshot/benchmarks/asc_revision_cpu/profile_fixed30_bounded.py": {
+      "bytes": 20141,
+      "sha256": "d04dadb4da7e3236496bfa5010736be106d5daced5d4963b5dadae3e660ce5c4"
+    },
+    "results/supplement30_common_policy_chain_resumed_724_20261009/source_snapshot/benchmarks/asc_revision_cpu/paired_supplement30.py": {
+      "bytes": 14776,
+      "sha256": "5f6b3d3f0c144017d08181f0f8531868dde4f349a75f7057003ef6fac4e7bf1a"
+    },
+    "results/supplement30_common_policy_chain_resumed_724_20261009/source_snapshot/benchmarks/asc_revision_cpu/resume_common_policy_chain.py": {
+      "bytes": 16348,
+      "sha256": "d0491d0c982983896d86d2e7f4b6f7756508b80e30545729c57665d33a534562"
+    },
+    "results/supplement30_common_policy_chain_resumed_724_20261009/source_snapshot/benchmarks/asc_large_cpu/benchmark.py": {
+      "bytes": 19063,
+      "sha256": "0da3e76c12e8bebb964a1fe3bd9097fabae8919e07f88def506d9842d9d95c29"
+    },
+    "results/supplement30_common_policy_chain_resumed_724_20261009/chain/input.json": {
+      "bytes": 553214,
+      "sha256": "242c3a4c686f8c1e193ec1babb908c3af8b9d9d8729ebfcd27576ae1196cb7d9"
+    },
+    "results/supplement30_common_policy_chain_resumed_724_20261009/chain/upstream_quimb_original.py": {
+      "bytes": 12228,
+      "sha256": "1e1ada931f9fb0f9228f7190cd46f5401328b1fbec9e42f40ba9dc7fca313aca"
+    },
+    "results/supplement30_common_policy_chain_resumed_724_20261009/chain/upstream_quimb_typo_only.py": {
+      "bytes": 12229,
+      "sha256": "1a4e2e70c05e5015006ec2cdce3b81f6d2ba463ebbf604726fbb370fe4c9f472"
+    },
+    "results/supplement30_common_policy_chain_resumed_724_20261009/chain/result.json": {
+      "bytes": 18237,
+      "sha256": "6c088b57dd2b83ef44dad68fa60fc4ba5438480771b571ac5a0690b2b83a32dc"
+    },
+    "results/supplement30_common_policy_chain_resumed_724_20261009/chain/run.log": {
+      "bytes": 3104,
+      "sha256": "5d98fd2eead7913008fd29f439de90b5057a31434ce2444d4ff4605f8a3d7430"
+    },
+    "results/supplement30_common_policy_chain_resumed_724_20261009/summary.json": {
+      "bytes": 6049,
+      "sha256": "4c91605fcd95f608491bfe9c6a249af91b80df549873eaf575e8af47d372b2c4"
+    },
+    "results/supplement30_common_policy_chain_resumed_724_20261009/run_metadata.json": {
+      "bytes": 541,
+      "sha256": "4ee64bc5c50fd1acc3765f7cc6d456d6525fdbdbb18acb62238c63eb24004b5e"
+    }
+  },
+  "source_snapshots": [
+    {
+      "path": "results/supplement30_common_policy_chain_resumed_724_20261009/prior_segment/source_snapshot/src/qibotn/backends/quimb.py",
+      "sha256": "9e2f24828e12f567fa8d23d35f4971b99390876ec8a8fc0c87de0b7dee201092"
+    },
+    {
+      "path": "results/supplement30_common_policy_chain_resumed_724_20261009/prior_segment/source_snapshot/src/qibotn/backends/_exact_numpy.py",
+      "sha256": "953de2012c268d85965ca33176c41e3f6f6e48ed76f5575ef3200a1e13da70fa"
+    },
+    {
+      "path": "results/supplement30_common_policy_chain_resumed_724_20261009/prior_segment/source_snapshot/src/qibotn/backends/_linear_cnot.py",
+      "sha256": "3c38cf9c91a8136798f8909dd841e2f66f85cf3b1d41c1916d50fa18fc3537c3"
+    },
+    {
+      "path": "results/supplement30_common_policy_chain_resumed_724_20261009/prior_segment/source_snapshot/src/qibotn/backends/_structured_numpy.py",
+      "sha256": "e8c68fc4ac3d490d8acae48e7bfff603353d5a50de014fe09ebe297656d4bf08"
+    },
+    {
+      "path": "results/supplement30_common_policy_chain_resumed_724_20261009/prior_segment/source_snapshot/src/qibotn/backends/_cnot_schedule.py",
+      "sha256": "49807da9550061c0f52a6e2d25a4441a0eabb1089371fd75db54a4714e7d0065"
+    },
+    {
+      "path": "results/supplement30_common_policy_chain_resumed_724_20261009/prior_segment/source_snapshot/src/qibotn/backends/_mixed_schedule.py",
+      "sha256": "29217f62093d2d2f741cfedb011052c2da40a2def1f70bf6c41549c1f02d0fbd"
+    },
+    {
+      "path": "results/supplement30_common_policy_chain_resumed_724_20261009/prior_segment/source_snapshot/benchmarks/asc_revision_cpu/paired_supplement30_common_policy.py",
+      "sha256": "5e79791931d9f5e927504e51788ddc84bfdda3cf3fe53edf369769211963d401"
+    },
+    {
+      "path": "results/supplement30_common_policy_chain_resumed_724_20261009/prior_segment/source_snapshot/benchmarks/asc_revision_cpu/common_qr_thread_policy.py",
+      "sha256": "38e8a86a70402be38f771b1317258a0f81da0c6a987ddba45c1cbbf2b43a77f9"
+    },
+    {
+      "path": "results/supplement30_common_policy_chain_resumed_724_20261009/prior_segment/source_snapshot/benchmarks/asc_revision_cpu/candidate_controlled_rank2.py",
+      "sha256": "623d590ba7ff529b2026eaea5fe85bf40cd733225d7c6d70a66c8279c3ea8466"
+    },
+    {
+      "path": "results/supplement30_common_policy_chain_resumed_724_20261009/prior_segment/source_snapshot/benchmarks/asc_revision_cpu/supplement30_workloads.py",
+      "sha256": "12140e8d9a1bb6f89b0543e4ddbdd2b4008754f504eabf7ef735edd503ec112d"
+    },
+    {
+      "path": "results/supplement30_common_policy_chain_resumed_724_20261009/prior_segment/source_snapshot/benchmarks/asc_revision_cpu/upstream_reference.py",
+      "sha256": "c7501c667f65509c7b375fd7c5291b3add074edfe3b6c5d0b76e5a7ae4d87aaa"
+    },
+    {
+      "path": "results/supplement30_common_policy_chain_resumed_724_20261009/prior_segment/source_snapshot/benchmarks/asc_revision_cpu/profile_fixed30_bounded.py",
+      "sha256": "d04dadb4da7e3236496bfa5010736be106d5daced5d4963b5dadae3e660ce5c4"
+    },
+    {
+      "path": "results/supplement30_common_policy_chain_resumed_724_20261009/prior_segment/source_snapshot/benchmarks/asc_revision_cpu/paired_supplement30.py",
+      "sha256": "5f6b3d3f0c144017d08181f0f8531868dde4f349a75f7057003ef6fac4e7bf1a"
+    },
+    {
+      "path": "results/supplement30_common_policy_chain_resumed_724_20261009/prior_segment/source_snapshot/benchmarks/asc_large_cpu/benchmark.py",
+      "sha256": "0da3e76c12e8bebb964a1fe3bd9097fabae8919e07f88def506d9842d9d95c29"
+    },
+    {
+      "path": "results/supplement30_common_policy_chain_resumed_724_20261009/source_snapshot/src/qibotn/backends/quimb.py",
+      "sha256": "9e2f24828e12f567fa8d23d35f4971b99390876ec8a8fc0c87de0b7dee201092"
+    },
+    {
+      "path": "results/supplement30_common_policy_chain_resumed_724_20261009/source_snapshot/src/qibotn/backends/_exact_numpy.py",
+      "sha256": "953de2012c268d85965ca33176c41e3f6f6e48ed76f5575ef3200a1e13da70fa"
+    },
+    {
+      "path": "results/supplement30_common_policy_chain_resumed_724_20261009/source_snapshot/src/qibotn/backends/_linear_cnot.py",
+      "sha256": "3c38cf9c91a8136798f8909dd841e2f66f85cf3b1d41c1916d50fa18fc3537c3"
+    },
+    {
+      "path": "results/supplement30_common_policy_chain_resumed_724_20261009/source_snapshot/src/qibotn/backends/_structured_numpy.py",
+      "sha256": "e8c68fc4ac3d490d8acae48e7bfff603353d5a50de014fe09ebe297656d4bf08"
+    },
+    {
+      "path": "results/supplement30_common_policy_chain_resumed_724_20261009/source_snapshot/src/qibotn/backends/_cnot_schedule.py",
+      "sha256": "49807da9550061c0f52a6e2d25a4441a0eabb1089371fd75db54a4714e7d0065"
+    },
+    {
+      "path": "results/supplement30_common_policy_chain_resumed_724_20261009/source_snapshot/src/qibotn/backends/_mixed_schedule.py",
+      "sha256": "29217f62093d2d2f741cfedb011052c2da40a2def1f70bf6c41549c1f02d0fbd"
+    },
+    {
+      "path": "results/supplement30_common_policy_chain_resumed_724_20261009/source_snapshot/benchmarks/asc_revision_cpu/paired_supplement30_common_policy.py",
+      "sha256": "5e79791931d9f5e927504e51788ddc84bfdda3cf3fe53edf369769211963d401"
+    },
+    {
+      "path": "results/supplement30_common_policy_chain_resumed_724_20261009/source_snapshot/benchmarks/asc_revision_cpu/common_qr_thread_policy.py",
+      "sha256": "38e8a86a70402be38f771b1317258a0f81da0c6a987ddba45c1cbbf2b43a77f9"
+    },
+    {
+      "path": "results/supplement30_common_policy_chain_resumed_724_20261009/source_snapshot/benchmarks/asc_revision_cpu/candidate_controlled_rank2.py",
+      "sha256": "623d590ba7ff529b2026eaea5fe85bf40cd733225d7c6d70a66c8279c3ea8466"
+    },
+    {
+      "path": "results/supplement30_common_policy_chain_resumed_724_20261009/source_snapshot/benchmarks/asc_revision_cpu/supplement30_workloads.py",
+      "sha256": "12140e8d9a1bb6f89b0543e4ddbdd2b4008754f504eabf7ef735edd503ec112d"
+    },
+    {
+      "path": "results/supplement30_common_policy_chain_resumed_724_20261009/source_snapshot/benchmarks/asc_revision_cpu/upstream_reference.py",
+      "sha256": "c7501c667f65509c7b375fd7c5291b3add074edfe3b6c5d0b76e5a7ae4d87aaa"
+    },
+    {
+      "path": "results/supplement30_common_policy_chain_resumed_724_20261009/source_snapshot/benchmarks/asc_revision_cpu/profile_fixed30_bounded.py",
+      "sha256": "d04dadb4da7e3236496bfa5010736be106d5daced5d4963b5dadae3e660ce5c4"
+    },
+    {
+      "path": "results/supplement30_common_policy_chain_resumed_724_20261009/source_snapshot/benchmarks/asc_revision_cpu/paired_supplement30.py",
+      "sha256": "5f6b3d3f0c144017d08181f0f8531868dde4f349a75f7057003ef6fac4e7bf1a"
+    },
+    {
+      "path": "results/supplement30_common_policy_chain_resumed_724_20261009/source_snapshot/benchmarks/asc_large_cpu/benchmark.py",
+      "sha256": "0da3e76c12e8bebb964a1fe3bd9097fabae8919e07f88def506d9842d9d95c29"
+    },
+    {
+      "path": "results/supplement30_common_policy_chain_resumed_724_20261009/source_snapshot/benchmarks/asc_revision_cpu/resume_common_policy_chain.py",
+      "sha256": "d0491d0c982983896d86d2e7f4b6f7756508b80e30545729c57665d33a534562"
+    }
+  ],
+  "original30_complete": false,
+  "all_contest_tasks_complete": false,
+  "performance_acceptance_audit_performed": false
+}

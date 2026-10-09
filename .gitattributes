@@ -1,4 +1,5 @@
 # Delivered report hashes refer to exact bytes on all platforms.
+README.md -text
 benchmarks/asc_large_cpu/final_report/** -text
 # Benchmark snapshots and current production hashes refer to raw measured bytes.
 benchmarks/asc_revision_cpu/** -text
@@ -16,3 +17,5 @@ results/validation_*common_policy* -text
 results/validation_724* -text
 results/validation_stage724* -text
 results/audit_common_policy_* -text
+results/validation_package_completed_chain* -text
+results/validation_chunk_transport_724* -text

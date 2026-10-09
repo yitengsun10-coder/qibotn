@@ -22,11 +22,12 @@ def test_reject_link_and_duplicate():
         validate_members([tarfile.TarInfo('results/a'), tarfile.TarInfo('results/a')])
 
 
-def test_transport_and_snapshot_checks(tmp_path):
+@pytest.mark.parametrize('mode,suffix', [('w', '.tar'), ('w:gz', '.tar.gz')])
+def test_transport_and_snapshot_checks(tmp_path, mode, suffix):
     source = b'# raw source\r\n'
     summary = json.dumps({'source_hashes': {'test.py': hashlib.sha256(source).hexdigest()}}).encode()
-    path = tmp_path / 'evidence.tar'
-    with tarfile.open(path, 'w') as archive:
+    path = tmp_path / ('evidence' + suffix)
+    with tarfile.open(path, mode) as archive:
         for name, data in [('results/case/summary.json', summary),
                            ('results/case/source_snapshot/test.py', source)]:
             member = tarfile.TarInfo(name); member.size = len(data)

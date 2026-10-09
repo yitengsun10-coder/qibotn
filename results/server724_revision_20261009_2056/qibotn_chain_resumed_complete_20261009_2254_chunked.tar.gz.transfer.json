@@ -1,0 +1,273 @@
+{
+  "status": "transport_only",
+  "remote_archive": "/root/autodl-tmp/qibotn_chain_resumed_complete_20261009_2254.tar.gz",
+  "bytes": 285205,
+  "sha256": "7b79b9e78d2b694c5439b5dd69fc5d48d31a7711a7d636899895eed954bb3b0a",
+  "chunks": [
+    {
+      "index": 0,
+      "bytes": 8192,
+      "sha256": "e2f3f6d8812733657878b55235b040b923216d5b0e0ed2dd1366fec2cc612af8",
+      "attempts": 1,
+      "prior_errors": []
+    },
+    {
+      "index": 1,
+      "bytes": 8192,
+      "sha256": "89eaf34397cf04997aaa5026b3eb400bf9c4a91b8b12de67860f6c680eb5a196",
+      "attempts": 1,
+      "prior_errors": []
+    },
+    {
+      "index": 2,
+      "bytes": 8192,
+      "sha256": "0af347eb2be40feb2a9c7e8de59731d65c7f71e609215ce297726f0c4a8b267e",
+      "attempts": 1,
+      "prior_errors": []
+    },
+    {
+      "index": 3,
+      "bytes": 8192,
+      "sha256": "168c3b8ea40651962e98eb8a1b6328eaaebaa2b28ab0d8f8cd3e8f65ca33babf",
+      "attempts": 1,
+      "prior_errors": []
+    },
+    {
+      "index": 4,
+      "bytes": 8192,
+      "sha256": "edb99d390a285117cae8bc7c9782cabae34fad7192797f55fe5b9dbb91eb0da7",
+      "attempts": 3,
+      "prior_errors": [
+        "TimeoutExpired",
+        "CalledProcessError"
+      ]
+    },
+    {
+      "index": 5,
+      "bytes": 8192,
+      "sha256": "9cc06f65e61d87b800a338bf5e1cca68bc3835179de77975fe21b932f2b9e3ac",
+      "attempts": 1,
+      "prior_errors": []
+    },
+    {
+      "index": 6,
+      "bytes": 8192,
+      "sha256": "7b3365824f50a7fb92f16be53a148d4894486b566443cfcf0e0cdfd72d7b15e4",
+      "attempts": 2,
+      "prior_errors": [
+        "CalledProcessError"
+      ]
+    },
+    {
+      "index": 7,
+      "bytes": 8192,
+      "sha256": "d5bea08a3366f09b8c8b19aafa94f851085949c6a397b4b3cdee26b57051ce33",
+      "attempts": 1,
+      "prior_errors": []
+    },
+    {
+      "index": 8,
+      "bytes": 8192,
+      "sha256": "10794d8f9407f0dd06194f621591842b98a31110e922828df2a7d1820d44c2d4",
+      "attempts": 1,
+      "prior_errors": []
+    },
+    {
+      "index": 9,
+      "bytes": 8192,
+      "sha256": "1ea633e951a41017ad35b3d06566273ede07c1e1ba68b702dc045b156bb3b7ef",
+      "attempts": 1,
+      "prior_errors": []
+    },
+    {
+      "index": 10,
+      "bytes": 8192,
+      "sha256": "42e921c564e196f7c5e3964a95076de579386fff2a6837c1d8513d4cd09031b8",
+      "attempts": 2,
+      "prior_errors": [
+        "CalledProcessError"
+      ]
+    },
+    {
+      "index": 11,
+      "bytes": 8192,
+      "sha256": "ed42b8bb1777fb337f568e950cfa2faea55fc17d8b0a0ccf4e9a77246bcd2562",
+      "attempts": 1,
+      "prior_errors": []
+    },
+    {
+      "index": 12,
+      "bytes": 8192,
+      "sha256": "ab0308fe4d1540c4c8b3871652ed0f394d2cb3a3d8bb13670146f1e14fb8d605",
+      "attempts": 1,
+      "prior_errors": []
+    },
+    {
+      "index": 13,
+      "bytes": 8192,
+      "sha256": "93e1eac2294d6c33c0b3777fa76cfd59ea1b0803d64bd662f5a21160e8717037",
+      "attempts": 1,
+      "prior_errors": []
+    },
+    {
+      "index": 14,
+      "bytes": 8192,
+      "sha256": "3fcda982002961d0a11322e9aa531267af67d8c8afeff1803ee3ba53a49bb5e4",
+      "attempts": 1,
+      "prior_errors": []
+    },
+    {
+      "index": 15,
+      "bytes": 8192,
+      "sha256": "129b41983a15c649efd05bf36bdab003057a7aebdde27770769f4e6eb69ee4ed",
+      "attempts": 1,
+      "prior_errors": []
+    },
+    {
+      "index": 16,
+      "bytes": 8192,
+      "sha256": "4d5e0d5296687d51b34a34dd08375e67b8327b36cc004743d42d417345687eeb",
+      "attempts": 1,
+      "prior_errors": []
+    },
+    {
+      "index": 17,
+      "bytes": 8192,
+      "sha256": "b28c6aefc8efc9f3bf6e12bf07f010845a434a6965340294471e33e42295b3ed",
+      "attempts": 2,
+      "prior_errors": [
+        "CalledProcessError"
+      ]
+    },
+    {
+      "index": 18,
+      "bytes": 8192,
+      "sha256": "74d8f2b15aad865dcfd71f9f9dff475212518ddf010ee5cc4e363f6341c54496",
+      "attempts": 1,
+      "prior_errors": []
+    },
+    {
+      "index": 19,
+      "bytes": 8192,
+      "sha256": "b47a83b38e5841c414436d86e6aaf0aa043392aa5b6eeecb879c6a3354aa7a45",
+      "attempts": 3,
+      "prior_errors": [
+        "CalledProcessError",
+        "CalledProcessError"
+      ]
+    },
+    {
+      "index": 20,
+      "bytes": 8192,
+      "sha256": "07fe21e8bd6ba7f4b2be3e6de55931da277f3cc638f9e688a62897a3ccd3c2a4",
+      "attempts": 1,
+      "prior_errors": []
+    },
+    {
+      "index": 21,
+      "bytes": 8192,
+      "sha256": "87b9f6f704e7d1ed0a48642f04922c1a09a010bedcc9aa27040182ef8e907e80",
+      "attempts": 2,
+      "prior_errors": [
+        "CalledProcessError"
+      ]
+    },
+    {
+      "index": 22,
+      "bytes": 8192,
+      "sha256": "976af4667efc322ac022921357af91830e4e547955b9ee396f32d2f7ac0c436b",
+      "attempts": 1,
+      "prior_errors": []
+    },
+    {
+      "index": 23,
+      "bytes": 8192,
+      "sha256": "166b1d5e32608586043d7105aa22b567f5d1c0b7afb16ed317c09ab81d7f9260",
+      "attempts": 1,
+      "prior_errors": []
+    },
+    {
+      "index": 24,
+      "bytes": 8192,
+      "sha256": "8af2bbc74e747d14c94e265925724757e39d0a7fb2604b2ab8503fd5cb08a57d",
+      "attempts": 1,
+      "prior_errors": []
+    },
+    {
+      "index": 25,
+      "bytes": 8192,
+      "sha256": "7b7e223c30d8b5a24582effa27019d24094980a4a37044633b7eb1f62617bc5e",
+      "attempts": 1,
+      "prior_errors": []
+    },
+    {
+      "index": 26,
+      "bytes": 8192,
+      "sha256": "e621f281b98c4b2905f2ff198d46bcfa2568a820b95b73223b7a934e435c6820",
+      "attempts": 1,
+      "prior_errors": []
+    },
+    {
+      "index": 27,
+      "bytes": 8192,
+      "sha256": "06a6d99d5754dc058464ac76a6e1043648759d68661f7f31112d21216c382e71",
+      "attempts": 1,
+      "prior_errors": []
+    },
+    {
+      "index": 28,
+      "bytes": 8192,
+      "sha256": "df56ef3583d9825dfb16cc1aebc105e63d1113dfd8251462bfbdc91a5d07f187",
+      "attempts": 2,
+      "prior_errors": [
+        "TimeoutExpired"
+      ]
+    },
+    {
+      "index": 29,
+      "bytes": 8192,
+      "sha256": "4238974dd5b153c80c69fc38b16413119a0197b415e6052d1ca9ee2ca6c54741",
+      "attempts": 1,
+      "prior_errors": []
+    },
+    {
+      "index": 30,
+      "bytes": 8192,
+      "sha256": "5fdeb138bae8a52e50763c2f83a40dff78285d75f3b3e636751ab62b61ca4288",
+      "attempts": 1,
+      "prior_errors": []
+    },
+    {
+      "index": 31,
+      "bytes": 8192,
+      "sha256": "3002c2c7f139eec52f46bc567c738e0010f81183c182553ecfc8f420a405f1a2",
+      "attempts": 1,
+      "prior_errors": []
+    },
+    {
+      "index": 32,
+      "bytes": 8192,
+      "sha256": "27d10ca0262d9ee290cf621dcbe963a6c979722deb89d2a4212829e06e230274",
+      "attempts": 1,
+      "prior_errors": []
+    },
+    {
+      "index": 33,
+      "bytes": 8192,
+      "sha256": "22804595d9ee7106accd070db616ac4aa485983a4d2e8e641118c19022bf82f7",
+      "attempts": 2,
+      "prior_errors": [
+        "CalledProcessError"
+      ]
+    },
+    {
+      "index": 34,
+      "bytes": 6677,
+      "sha256": "5f81ff9bfdb6b01a633c30a6eddca16888f06b9d4f08ce69f23033228c39487b",
+      "attempts": 1,
+      "prior_errors": []
+    }
+  ],
+  "benchmark_restarted": false,
+  "remote_evidence_modified": false
+}

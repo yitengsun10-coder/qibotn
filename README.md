@@ -13,7 +13,7 @@ source (one attribute typo repair only) give **4.868623693443177x** on a
 checks. The 20q original time-budget stop and explicit recovery are disclosed.
 See the [current results and unfinished items](benchmarks/asc_revision_cpu/PRESSURE_RESULTS_20261009.md).
 
-**Exact 30q acceptance and the user's 7x target remain incomplete.**
+**Original high-entanglement exact30 acceptance and 7x on that input remain incomplete.**
 The old 30q thread comparison in
 [`benchmarks/asc_large_cpu`](benchmarks/asc_large_cpu/README.md) is preserved
 as history, not accepted accurate optimization: its common truncated state
@@ -21,12 +21,16 @@ lost substantial norm. It must not be presented as a current successful 7x
 result. The user has since rented a 32-vCPU / 60-GiB CPU instance. Bounded
 original-30q probes stopped at their declared time limits, not OOM, and have
 not completed acceptance. A new exact controlled-gate rank-two factorization
-is under supplementary evaluation, with identical QR thread scheduling for
-the official reference and both candidates. Supplementary six-bridge inputs
-do not replace the original high-entanglement input. See the
+has completed one predeclared six-bridge 30q/9693-gate/depth-445 chain:
+official mean 529.9836281165481 s, integrated mean 334.01531983166933 s
+(1.5867045511075333x), research candidate mean 2.8484130998452506 s
+(186.06276882568093x). Independent full-state and explicit-continuation audits
+pass with identical QR thread scheduling. The candidate is not integrated
+into production; this bounded-entanglement supplementary input does not
+replace the original high-entanglement input or establish a general 7x claim.
+Ring/nonlocal supplementary pairs are still incomplete. See the
 [724 stage record](benchmarks/asc_revision_cpu/SERVER724_RANK2_STAGE_20261009.md)
-for scope, raw-evidence locations and remaining work; no new 30q speedup is
-accepted yet.
+for scope, raw-evidence locations and remaining work.
 
 ## Supported Computation
 

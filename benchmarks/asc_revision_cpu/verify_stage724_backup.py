@@ -64,7 +64,7 @@ def unpack(archive_path, expected_sha, destination):
     if actual != expected_sha.lower():
         raise ValueError('Transport SHA256 differs')
     # Validate the entire inventory before creating the output directory.
-    with tarfile.open(archive_path, 'r:') as archive:
+    with tarfile.open(archive_path, 'r:*') as archive:
         files = validate_members(archive.getmembers())
         destination.mkdir(parents=True)
         inventory = {}

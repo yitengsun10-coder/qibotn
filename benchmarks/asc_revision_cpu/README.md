@@ -1,5 +1,20 @@
 # QiboTN CPU correctness and core-code revision (2026-10-09)
 
+## Supplementary exact30 chain completed (23:07, 2026-10-09)
+
+One predeclared six-bridge chain (30q/9693 gates/depth445) has completed all
+12 planned rows, with three extra restart warmups excluded from the means.
+The original 1800-second protected stop and four-row prefix are preserved.
+Independent raw-byte/full-state/pair auditing passes for this chain only.
+Official mean 529.9836281165481 s; production integrated mean
+334.01531983166933 s (1.5867045511075333x); controlled-rank2 research candidate
+mean 2.8484130998452506 s (186.06276882568093x). All methods share the same
+size-based QR threading policy and untruncated complex128 settings.
+The candidate is **not production-integrated**, and this bounded-entanglement
+input is **not original30 acceptance or a general 7x claim**. Ring/nonlocal
+pairs, original high-entanglement30, final Word/PDF and submission remain
+unfinished. See `SERVER724_RANK2_STAGE_20261009.md` for the audited evidence.
+
 ## Exact deep-pressure completion (17:04, 2026-10-09)
 
 The predeclared 20q/9991-gate/depth-677 input has now completed all three
@@ -16,7 +31,7 @@ input and zero-truncation complex128 settings; its 18 helper/small-state tests
 pass, but local resource preflight fails. Subsequently the user rented the
 724 CPU instance; bounded original30 probes remain incomplete. See
 `SERVER724_RANK2_STAGE_20261009.md` for the new research candidate, supplementary
-full-state evidence and pending formal pairs. The helper tests and these
+full-state evidence and the completed chain/pending other pairs. The helper tests and these
 supplementary inputs do not establish original30 acceptance.
 
 ## Current production update (2026-10-09)

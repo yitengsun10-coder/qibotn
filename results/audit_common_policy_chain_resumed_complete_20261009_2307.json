@@ -1,0 +1,69 @@
+{
+  "status": "pass_explicit_chain_continuation_only",
+  "formal_chain_supplement_complete": true,
+  "supplement30_suite_complete": false,
+  "original30_complete": false,
+  "all_contest_tasks_complete": false,
+  "failures": [],
+  "prior_raw_files_verified": 20,
+  "preserved_rows": 4,
+  "restart_warmups": 3,
+  "total_planned_rows": 12,
+  "chain": {
+    "kind": "chain",
+    "pass": true,
+    "rows": 12,
+    "means_s": {
+      "upstream_typo_only": 529.9836281165481,
+      "integrated": 334.01531983166933,
+      "controlled_rank2": 2.8484130998452506
+    },
+    "stdev_s": {
+      "upstream_typo_only": 2.0000957560222044,
+      "integrated": 2.5900725200570336,
+      "controlled_rank2": 0.03395374555947642
+    },
+    "speedups_vs_official_common_qr_policy": {
+      "integrated": 1.5867045511075333,
+      "controlled_rank2": 186.06276882568093
+    }
+  },
+  "broader_pair_audit": {
+    "status": "incomplete_or_failed",
+    "supplement30_suite_complete": false,
+    "original30_complete": false,
+    "all_contest_tasks_complete": false,
+    "source_snapshots_verified": 15,
+    "cases": [
+      {
+        "kind": "chain",
+        "pass": true,
+        "rows": 12,
+        "means_s": {
+          "upstream_typo_only": 529.9836281165481,
+          "integrated": 334.01531983166933,
+          "controlled_rank2": 2.8484130998452506
+        },
+        "stdev_s": {
+          "upstream_typo_only": 2.0000957560222044,
+          "integrated": 2.5900725200570336,
+          "controlled_rank2": 0.03395374555947642
+        },
+        "speedups_vs_official_common_qr_policy": {
+          "integrated": 1.5867045511075333,
+          "controlled_rank2": 186.06276882568093
+        }
+      }
+    ],
+    "failures": [
+      "suite incomplete",
+      "case summaries missing/reordered",
+      "ring: no result",
+      "nonlocal_mixed: no result"
+    ],
+    "aggregate_speedups_vs_official_common_qr_policy": null,
+    "scope": "three predeclared six-bridge exact30 inputs; not generic high-entanglement original30"
+  },
+  "scope": "one predeclared six-bridge chain, split across disclosed time-stopped and resumed processes",
+  "auditor_sha256": "fdc8462e9adfd6b0a3fe8001000b146190f20ec84ce55c70a44f78d33fd2eac3"
+}

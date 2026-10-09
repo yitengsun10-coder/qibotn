@@ -1,0 +1,9 @@
+{"kind": "chain", "full_state_pass": "upstream_typo_only", "max_bond": 2048}
+{"kind": "chain", "full_state_pass": "integrated", "max_bond": 2048}
+{"kind": "chain", "full_state_pass": "controlled_rank2", "max_bond": 256}
+/root/autodl-tmp/qibotn_diagnostic_env_20261009/lib/python3.12/site-packages/cotengra/hyperoptimizers/hyper.py:36: UserWarning: Couldn't import `kahypar` - skipping from default hyper optimizer and using basic `labels` method instead. `kahypar` is highly recommended for the best quality contraction paths.
+  warnings.warn(
+{"kind": "chain", "method": "upstream_typo_only", "repeat": 0, "runtime_s": 531.0148031786084, "value": 0.0021531468075622045, "abs_error": 9.237402509576498e-17, "qr_thread_call_counts": {"1": 11653, "4": 320, "8": 202, "16": 99}}
+{"kind": "chain", "method": "integrated", "repeat": 0, "runtime_s": 337.8426063582301, "value": 0.0021531468075619968, "abs_error": 1.1535911115245767e-16, "qr_thread_call_counts": {"1": 5616, "4": 103, "8": 99, "16": 0}}
+{"kind": "chain", "method": "controlled_rank2", "repeat": 0, "runtime_s": 2.874048136174679, "value": 0.0021531468075624244, "abs_error": 3.122502256758253e-16, "qr_thread_call_counts": {"1": 6157, "4": 0, "8": 0, "16": 0}}
+{"kind": "chain", "method": "controlled_rank2", "repeat": 1, "runtime_s": 2.811768375337124, "value": 0.0021531468075624244, "abs_error": 3.122502256758253e-16, "qr_thread_call_counts": {"1": 6157, "4": 0, "8": 0, "16": 0}}
