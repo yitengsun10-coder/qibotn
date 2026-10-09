@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="32" time="7.717" timestamp="2026-10-09T21:46:02.060304+08:00" hostname="DESKTOP-ULHNQOT"><testcase classname="benchmarks.asc_revision_cpu.test_resume_common_policy_chain" name="test_prefix_and_unmodified_original" time="0.206" /><testcase classname="benchmarks.asc_revision_cpu.test_resume_common_policy_chain" name="test_reject_invalid_continuation[active]" time="0.086" /><testcase classname="benchmarks.asc_revision_cpu.test_resume_common_policy_chain" name="test_reject_invalid_continuation[oom]" time="0.090" /><testcase classname="benchmarks.asc_revision_cpu.test_resume_common_policy_chain" name="test_reject_invalid_continuation[exit]" time="0.084" /><testcase classname="benchmarks.asc_revision_cpu.test_resume_common_policy_chain" name="test_reject_invalid_continuation[scope]" time="0.085" /><testcase classname="benchmarks.asc_revision_cpu.test_resume_common_policy_chain" name="test_reject_invalid_continuation[empty]" time="0.082" /><testcase classname="benchmarks.asc_revision_cpu.test_resume_common_policy_chain" name="test_reject_invalid_continuation[order]" time="0.085" /><testcase classname="benchmarks.asc_revision_cpu.test_resume_common_policy_chain" name="test_reject_invalid_continuation[state]" time="0.087" /><testcase classname="benchmarks.asc_revision_cpu.test_resume_common_policy_chain" name="test_reject_invalid_continuation[scalar]" time="0.083" /><testcase classname="benchmarks.asc_revision_cpu.test_resume_common_policy_chain" name="test_reject_invalid_continuation[policy]" time="0.081" /><testcase classname="benchmarks.asc_revision_cpu.test_resume_common_policy_chain" name="test_reject_invalid_continuation[precision]" time="0.085" /><testcase classname="benchmarks.asc_revision_cpu.test_resume_common_policy_chain" name="test_reject_invalid_continuation[hist]" time="0.085" /><testcase classname="benchmarks.asc_revision_cpu.test_resume_common_policy_chain" name="test_reject_invalid_continuation[source]" time="0.084" /><testcase classname="benchmarks.asc_revision_cpu.test_resume_common_policy_chain" name="test_full_smoke_pipeline_preserves_prior_bytes_and_rows" time="1.809"><failure message="ValueError: Insufficient effective memory; no worker launched">tmp_path = WindowsPath('C:/Users/孙逸腾/AppData/Local/Temp/pytest-of-孙逸腾/pytest-144/test_full_smoke_pipeline_prese0')
+
+    def test_full_smoke_pipeline_preserves_prior_bytes_and_rows(tmp_path):
+        # Intentionally synthetic 9q stop; never used as experimental evidence.
+        source=tmp_path/'synthetic_stopped_smoke';output=tmp_path/'synthetic_resumed_smoke'
+&gt;       fresh_suite(Namespace(output=source,execute=True,smoke=True,seconds=120.,memory_mib=512.))
+
+benchmarks\asc_revision_cpu\test_resume_common_policy_chain.py:55: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+args = Namespace(output=WindowsPath('C:/Users/孙逸腾/AppData/Local/Temp/pytest-of-孙逸腾/pytest-144/test_full_smoke_pipeline_prese0/synthetic_stopped_smoke'), execute=True, smoke=True, seconds=120.0, memory_mib=512.0)
+
+    def suite(args):
+        import psutil
+        from benchmarks.asc_revision_cpu.supplement30_workloads import CONFIGURATIONS,build,metadata
+        if args.output.exists():raise ValueError('Fresh output required')
+        args.output.mkdir(parents=True)
+        size,layers=(3,8) if args.smoke else (10,111)
+        report={'recorded_at':datetime.now().astimezone().isoformat(),'status':'plan_only','smoke_only':args.smoke,
+                'execute_requested':args.execute,'original30_complete':False,'all_contest_tasks_complete':False,
+                'supplement30_suite_complete':False,
+                'source_hashes':{p.relative_to(ROOT).as_posix():hashlib.sha256(p.read_bytes()).hexdigest() for p in SOURCES},
+                'workloads':[metadata(build(k,s,size,layers),k,s,size) for k,s in CONFIGURATIONS],
+                'common_policy':'same size-only QR policy for native official, integrated, rank2; other BLAS=1; affinity first16',
+                'budgets_per_case':{'seconds':args.seconds,'rss_mib':args.memory_mib,'reserve_mib':2048},
+                'environment':{'python':sys.version,'platform':platform.platform(),
+                    'memory':effective_memory(psutil.virtual_memory().available),'affinity':psutil.Process().cpu_affinity(),
+                    'versions':{n:importlib.metadata.version(n) for n in ['qibo','quimb','numpy','scipy','threadpoolctl','psutil']}},
+                'cases':[]}
+        for source in SOURCES:
+            target=args.output/'source_snapshot'/source.relative_to(ROOT)
+            target.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(source,target)
+        save(args.output/'summary.json',report)
+        if not args.execute:return
+        env=os.environ.copy();env['PYTHONPATH']=str(ROOT/'src')+os.pathsep+str(ROOT)
+        for name in ['OPENBLAS_NUM_THREADS','OMP_NUM_THREADS','MKL_NUM_THREADS','NUMEXPR_NUM_THREADS']:env[name]='1'
+        report['status']='running';save(args.output/'summary.json',report)
+        for index,(kind,_) in enumerate(CONFIGURATIONS):
+            if effective_memory(psutil.virtual_memory().available)['available_bytes']&lt;(args.memory_mib+2048)*2**20:
+&gt;               raise ValueError('Insufficient effective memory; no worker launched')
+E               ValueError: Insufficient effective memory; no worker launched
+
+benchmarks\asc_revision_cpu\paired_supplement30_common_policy.py:146: ValueError</failure></testcase><testcase classname="benchmarks.asc_revision_cpu.test_resume_common_policy_chain" name="test_live_counter_observer_and_exception_restore" time="1.070" /><testcase classname="benchmarks.asc_revision_cpu.test_audit_resumed_common_policy" name="test_complete_chain_does_not_promote_full_suite" time="0.322" /><testcase classname="benchmarks.asc_revision_cpu.test_audit_resumed_common_policy" name="test_reject_changed_or_incomplete_resume[prior]" time="0.221" /><testcase classname="benchmarks.asc_revision_cpu.test_audit_resumed_common_policy" name="test_reject_changed_or_incomplete_resume[prefix]" time="0.217" /><testcase classname="benchmarks.asc_revision_cpu.test_audit_resumed_common_policy" name="test_reject_changed_or_incomplete_resume[warmup]" time="0.241" /><testcase classname="benchmarks.asc_revision_cpu.test_audit_resumed_common_policy" name="test_reject_changed_or_incomplete_resume[version]" time="0.218" /><testcase classname="benchmarks.asc_revision_cpu.test_audit_resumed_common_policy" name="test_reject_changed_or_incomplete_resume[affinity]" time="0.224" /><testcase classname="benchmarks.asc_revision_cpu.test_audit_resumed_common_policy" name="test_reject_changed_or_incomplete_resume[false7]" time="0.226" /><testcase classname="benchmarks.asc_revision_cpu.test_audit_resumed_common_policy" name="test_reject_changed_or_incomplete_resume[scope]" time="0.220" /><testcase classname="benchmarks.asc_revision_cpu.test_audit_resumed_common_policy" name="test_reject_changed_or_incomplete_resume[partial]" time="0.212" /><testcase classname="benchmarks.asc_revision_cpu.test_audit_common_policy" name="test_valid_case_scope_not_original30" time="0.075" /><testcase classname="benchmarks.asc_revision_cpu.test_audit_common_policy" name="test_reject_false_or_incomplete_claim[partial]" time="0.093" /><testcase classname="benchmarks.asc_revision_cpu.test_audit_common_policy" name="test_reject_false_or_incomplete_claim[false7]" time="0.093" /><testcase classname="benchmarks.asc_revision_cpu.test_audit_common_policy" name="test_reject_false_or_incomplete_claim[pool]" time="0.081" /><testcase classname="benchmarks.asc_revision_cpu.test_audit_common_policy" name="test_reject_false_or_incomplete_claim[qr_histogram]" time="0.078" /><testcase classname="benchmarks.asc_revision_cpu.test_audit_common_policy" name="test_reject_false_or_incomplete_claim[rank2_not_used]" time="0.087" /><testcase classname="benchmarks.asc_revision_cpu.test_audit_common_policy" name="test_reject_false_or_incomplete_claim[source]" time="0.094" /><testcase classname="benchmarks.asc_revision_cpu.test_audit_common_policy" name="test_reject_false_or_incomplete_claim[original_promoted]" time="0.100" /></testsuite></testsuites>

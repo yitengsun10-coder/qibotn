@@ -29,6 +29,7 @@ CORE = tuple(ROOT / 'src/qibotn/backends' / name for name in (
     'quimb.py', '_exact_numpy.py', '_linear_cnot.py', '_structured_numpy.py',
     '_cnot_schedule.py', '_mixed_schedule.py'))
 SOURCES = (*CORE, Path(__file__), HERE / 'capacity_plan.py',
+           HERE / 'profile_fixed30_bounded.py',
            HERE / 'upstream_reference.py', ROOT / 'benchmarks/asc_large_cpu/benchmark.py')
 METHODS = ('upstream_typo_only', 'integrated')
 QASM_SHA256 = '1ea5c95ebdcc651a1291dadfb7a193009377732bba8d03a01ac37ef7b82b37d4'
@@ -64,6 +65,28 @@ def make_plan(total_bytes, available_bytes, disk_free_bytes, process_budget_byte
         'note': 'Full-rank planning policy is conservative, not observed memory and not proof that every 30q circuit needs this RAM.',
         'correctness_scope': 'complete MPS overlap against pinned official zero-truncation CPU implementation; no independent dense 30q oracle',
         'policy': 'fixed input and all gates; same threads/affinity; original four ZZ; no answer-based selection; no precision reduction'}
+
+
+def container_resource_plan(memory, disk_free_bytes, process_budget_bytes,
+                            cgroup_root=Path('/sys/fs/cgroup')):
+    """Do not admit a container using its physical host's RAM readings.
+
+    Admission remains a planning policy, not proof that all evaluator/SVD
+    allocations fit. Bounded diagnosis must precede any full execution.
+    """
+    from benchmarks.asc_revision_cpu.profile_fixed30_bounded import effective_memory
+    effective = effective_memory(memory.available, cgroup_root)
+    limit = effective['cgroup_limit_bytes']
+    total = min(memory.total, limit) if limit is not None else memory.total
+    plan = make_plan(total, effective['available_bytes'], disk_free_bytes,
+                     process_budget_bytes)
+    plan.update(host_total_memory_bytes=memory.total,
+                host_available_memory_bytes=memory.available,
+                effective_total_memory_bytes=total,
+                effective_available_memory_bytes=effective['available_bytes'],
+                container_memory=effective,
+                allocation_forecast_complete=False)
+    return plan
 
 
 def site_array(state, site, np):
@@ -231,11 +254,13 @@ def worker(args):
 
 def suite(args):
     import psutil
+    from benchmarks.asc_revision_cpu.profile_fixed30_bounded import effective_memory
     if args.output.exists():
         raise ValueError('Fresh directory required; old evidence is preserved')
     args.output.mkdir(parents=True)
     memory = psutil.virtual_memory()
-    plan = make_plan(memory.total, memory.available, shutil.disk_usage(args.output).free, args.memory_gib * 2**30)
+    plan = container_resource_plan(memory, shutil.disk_usage(args.output).free,
+                                   args.memory_gib * 2**30)
     save(args.output / 'resource_plan.json', plan)
     if not args.execute:
         print(json.dumps(plan, ensure_ascii=False, indent=2))
@@ -272,8 +297,9 @@ def suite(args):
                 peak = max(peak, sum(p.memory_info().rss for p in [tree, *children]))
                 if peak > args.memory_gib * 2**30:
                     reason = 'process_tree_memory_budget_exceeded'
-                elif psutil.virtual_memory().available < 2 * 2**30:
-                    reason = 'system_available_memory_below_2_GiB'
+                elif effective_memory(psutil.virtual_memory().available)[
+                        'available_bytes'] < 2 * 2**30:
+                    reason = 'effective_available_memory_below_2_GiB'
                 elif time.monotonic() - begin > args.seconds:
                     reason = 'wall_clock_budget_exceeded'
                 if reason:

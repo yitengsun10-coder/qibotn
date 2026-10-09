@@ -13,8 +13,11 @@ controller (exit 0) remain disclosed. See `PRESSURE_RESULTS_20261009.md`.
 The user now requires exact 30q as a personal hard acceptance item. That is
 **still incomplete**. `exact30_acceptance.py` fixes the existing 30q/9998-gate
 input and zero-truncation complex128 settings; its 18 helper/small-state tests
-pass, but local resource preflight fails. No new long test or paid resource
-has been started. These tests do not establish a 30q runtime or accuracy result.
+pass, but local resource preflight fails. Subsequently the user rented the
+724 CPU instance; bounded original30 probes remain incomplete. See
+`SERVER724_RANK2_STAGE_20261009.md` for the new research candidate, supplementary
+full-state evidence and pending formal pairs. The helper tests and these
+supplementary inputs do not establish original30 acceptance.
 
 ## Current production update (2026-10-09)
 

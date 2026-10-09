@@ -1,0 +1,315 @@
+{
+  "status": "running",
+  "method": "integrated",
+  "qubits": 30,
+  "gates": 9998,
+  "depth": 449,
+  "qasm_sha256": "1ea5c95ebdcc651a1291dadfb7a193009377732bba8d03a01ac37ef7b82b37d4",
+  "precision": "complex128",
+  "cutoff": 0,
+  "max_bond": null,
+  "affinity": [
+    160,
+    161,
+    162,
+    163,
+    164,
+    165,
+    166,
+    167,
+    168,
+    169,
+    170,
+    171,
+    172,
+    173,
+    174,
+    175
+  ],
+  "threads_requested": 16,
+  "reference": null,
+  "instrumented_not_formal_timing": true,
+  "formal_30q_acceptance_complete": false,
+  "publishable_speedup": null,
+  "smoke_test_only": false,
+  "progress": {
+    "completed_apply_gate_calls": 319,
+    "completed_apply_gate_raw_calls": 390,
+    "max_bond_observed": 4096,
+    "mps_array_bytes": 2326440576,
+    "identity_snapshot_bytes": 1163215936,
+    "counter_note": "API calls, not original input gates; fusion/nesting differ by path",
+    "analytic_gauge_shifts": 0
+  },
+  "threadpools": [
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 16,
+      "prefix": "libscipy_openblas",
+      "filepath": "/root/autodl-tmp/qibotn_diagnostic_env_20261009/lib/python3.12/site-packages/scipy.libs/libscipy_openblas-6cdc3b4a.so",
+      "version": "0.3.30",
+      "threading_layer": "pthreads",
+      "architecture": "SkylakeX"
+    },
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 16,
+      "prefix": "libscipy_openblas",
+      "filepath": "/root/autodl-tmp/qibotn_diagnostic_env_20261009/lib/python3.12/site-packages/numpy.libs/libscipy_openblas64_-56d6093b.so",
+      "version": "0.3.29",
+      "threading_layer": "pthreads",
+      "architecture": "SkylakeX"
+    }
+  ],
+  "instrumented_elapsed_s": 117.29658438265324,
+  "stages": {
+    "apply_gate_raw_inclusive": {
+      "calls": 390,
+      "completed_calls": 390,
+      "inclusive_s": 4.424429148435593,
+      "exclusive_s": 4.424429148435593,
+      "max_completed_s": 0.43433504551649094,
+      "max_input_bytes": 0,
+      "largest_input_shape": null
+    },
+    "apply_gate_inclusive": {
+      "calls": 320,
+      "completed_calls": 319,
+      "inclusive_s": 107.05261091142893,
+      "exclusive_s": 0.3085390105843544,
+      "max_completed_s": 9.189981803297997,
+      "max_input_bytes": 0,
+      "largest_input_shape": null
+    },
+    "structured.right_canonize_site": {
+      "calls": 607,
+      "completed_calls": 607,
+      "inclusive_s": 49.74707534909248,
+      "exclusive_s": 17.37027656286955,
+      "max_completed_s": 3.20104917883873,
+      "max_input_bytes": 0,
+      "largest_input_shape": null
+    },
+    "exact.right_canonize_site": {
+      "calls": 324,
+      "completed_calls": 324,
+      "inclusive_s": 0.08544839918613434,
+      "exclusive_s": 0.05554597079753876,
+      "max_completed_s": 0.0005809739232063293,
+      "max_input_bytes": 0,
+      "largest_input_shape": null
+    },
+    "exact.left_isometric_factor": {
+      "calls": 690,
+      "completed_calls": 690,
+      "inclusive_s": 0.06455446779727936,
+      "exclusive_s": 0.04246440529823303,
+      "max_completed_s": 0.00039939582347869873,
+      "max_input_bytes": 65536,
+      "largest_input_shape": [
+        64,
+        64
+      ]
+    },
+    "exact.reduced_qr": {
+      "calls": 590,
+      "completed_calls": 590,
+      "inclusive_s": 77.50227115303278,
+      "exclusive_s": 77.50227115303278,
+      "max_completed_s": 3.881404347717762,
+      "max_input_bytes": 268435456,
+      "largest_input_shape": [
+        8192,
+        2048
+      ]
+    },
+    "structured.two_site": {
+      "calls": 319,
+      "completed_calls": 319,
+      "inclusive_s": 10.58409982919693,
+      "exclusive_s": 8.057557962834835,
+      "max_completed_s": 0.9031882509589195,
+      "max_input_bytes": 268435456,
+      "largest_input_shape": [
+        4096,
+        4096
+      ]
+    },
+    "exact.two_site": {
+      "calls": 215,
+      "completed_calls": 215,
+      "inclusive_s": 0.1355249285697937,
+      "exclusive_s": 0.1264679655432701,
+      "max_completed_s": 0.023734115064144135,
+      "max_input_bytes": 65536,
+      "largest_input_shape": [
+        64,
+        64
+      ]
+    },
+    "structured.left_canonize_site": {
+      "calls": 297,
+      "completed_calls": 297,
+      "inclusive_s": 51.82276675850153,
+      "exclusive_s": 8.9740771651268,
+      "max_completed_s": 4.118145272135735,
+      "max_input_bytes": 0,
+      "largest_input_shape": null
+    },
+    "exact.left_canonize_site": {
+      "calls": 151,
+      "completed_calls": 151,
+      "inclusive_s": 0.05087582767009735,
+      "exclusive_s": 0.025280751287937164,
+      "max_completed_s": 0.0005455687642097473,
+      "max_input_bytes": 0,
+      "largest_input_shape": null
+    }
+  },
+  "in_flight_stages": [
+    "apply_gate_inclusive"
+  ],
+  "memory": {
+    "available_bytes": 59377803264,
+    "cgroup_limit_bytes": 64424509440,
+    "cgroup_used_bytes": 5046706176,
+    "host_available_bytes": 340499861504
+  },
+  "current_process_rss_bytes": 3734159360,
+  "bond_growth_milestones": [
+    {
+      "completed_apply_gate_calls": 1,
+      "completed_apply_gate_raw_calls": 60,
+      "max_bond_observed": 2,
+      "mps_array_bytes": 1024,
+      "identity_snapshot_bytes": 0,
+      "counter_note": "API calls, not original input gates; fusion/nesting differ by path",
+      "analytic_gauge_shifts": 0,
+      "instrumented_elapsed_s": 0.30373598635196686,
+      "rss_bytes": 298668032
+    },
+    {
+      "completed_apply_gate_calls": 16,
+      "completed_apply_gate_raw_calls": 60,
+      "max_bond_observed": 4,
+      "mps_array_bytes": 2304,
+      "identity_snapshot_bytes": 0,
+      "counter_note": "API calls, not original input gates; fusion/nesting differ by path",
+      "analytic_gauge_shifts": 0,
+      "instrumented_elapsed_s": 0.3360598683357239,
+      "rss_bytes": 298668032
+    },
+    {
+      "completed_apply_gate_calls": 45,
+      "completed_apply_gate_raw_calls": 90,
+      "max_bond_observed": 8,
+      "mps_array_bytes": 8832,
+      "identity_snapshot_bytes": 0,
+      "counter_note": "API calls, not original input gates; fusion/nesting differ by path",
+      "analytic_gauge_shifts": 0,
+      "instrumented_elapsed_s": 0.40674393624067307,
+      "rss_bytes": 298668032
+    },
+    {
+      "completed_apply_gate_calls": 75,
+      "completed_apply_gate_raw_calls": 120,
+      "max_bond_observed": 16,
+      "mps_array_bytes": 33408,
+      "identity_snapshot_bytes": 0,
+      "counter_note": "API calls, not original input gates; fusion/nesting differ by path",
+      "analytic_gauge_shifts": 0,
+      "instrumented_elapsed_s": 0.4797442555427551,
+      "rss_bytes": 298668032
+    },
+    {
+      "completed_apply_gate_calls": 104,
+      "completed_apply_gate_raw_calls": 150,
+      "max_bond_observed": 32,
+      "mps_array_bytes": 125568,
+      "identity_snapshot_bytes": 0,
+      "counter_note": "API calls, not original input gates; fusion/nesting differ by path",
+      "analytic_gauge_shifts": 0,
+      "instrumented_elapsed_s": 0.5506422743201256,
+      "rss_bytes": 298668032
+    },
+    {
+      "completed_apply_gate_calls": 134,
+      "completed_apply_gate_raw_calls": 180,
+      "max_bond_observed": 64,
+      "mps_array_bytes": 469632,
+      "identity_snapshot_bytes": 0,
+      "counter_note": "API calls, not original input gates; fusion/nesting differ by path",
+      "analytic_gauge_shifts": 0,
+      "instrumented_elapsed_s": 0.6271848529577255,
+      "rss_bytes": 300134400
+    },
+    {
+      "completed_apply_gate_calls": 163,
+      "completed_apply_gate_raw_calls": 210,
+      "max_bond_observed": 128,
+      "mps_array_bytes": 1747584,
+      "identity_snapshot_bytes": 262144,
+      "counter_note": "API calls, not original input gates; fusion/nesting differ by path",
+      "analytic_gauge_shifts": 0,
+      "instrumented_elapsed_s": 0.7064051181077957,
+      "rss_bytes": 302145536
+    },
+    {
+      "completed_apply_gate_calls": 193,
+      "completed_apply_gate_raw_calls": 240,
+      "max_bond_observed": 256,
+      "mps_array_bytes": 6466176,
+      "identity_snapshot_bytes": 3578176,
+      "counter_note": "API calls, not original input gates; fusion/nesting differ by path",
+      "analytic_gauge_shifts": 0,
+      "instrumented_elapsed_s": 12.062101252377033,
+      "rss_bytes": 313651200
+    },
+    {
+      "completed_apply_gate_calls": 222,
+      "completed_apply_gate_raw_calls": 270,
+      "max_bond_observed": 512,
+      "mps_array_bytes": 23767680,
+      "identity_snapshot_bytes": 13264448,
+      "counter_note": "API calls, not original input gates; fusion/nesting differ by path",
+      "analytic_gauge_shifts": 0,
+      "instrumented_elapsed_s": 24.8303694576025,
+      "rss_bytes": 348446720
+    },
+    {
+      "completed_apply_gate_calls": 252,
+      "completed_apply_gate_raw_calls": 300,
+      "max_bond_observed": 1024,
+      "mps_array_bytes": 86682240,
+      "identity_snapshot_bytes": 48929088,
+      "counter_note": "API calls, not original input gates; fusion/nesting differ by path",
+      "analytic_gauge_shifts": 0,
+      "instrumented_elapsed_s": 39.77988453954458,
+      "rss_bytes": 464674816
+    },
+    {
+      "completed_apply_gate_calls": 281,
+      "completed_apply_gate_raw_calls": 330,
+      "max_bond_observed": 2048,
+      "mps_array_bytes": 313174656,
+      "identity_snapshot_bytes": 178939456,
+      "counter_note": "API calls, not original input gates; fusion/nesting differ by path",
+      "analytic_gauge_shifts": 0,
+      "instrumented_elapsed_s": 55.35587239265442,
+      "rss_bytes": 874565632
+    },
+    {
+      "completed_apply_gate_calls": 311,
+      "completed_apply_gate_raw_calls": 360,
+      "max_bond_observed": 4096,
+      "mps_array_bytes": 1118481024,
+      "identity_snapshot_bytes": 648714560,
+      "counter_note": "API calls, not original input gates; fusion/nesting differ by path",
+      "analytic_gauge_shifts": 0,
+      "instrumented_elapsed_s": 92.28301897644997,
+      "rss_bytes": 1599152128
+    }
+  ]
+}

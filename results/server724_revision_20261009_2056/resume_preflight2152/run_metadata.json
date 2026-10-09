@@ -1,0 +1,16 @@
+{
+  "controller_pid": 3534,
+  "worker_pid": 3535,
+  "started_at": "2026-10-09T21:52:29.719040+08:00",
+  "command": [
+    "/root/autodl-tmp/qibotn_diagnostic_env_20261009/bin/python",
+    "-X",
+    "utf8",
+    "/root/autodl-tmp/qibotn_diagnostic_20261009/benchmarks/asc_revision_cpu/resume_common_policy_chain.py",
+    "--worker",
+    "--source",
+    "/root/autodl-tmp/qibotn_diagnostic_20261009/results/supplement30_common_policy_paired_724_20261009",
+    "--output",
+    "results/supplement30_common_policy_chain_resumed_724_20261009"
+  ]
+}

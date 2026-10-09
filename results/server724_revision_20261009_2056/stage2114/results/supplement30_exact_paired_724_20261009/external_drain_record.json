@@ -1,0 +1,45 @@
+{
+  "recorded_at": "2026-10-09T20:44:10.645959+08:00",
+  "reason": "first complete official calibration exceeded 900s; defer further suite calls for bounded rank2 diagnosis",
+  "summary_sha256_before_stop": "5d65b101646b69535d17ad4394a8fda11cd2e02bf5b9745069c9562ae7c2f13c",
+  "original_summary_preserved": true,
+  "planned_processes": [
+    {
+      "pid": 2445,
+      "created_at": 1791549804.48,
+      "command": [
+        "/root/autodl-tmp/qibotn_diagnostic_env_20261009/bin/python",
+        "-X",
+        "utf8",
+        "/root/autodl-tmp/qibotn_diagnostic_20261009/benchmarks/asc_revision_cpu/paired_supplement30.py",
+        "--worker",
+        "--output",
+        "results/supplement30_exact_paired_724_20261009/ring",
+        "--kind",
+        "ring"
+      ]
+    },
+    {
+      "pid": 2341,
+      "created_at": 1791548903.02,
+      "command": [
+        "/root/autodl-tmp/qibotn_diagnostic_env_20261009/bin/python",
+        "benchmarks/asc_revision_cpu/paired_supplement30.py",
+        "--execute",
+        "--seconds",
+        "900",
+        "--memory-mib",
+        "4096",
+        "--output",
+        "results/supplement30_exact_paired_724_20261009"
+      ]
+    }
+  ],
+  "execute_requested": true,
+  "supplement30_suite_complete": false,
+  "original30_complete": false,
+  "all_contest_tasks_complete": false,
+  "status": "externally_drained_incomplete",
+  "summary_sha256_after_stop": "5d65b101646b69535d17ad4394a8fda11cd2e02bf5b9745069c9562ae7c2f13c",
+  "processes_still_alive": []
+}

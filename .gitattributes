@@ -9,3 +9,10 @@ src/qibotn/backends/_linear_cnot.py -text
 src/qibotn/backends/_structured_numpy.py -text
 src/qibotn/backends/_cnot_schedule.py -text
 src/qibotn/backends/_mixed_schedule.py -text
+# Server evidence contains byte-hashed official sources and input snapshots.
+results/server724_diagnostic_20261009_1948/** -text
+results/server724_revision_20261009_2056/** -text
+results/validation_*common_policy* -text
+results/validation_724* -text
+results/validation_stage724* -text
+results/audit_common_policy_* -text

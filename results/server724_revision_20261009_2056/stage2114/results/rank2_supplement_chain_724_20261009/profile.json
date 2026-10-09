@@ -1,0 +1,138 @@
+{
+  "kind": "chain",
+  "seed": 20261101,
+  "qubits": 30,
+  "gates": 9693,
+  "depth": 445,
+  "input_sha256": "242c3a4c686f8c1e193ec1babb908c3af8b9d9d8729ebfcd27576ae1196cb7d9",
+  "input_format": "canonical JSON gate record; fSim is not supported by Qibo OpenQASM exporter",
+  "gate_counts": {
+    "h": 30,
+    "rx": 3330,
+    "ry": 3330,
+    "cx": 2999,
+    "cy": 2,
+    "cz": 2
+  },
+  "distinct_two_qubit_edges": 29,
+  "bridge_gate_count": 6,
+  "group_size": 10,
+  "structure_limit": "three regions with six controlled bridge gates; bounded inter-region entanglement, not generic30",
+  "precision": "complex128",
+  "cutoff": 0,
+  "max_bond": null,
+  "replaces_original30": false,
+  "input_file": "input.json",
+  "status": "completed_instrumented_call_not_acceptance",
+  "formal_30q_acceptance_complete": false,
+  "publishable_speedup": null,
+  "instrumented_not_formal_timing": true,
+  "smoke_test_only": false,
+  "affinity": [
+    160,
+    161,
+    162,
+    163,
+    164,
+    165,
+    166,
+    167,
+    168,
+    169,
+    170,
+    171,
+    172,
+    173,
+    174,
+    175
+  ],
+  "threads": 16,
+  "max_bond_observed": 256,
+  "controlled_rank2_splits": 30,
+  "completed_apply_gate_calls": 6363,
+  "threadpools": [
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 16,
+      "prefix": "libscipy_openblas",
+      "filepath": "/root/autodl-tmp/qibotn_diagnostic_env_20261009/lib/python3.12/site-packages/scipy.libs/libscipy_openblas-6cdc3b4a.so",
+      "version": "0.3.30",
+      "threading_layer": "pthreads",
+      "architecture": "SkylakeX"
+    },
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 16,
+      "prefix": "libscipy_openblas",
+      "filepath": "/root/autodl-tmp/qibotn_diagnostic_env_20261009/lib/python3.12/site-packages/numpy.libs/libscipy_openblas64_-56d6093b.so",
+      "version": "0.3.29",
+      "threading_layer": "pthreads",
+      "architecture": "SkylakeX"
+    }
+  ],
+  "instrumented_elapsed_s": 175.75512108951807,
+  "stages": {
+    "apply_gate_raw_inclusive": {
+      "calls": 3360,
+      "completed_calls": 3360,
+      "inclusive_s": 1.2586383670568466,
+      "exclusive_s": 1.2586383670568466,
+      "max_completed_s": 0.05981419235467911,
+      "max_input_bytes": 0,
+      "largest_input_shape": null
+    },
+    "apply_gate_inclusive": {
+      "calls": 3003,
+      "completed_calls": 3003,
+      "inclusive_s": 172.99407433718443,
+      "exclusive_s": 32.44769685715437,
+      "max_completed_s": 3.902913697063923,
+      "max_input_bytes": 0,
+      "largest_input_shape": null
+    },
+    "exact.isometric_factor": {
+      "calls": 7681,
+      "completed_calls": 7681,
+      "inclusive_s": 12.497710011899471,
+      "exclusive_s": 0.4129776135087013,
+      "max_completed_s": 0.6503030210733414,
+      "max_input_bytes": 131072,
+      "largest_input_shape": [
+        64,
+        128
+      ]
+    },
+    "exact.reduced_qr": {
+      "calls": 6157,
+      "completed_calls": 6157,
+      "inclusive_s": 130.88299947977066,
+      "exclusive_s": 130.88299947977066,
+      "max_completed_s": 3.2219263315200806,
+      "max_input_bytes": 1048576,
+      "largest_input_shape": [
+        512,
+        128
+      ]
+    },
+    "controlled_rank2.two_site": {
+      "calls": 3003,
+      "completed_calls": 3003,
+      "inclusive_s": 41.25488889217377,
+      "exclusive_s": 9.250400386750698,
+      "max_completed_s": 2.624869167804718,
+      "max_input_bytes": 0,
+      "largest_input_shape": null
+    }
+  },
+  "in_flight_stages": [],
+  "memory": {
+    "available_bytes": 62679961600,
+    "cgroup_limit_bytes": 64424509440,
+    "cgroup_used_bytes": 1744547840,
+    "host_available_bytes": 333440135168
+  },
+  "current_process_rss_bytes": 323428352,
+  "observable": 0.002153146807562334
+}

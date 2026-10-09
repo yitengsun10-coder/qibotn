@@ -1,0 +1,17 @@
+{"kind": "chain", "full_state_pass": "upstream_typo_only", "max_bond": 16}
+{"kind": "chain", "full_state_pass": "integrated", "max_bond": 16}
+{"kind": "chain", "full_state_pass": "controlled_rank2", "max_bond": 16}
+/root/autodl-tmp/qibotn_diagnostic_env_20261009/lib/python3.12/site-packages/cotengra/hyperoptimizers/hyper.py:36: UserWarning: Couldn't import `kahypar` - skipping from default hyper optimizer and using basic `labels` method instead. `kahypar` is highly recommended for the best quality contraction paths.
+  warnings.warn(
+{"kind": "chain", "method": "upstream_typo_only", "repeat": 0, "runtime_s": 0.1224663257598877, "value": -0.08676562353047824, "abs_error": 2.3592239273284576e-16, "qr_thread_call_counts": {"1": 229, "4": 0, "8": 0, "16": 0}}
+{"kind": "chain", "method": "integrated", "repeat": 0, "runtime_s": 0.02154397964477539, "value": -0.08676562353047854, "abs_error": 5.551115123125783e-17, "qr_thread_call_counts": {"1": 134, "4": 0, "8": 0, "16": 0}}
+{"kind": "chain", "method": "controlled_rank2", "repeat": 0, "runtime_s": 0.02382972091436386, "value": -0.0867656235304784, "abs_error": 8.326672684688674e-17, "qr_thread_call_counts": {"1": 146, "4": 0, "8": 0, "16": 0}}
+{"kind": "chain", "method": "controlled_rank2", "repeat": 1, "runtime_s": 0.023529723286628723, "value": -0.0867656235304784, "abs_error": 8.326672684688674e-17, "qr_thread_call_counts": {"1": 146, "4": 0, "8": 0, "16": 0}}
+{"kind": "chain", "method": "integrated", "repeat": 1, "runtime_s": 0.0208461731672287, "value": -0.08676562353047854, "abs_error": 5.551115123125783e-17, "qr_thread_call_counts": {"1": 134, "4": 0, "8": 0, "16": 0}}
+{"kind": "chain", "method": "upstream_typo_only", "repeat": 1, "runtime_s": 0.052054263651371, "value": -0.08676562353047824, "abs_error": 2.3592239273284576e-16, "qr_thread_call_counts": {"1": 229, "4": 0, "8": 0, "16": 0}}
+{"kind": "chain", "method": "upstream_typo_only", "repeat": 2, "runtime_s": 0.05074140429496765, "value": -0.08676562353047824, "abs_error": 2.3592239273284576e-16, "qr_thread_call_counts": {"1": 229, "4": 0, "8": 0, "16": 0}}
+{"kind": "chain", "method": "integrated", "repeat": 2, "runtime_s": 0.02107488363981247, "value": -0.08676562353047854, "abs_error": 5.551115123125783e-17, "qr_thread_call_counts": {"1": 134, "4": 0, "8": 0, "16": 0}}
+{"kind": "chain", "method": "controlled_rank2", "repeat": 2, "runtime_s": 0.02442246675491333, "value": -0.0867656235304784, "abs_error": 8.326672684688674e-17, "qr_thread_call_counts": {"1": 146, "4": 0, "8": 0, "16": 0}}
+{"kind": "chain", "method": "controlled_rank2", "repeat": 3, "runtime_s": 0.0234903022646904, "value": -0.0867656235304784, "abs_error": 8.326672684688674e-17, "qr_thread_call_counts": {"1": 146, "4": 0, "8": 0, "16": 0}}
+{"kind": "chain", "method": "integrated", "repeat": 3, "runtime_s": 0.020826883614063263, "value": -0.08676562353047854, "abs_error": 5.551115123125783e-17, "qr_thread_call_counts": {"1": 134, "4": 0, "8": 0, "16": 0}}
+{"kind": "chain", "method": "upstream_typo_only", "repeat": 3, "runtime_s": 0.05121878534555435, "value": -0.08676562353047824, "abs_error": 2.3592239273284576e-16, "qr_thread_call_counts": {"1": 229, "4": 0, "8": 0, "16": 0}}

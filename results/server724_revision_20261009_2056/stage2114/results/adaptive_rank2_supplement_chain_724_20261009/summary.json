@@ -1,0 +1,61 @@
+{
+  "recorded_at": "2026-10-09T20:58:53.034343+08:00",
+  "status": "complete_diagnostic_only",
+  "execute_requested": true,
+  "input": {
+    "kind": "chain",
+    "seed": 20261101,
+    "qubits": 30,
+    "gates": 9693,
+    "depth": 445,
+    "input_sha256": "242c3a4c686f8c1e193ec1babb908c3af8b9d9d8729ebfcd27576ae1196cb7d9",
+    "input_format": "canonical JSON gate record; fSim is not supported by Qibo OpenQASM exporter",
+    "gate_counts": {
+      "h": 30,
+      "rx": 3330,
+      "ry": 3330,
+      "cx": 2999,
+      "cy": 2,
+      "cz": 2
+    },
+    "distinct_two_qubit_edges": 29,
+    "bridge_gate_count": 6,
+    "group_size": 10,
+    "structure_limit": "three regions with six controlled bridge gates; bounded inter-region entanglement, not generic30",
+    "precision": "complex128",
+    "cutoff": 0,
+    "max_bond": null,
+    "replaces_original30": false,
+    "input_file": "input.json"
+  },
+  "threads": 16,
+  "candidate": "adaptive",
+  "budgets": {
+    "seconds": 180.0,
+    "memory_mib": 8192.0,
+    "reserve_mib": 2048.0
+  },
+  "source_hashes": {
+    "src/qibotn/backends/quimb.py": "9e2f24828e12f567fa8d23d35f4971b99390876ec8a8fc0c87de0b7dee201092",
+    "src/qibotn/backends/_exact_numpy.py": "953de2012c268d85965ca33176c41e3f6f6e48ed76f5575ef3200a1e13da70fa",
+    "src/qibotn/backends/_linear_cnot.py": "3c38cf9c91a8136798f8909dd841e2f66f85cf3b1d41c1916d50fa18fc3537c3",
+    "src/qibotn/backends/_structured_numpy.py": "e8c68fc4ac3d490d8acae48e7bfff603353d5a50de014fe09ebe297656d4bf08",
+    "src/qibotn/backends/_cnot_schedule.py": "49807da9550061c0f52a6e2d25a4441a0eabb1089371fd75db54a4714e7d0065",
+    "src/qibotn/backends/_mixed_schedule.py": "29217f62093d2d2f741cfedb011052c2da40a2def1f70bf6c41549c1f02d0fbd",
+    "benchmarks/asc_revision_cpu/probe_controlled_rank2.py": "3bb165910930dafd01acf85e197e8de4d3edecb5fe424190df6e3eca87cb698c",
+    "benchmarks/asc_revision_cpu/candidate_controlled_rank2.py": "623d590ba7ff529b2026eaea5fe85bf40cd733225d7c6d70a66c8279c3ea8466",
+    "benchmarks/asc_revision_cpu/candidate_controlled_adaptive.py": "a64f5028c835fe4561485b7587a2df9fa76c273dc0994d27360df5c5fd241d14",
+    "benchmarks/asc_revision_cpu/profile_fixed30_bounded.py": "d04dadb4da7e3236496bfa5010736be106d5daced5d4963b5dadae3e660ce5c4",
+    "benchmarks/asc_revision_cpu/supplement30_workloads.py": "12140e8d9a1bb6f89b0543e4ddbdd2b4008754f504eabf7ef735edd503ec112d",
+    "benchmarks/asc_revision_cpu/paired_supplement30.py": "5f6b3d3f0c144017d08181f0f8531868dde4f349a75f7057003ef6fac4e7bf1a",
+    "benchmarks/asc_revision_cpu/upstream_reference.py": "c7501c667f65509c7b375fd7c5291b3add074edfe3b6c5d0b76e5a7ae4d87aaa",
+    "benchmarks/asc_large_cpu/benchmark.py": "0da3e76c12e8bebb964a1fe3bd9097fabae8919e07f88def506d9842d9d95c29"
+  },
+  "formal_30q_acceptance_complete": false,
+  "publishable_speedup": null,
+  "exit_code": 0,
+  "supervisor_stop_reason": null,
+  "wall_s": 12.17300895601511,
+  "peak_process_tree_rss_bytes": 320221184,
+  "source_unchanged": true
+}

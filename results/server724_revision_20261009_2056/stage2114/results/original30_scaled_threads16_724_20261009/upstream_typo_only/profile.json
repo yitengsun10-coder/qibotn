@@ -1,0 +1,247 @@
+{
+  "status": "running",
+  "method": "upstream_typo_only",
+  "qubits": 30,
+  "gates": 9998,
+  "depth": 449,
+  "qasm_sha256": "1ea5c95ebdcc651a1291dadfb7a193009377732bba8d03a01ac37ef7b82b37d4",
+  "precision": "complex128",
+  "cutoff": 0,
+  "max_bond": null,
+  "affinity": [
+    160,
+    161,
+    162,
+    163,
+    164,
+    165,
+    166,
+    167,
+    168,
+    169,
+    170,
+    171,
+    172,
+    173,
+    174,
+    175
+  ],
+  "threads_requested": 16,
+  "reference": {
+    "commit": "7ebbd4d4a00f37b898c552922953591b78b0af7e",
+    "path": "src/qibotn/backends/quimb.py",
+    "original_sha256": "1e1ada931f9fb0f9228f7190cd46f5401328b1fbec9e42f40ba9dc7fca313aca",
+    "typo_only_sha256": "1a4e2e70c05e5015006ec2cdce3b81f6d2ba463ebbf604726fbb370fe4c9f472",
+    "sole_change": "contraction_optimizer -> contractions_optimizer at the observable contraction",
+    "extra_norm_contraction": false,
+    "state_preparations_per_call": 1,
+    "algorithm_or_backend_replacement": false
+  },
+  "instrumented_not_formal_timing": true,
+  "formal_30q_acceptance_complete": false,
+  "publishable_speedup": null,
+  "smoke_test_only": false,
+  "progress": {
+    "completed_apply_gate_calls": 980,
+    "completed_apply_gate_raw_calls": 0,
+    "max_bond_observed": 2048,
+    "mps_array_bytes": 715827840,
+    "identity_snapshot_bytes": 0,
+    "counter_note": "API calls, not original input gates; fusion/nesting differ by path",
+    "analytic_gauge_shifts": 0
+  },
+  "threadpools": [
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 16,
+      "prefix": "libscipy_openblas",
+      "filepath": "/root/autodl-tmp/qibotn_diagnostic_env_20261009/lib/python3.12/site-packages/numpy.libs/libscipy_openblas64_-56d6093b.so",
+      "version": "0.3.29",
+      "threading_layer": "pthreads",
+      "architecture": "SkylakeX"
+    },
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 16,
+      "prefix": "libscipy_openblas",
+      "filepath": "/root/autodl-tmp/qibotn_diagnostic_env_20261009/lib/python3.12/site-packages/scipy.libs/libscipy_openblas-6cdc3b4a.so",
+      "version": "0.3.30",
+      "threading_layer": "pthreads",
+      "architecture": "SkylakeX"
+    }
+  ],
+  "instrumented_elapsed_s": 118.3346209526062,
+  "stages": {
+    "apply_gate_inclusive": {
+      "calls": 981,
+      "completed_calls": 980,
+      "inclusive_s": 106.58786311745644,
+      "exclusive_s": 2.765091195702553,
+      "max_completed_s": 10.10727845132351,
+      "max_input_bytes": 0,
+      "largest_input_shape": null
+    },
+    "native.right_canonize_site": {
+      "calls": 559,
+      "completed_calls": 559,
+      "inclusive_s": 69.9488985016942,
+      "exclusive_s": 69.9488985016942,
+      "max_completed_s": 3.2348995730280876,
+      "max_input_bytes": 0,
+      "largest_input_shape": null
+    },
+    "native.gate_split_inplace": {
+      "calls": 290,
+      "completed_calls": 290,
+      "inclusive_s": 35.54965889453888,
+      "exclusive_s": 35.54965889453888,
+      "max_completed_s": 1.4741971865296364,
+      "max_input_bytes": 0,
+      "largest_input_shape": null
+    },
+    "native.left_canonize_site": {
+      "calls": 270,
+      "completed_calls": 270,
+      "inclusive_s": 9.867961466312408,
+      "exclusive_s": 9.867961466312408,
+      "max_completed_s": 0.6240072101354599,
+      "max_input_bytes": 0,
+      "largest_input_shape": null
+    }
+  },
+  "in_flight_stages": [
+    "apply_gate_inclusive"
+  ],
+  "memory": {
+    "available_bytes": 61803511808,
+    "cgroup_limit_bytes": 64424509440,
+    "cgroup_used_bytes": 2620997632,
+    "host_available_bytes": 343112884224
+  },
+  "current_process_rss_bytes": 1314185216,
+  "bond_growth_milestones": [
+    {
+      "completed_apply_gate_calls": 91,
+      "completed_apply_gate_raw_calls": 0,
+      "max_bond_observed": 2,
+      "mps_array_bytes": 1024,
+      "identity_snapshot_bytes": 0,
+      "counter_note": "API calls, not original input gates; fusion/nesting differ by path",
+      "analytic_gauge_shifts": 0,
+      "instrumented_elapsed_s": 0.15431516617536545,
+      "rss_bytes": 298156032
+    },
+    {
+      "completed_apply_gate_calls": 106,
+      "completed_apply_gate_raw_calls": 0,
+      "max_bond_observed": 4,
+      "mps_array_bytes": 2304,
+      "identity_snapshot_bytes": 0,
+      "counter_note": "API calls, not original input gates; fusion/nesting differ by path",
+      "analytic_gauge_shifts": 0,
+      "instrumented_elapsed_s": 0.18464452028274536,
+      "rss_bytes": 301191168
+    },
+    {
+      "completed_apply_gate_calls": 195,
+      "completed_apply_gate_raw_calls": 0,
+      "max_bond_observed": 8,
+      "mps_array_bytes": 8832,
+      "identity_snapshot_bytes": 0,
+      "counter_note": "API calls, not original input gates; fusion/nesting differ by path",
+      "analytic_gauge_shifts": 0,
+      "instrumented_elapsed_s": 0.3702460080385208,
+      "rss_bytes": 301191168
+    },
+    {
+      "completed_apply_gate_calls": 285,
+      "completed_apply_gate_raw_calls": 0,
+      "max_bond_observed": 16,
+      "mps_array_bytes": 33408,
+      "identity_snapshot_bytes": 0,
+      "counter_note": "API calls, not original input gates; fusion/nesting differ by path",
+      "analytic_gauge_shifts": 0,
+      "instrumented_elapsed_s": 0.42485901713371277,
+      "rss_bytes": 301191168
+    },
+    {
+      "completed_apply_gate_calls": 374,
+      "completed_apply_gate_raw_calls": 0,
+      "max_bond_observed": 32,
+      "mps_array_bytes": 125568,
+      "identity_snapshot_bytes": 0,
+      "counter_note": "API calls, not original input gates; fusion/nesting differ by path",
+      "analytic_gauge_shifts": 0,
+      "instrumented_elapsed_s": 0.4793151393532753,
+      "rss_bytes": 301461504
+    },
+    {
+      "completed_apply_gate_calls": 464,
+      "completed_apply_gate_raw_calls": 0,
+      "max_bond_observed": 64,
+      "mps_array_bytes": 469632,
+      "identity_snapshot_bytes": 0,
+      "counter_note": "API calls, not original input gates; fusion/nesting differ by path",
+      "analytic_gauge_shifts": 0,
+      "instrumented_elapsed_s": 0.5394996479153633,
+      "rss_bytes": 302587904
+    },
+    {
+      "completed_apply_gate_calls": 553,
+      "completed_apply_gate_raw_calls": 0,
+      "max_bond_observed": 128,
+      "mps_array_bytes": 1747584,
+      "identity_snapshot_bytes": 0,
+      "counter_note": "API calls, not original input gates; fusion/nesting differ by path",
+      "analytic_gauge_shifts": 0,
+      "instrumented_elapsed_s": 0.7998217418789864,
+      "rss_bytes": 305934336
+    },
+    {
+      "completed_apply_gate_calls": 643,
+      "completed_apply_gate_raw_calls": 0,
+      "max_bond_observed": 256,
+      "mps_array_bytes": 6466176,
+      "identity_snapshot_bytes": 0,
+      "counter_note": "API calls, not original input gates; fusion/nesting differ by path",
+      "analytic_gauge_shifts": 0,
+      "instrumented_elapsed_s": 13.293297722935677,
+      "rss_bytes": 317722624
+    },
+    {
+      "completed_apply_gate_calls": 732,
+      "completed_apply_gate_raw_calls": 0,
+      "max_bond_observed": 512,
+      "mps_array_bytes": 23767680,
+      "identity_snapshot_bytes": 0,
+      "counter_note": "API calls, not original input gates; fusion/nesting differ by path",
+      "analytic_gauge_shifts": 0,
+      "instrumented_elapsed_s": 37.005008816719055,
+      "rss_bytes": 355639296
+    },
+    {
+      "completed_apply_gate_calls": 822,
+      "completed_apply_gate_raw_calls": 0,
+      "max_bond_observed": 1024,
+      "mps_array_bytes": 86682240,
+      "identity_snapshot_bytes": 0,
+      "counter_note": "API calls, not original input gates; fusion/nesting differ by path",
+      "analytic_gauge_shifts": 0,
+      "instrumented_elapsed_s": 63.717358373105526,
+      "rss_bytes": 487415808
+    },
+    {
+      "completed_apply_gate_calls": 911,
+      "completed_apply_gate_raw_calls": 0,
+      "max_bond_observed": 2048,
+      "mps_array_bytes": 313174656,
+      "identity_snapshot_bytes": 0,
+      "counter_note": "API calls, not original input gates; fusion/nesting differ by path",
+      "analytic_gauge_shifts": 0,
+      "instrumented_elapsed_s": 96.0994413793087,
+      "rss_bytes": 877461504
+    }
+  ]
+}

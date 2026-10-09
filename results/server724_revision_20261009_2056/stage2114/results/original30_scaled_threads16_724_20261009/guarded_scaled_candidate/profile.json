@@ -1,0 +1,322 @@
+{
+  "status": "running",
+  "method": "guarded_scaled_candidate",
+  "qubits": 30,
+  "gates": 9998,
+  "depth": 449,
+  "qasm_sha256": "1ea5c95ebdcc651a1291dadfb7a193009377732bba8d03a01ac37ef7b82b37d4",
+  "precision": "complex128",
+  "cutoff": 0,
+  "max_bond": null,
+  "affinity": [
+    160,
+    161,
+    162,
+    163,
+    164,
+    165,
+    166,
+    167,
+    168,
+    169,
+    170,
+    171,
+    172,
+    173,
+    174,
+    175
+  ],
+  "threads_requested": 16,
+  "reference": null,
+  "instrumented_not_formal_timing": true,
+  "formal_30q_acceptance_complete": false,
+  "publishable_speedup": null,
+  "smoke_test_only": false,
+  "progress": {
+    "completed_apply_gate_calls": 310,
+    "completed_apply_gate_raw_calls": 360,
+    "max_bond_observed": 2048,
+    "mps_array_bytes": 715827840,
+    "identity_snapshot_bytes": 380279104,
+    "counter_note": "API calls, not original input gates; fusion/nesting differ by path",
+    "analytic_gauge_shifts": 0
+  },
+  "threadpools": [
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 16,
+      "prefix": "libscipy_openblas",
+      "filepath": "/root/autodl-tmp/qibotn_diagnostic_env_20261009/lib/python3.12/site-packages/scipy.libs/libscipy_openblas-6cdc3b4a.so",
+      "version": "0.3.30",
+      "threading_layer": "pthreads",
+      "architecture": "SkylakeX"
+    },
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 16,
+      "prefix": "libscipy_openblas",
+      "filepath": "/root/autodl-tmp/qibotn_diagnostic_env_20261009/lib/python3.12/site-packages/numpy.libs/libscipy_openblas64_-56d6093b.so",
+      "version": "0.3.29",
+      "threading_layer": "pthreads",
+      "architecture": "SkylakeX"
+    }
+  ],
+  "instrumented_elapsed_s": 117.01776554435492,
+  "stages": {
+    "apply_gate_raw_inclusive": {
+      "calls": 360,
+      "completed_calls": 360,
+      "inclusive_s": 1.5469818860292435,
+      "exclusive_s": 1.5469818860292435,
+      "max_completed_s": 0.10723577439785004,
+      "max_input_bytes": 0,
+      "largest_input_shape": null
+    },
+    "apply_gate_inclusive": {
+      "calls": 311,
+      "completed_calls": 310,
+      "inclusive_s": 114.1659565269947,
+      "exclusive_s": 0.2649124041199684,
+      "max_completed_s": 9.262612253427505,
+      "max_input_bytes": 0,
+      "largest_input_shape": null
+    },
+    "guarded_scaled.right_canonize_site": {
+      "calls": 595,
+      "completed_calls": 595,
+      "inclusive_s": 53.34590744972229,
+      "exclusive_s": 0.10295610874891281,
+      "max_completed_s": 2.175471469759941,
+      "max_input_bytes": 0,
+      "largest_input_shape": null
+    },
+    "structured.right_canonize_site": {
+      "calls": 595,
+      "completed_calls": 595,
+      "inclusive_s": 53.24295134097338,
+      "exclusive_s": 14.329443648457527,
+      "max_completed_s": 2.1752548217773438,
+      "max_input_bytes": 0,
+      "largest_input_shape": null
+    },
+    "exact.right_canonize_site": {
+      "calls": 324,
+      "completed_calls": 324,
+      "inclusive_s": 0.09775418788194656,
+      "exclusive_s": 0.06307205557823181,
+      "max_completed_s": 0.0006667003035545349,
+      "max_input_bytes": 0,
+      "largest_input_shape": null
+    },
+    "exact.left_isometric_factor": {
+      "calls": 688,
+      "completed_calls": 688,
+      "inclusive_s": 0.07380613684654236,
+      "exclusive_s": 0.05046401917934418,
+      "max_completed_s": 0.0004306882619857788,
+      "max_input_bytes": 65536,
+      "largest_input_shape": [
+        64,
+        64
+      ]
+    },
+    "exact.reduced_qr": {
+      "calls": 576,
+      "completed_calls": 576,
+      "inclusive_s": 87.69659155607224,
+      "exclusive_s": 87.69659155607224,
+      "max_completed_s": 3.2430329844355583,
+      "max_input_bytes": 67108864,
+      "largest_input_shape": [
+        4096,
+        1024
+      ]
+    },
+    "structured.two_site": {
+      "calls": 311,
+      "completed_calls": 311,
+      "inclusive_s": 8.288928769528866,
+      "exclusive_s": 5.073539800941944,
+      "max_completed_s": 1.2644973248243332,
+      "max_input_bytes": 268435456,
+      "largest_input_shape": [
+        4096,
+        4096
+      ]
+    },
+    "exact.two_site": {
+      "calls": 213,
+      "completed_calls": 213,
+      "inclusive_s": 0.16811471432447433,
+      "exclusive_s": 0.15866294503211975,
+      "max_completed_s": 0.031410276889801025,
+      "max_input_bytes": 65536,
+      "largest_input_shape": [
+        64,
+        64
+      ]
+    },
+    "guarded_scaled.left_canonize_site": {
+      "calls": 289,
+      "completed_calls": 289,
+      "inclusive_s": 53.16415289789438,
+      "exclusive_s": 0.04604412615299225,
+      "max_completed_s": 3.3343157172203064,
+      "max_input_bytes": 0,
+      "largest_input_shape": null
+    },
+    "structured.left_canonize_site": {
+      "calls": 289,
+      "completed_calls": 289,
+      "inclusive_s": 53.11810877174139,
+      "exclusive_s": 7.248761378228664,
+      "max_completed_s": 3.3342039734125137,
+      "max_input_bytes": 0,
+      "largest_input_shape": null
+    },
+    "exact.left_canonize_site": {
+      "calls": 151,
+      "completed_calls": 151,
+      "inclusive_s": 0.059125714004039764,
+      "exclusive_s": 0.029453478753566742,
+      "max_completed_s": 0.0006951764225959778,
+      "max_input_bytes": 0,
+      "largest_input_shape": null
+    }
+  },
+  "in_flight_stages": [
+    "apply_gate_inclusive"
+  ],
+  "memory": {
+    "available_bytes": 61516140544,
+    "cgroup_limit_bytes": 64424509440,
+    "cgroup_used_bytes": 2908368896,
+    "host_available_bytes": 346722545664
+  },
+  "current_process_rss_bytes": 1600012288,
+  "bond_growth_milestones": [
+    {
+      "completed_apply_gate_calls": 1,
+      "completed_apply_gate_raw_calls": 60,
+      "max_bond_observed": 2,
+      "mps_array_bytes": 1024,
+      "identity_snapshot_bytes": 0,
+      "counter_note": "API calls, not original input gates; fusion/nesting differ by path",
+      "analytic_gauge_shifts": 0,
+      "instrumented_elapsed_s": 0.31656546890735626,
+      "rss_bytes": 298999808
+    },
+    {
+      "completed_apply_gate_calls": 16,
+      "completed_apply_gate_raw_calls": 60,
+      "max_bond_observed": 4,
+      "mps_array_bytes": 2304,
+      "identity_snapshot_bytes": 0,
+      "counter_note": "API calls, not original input gates; fusion/nesting differ by path",
+      "analytic_gauge_shifts": 0,
+      "instrumented_elapsed_s": 0.35872380435466766,
+      "rss_bytes": 298999808
+    },
+    {
+      "completed_apply_gate_calls": 45,
+      "completed_apply_gate_raw_calls": 90,
+      "max_bond_observed": 8,
+      "mps_array_bytes": 8832,
+      "identity_snapshot_bytes": 0,
+      "counter_note": "API calls, not original input gates; fusion/nesting differ by path",
+      "analytic_gauge_shifts": 0,
+      "instrumented_elapsed_s": 0.44910116493701935,
+      "rss_bytes": 298999808
+    },
+    {
+      "completed_apply_gate_calls": 75,
+      "completed_apply_gate_raw_calls": 120,
+      "max_bond_observed": 16,
+      "mps_array_bytes": 33408,
+      "identity_snapshot_bytes": 0,
+      "counter_note": "API calls, not original input gates; fusion/nesting differ by path",
+      "analytic_gauge_shifts": 0,
+      "instrumented_elapsed_s": 0.5429458469152451,
+      "rss_bytes": 298999808
+    },
+    {
+      "completed_apply_gate_calls": 104,
+      "completed_apply_gate_raw_calls": 150,
+      "max_bond_observed": 32,
+      "mps_array_bytes": 125568,
+      "identity_snapshot_bytes": 0,
+      "counter_note": "API calls, not original input gates; fusion/nesting differ by path",
+      "analytic_gauge_shifts": 0,
+      "instrumented_elapsed_s": 0.6349943801760674,
+      "rss_bytes": 300040192
+    },
+    {
+      "completed_apply_gate_calls": 134,
+      "completed_apply_gate_raw_calls": 180,
+      "max_bond_observed": 64,
+      "mps_array_bytes": 469632,
+      "identity_snapshot_bytes": 0,
+      "counter_note": "API calls, not original input gates; fusion/nesting differ by path",
+      "analytic_gauge_shifts": 0,
+      "instrumented_elapsed_s": 0.7311234623193741,
+      "rss_bytes": 300630016
+    },
+    {
+      "completed_apply_gate_calls": 163,
+      "completed_apply_gate_raw_calls": 210,
+      "max_bond_observed": 128,
+      "mps_array_bytes": 1747584,
+      "identity_snapshot_bytes": 262144,
+      "counter_note": "API calls, not original input gates; fusion/nesting differ by path",
+      "analytic_gauge_shifts": 0,
+      "instrumented_elapsed_s": 0.8435814827680588,
+      "rss_bytes": 302641152
+    },
+    {
+      "completed_apply_gate_calls": 193,
+      "completed_apply_gate_raw_calls": 240,
+      "max_bond_observed": 256,
+      "mps_array_bytes": 6466176,
+      "identity_snapshot_bytes": 3578176,
+      "counter_note": "API calls, not original input gates; fusion/nesting differ by path",
+      "analytic_gauge_shifts": 0,
+      "instrumented_elapsed_s": 13.271394893527031,
+      "rss_bytes": 314150912
+    },
+    {
+      "completed_apply_gate_calls": 222,
+      "completed_apply_gate_raw_calls": 270,
+      "max_bond_observed": 512,
+      "mps_array_bytes": 23767680,
+      "identity_snapshot_bytes": 13264448,
+      "counter_note": "API calls, not original input gates; fusion/nesting differ by path",
+      "analytic_gauge_shifts": 0,
+      "instrumented_elapsed_s": 36.55582432448864,
+      "rss_bytes": 348827648
+    },
+    {
+      "completed_apply_gate_calls": 252,
+      "completed_apply_gate_raw_calls": 300,
+      "max_bond_observed": 1024,
+      "mps_array_bytes": 86682240,
+      "identity_snapshot_bytes": 48929088,
+      "counter_note": "API calls, not original input gates; fusion/nesting differ by path",
+      "analytic_gauge_shifts": 0,
+      "instrumented_elapsed_s": 57.54325267672539,
+      "rss_bytes": 465367040
+    },
+    {
+      "completed_apply_gate_calls": 281,
+      "completed_apply_gate_raw_calls": 330,
+      "max_bond_observed": 2048,
+      "mps_array_bytes": 313174656,
+      "identity_snapshot_bytes": 178939456,
+      "counter_note": "API calls, not original input gates; fusion/nesting differ by path",
+      "analytic_gauge_shifts": 0,
+      "instrumented_elapsed_s": 83.10226484388113,
+      "rss_bytes": 874651648
+    }
+  ]
+}

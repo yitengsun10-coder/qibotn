@@ -1,0 +1,72 @@
+{
+  "status": "pass_kernel_calibration_not_acceptance",
+  "shape": [
+    1024,
+    256
+  ],
+  "dtype": "complex128",
+  "threads_requested": 16,
+  "input_sha256": "713a2c41635de5f9558904879353ff3046118869c2d4670c3f4369a3fe9cebf7",
+  "affinity": [
+    160,
+    161,
+    162,
+    163,
+    164,
+    165,
+    166,
+    167,
+    168,
+    169,
+    170,
+    171,
+    172,
+    173,
+    174,
+    175,
+    176,
+    177,
+    178,
+    179,
+    180,
+    181,
+    182,
+    183,
+    184,
+    185,
+    186,
+    187,
+    188,
+    189,
+    190,
+    191
+  ],
+  "formal_30q_acceptance_complete": false,
+  "publishable_speedup": null,
+  "threadpools": [
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 16,
+      "prefix": "libscipy_openblas",
+      "filepath": "/root/autodl-tmp/qibotn_diagnostic_env_20261009/lib/python3.12/site-packages/scipy.libs/libscipy_openblas-6cdc3b4a.so",
+      "version": "0.3.30",
+      "threading_layer": "pthreads",
+      "architecture": "SkylakeX"
+    },
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 16,
+      "prefix": "libscipy_openblas",
+      "filepath": "/root/autodl-tmp/qibotn_diagnostic_env_20261009/lib/python3.12/site-packages/numpy.libs/libscipy_openblas64_-56d6093b.so",
+      "version": "0.3.29",
+      "threading_layer": "pthreads",
+      "architecture": "SkylakeX"
+    }
+  ],
+  "runtime_s": 0.021851278841495514,
+  "projection_relative_residual": 1.0237755403757805e-15,
+  "projection_orthogonality_residual": 5.752253340780803e-16,
+  "numerical_check_scope": "four deterministic random projections, not full matrix or circuit validation"
+}

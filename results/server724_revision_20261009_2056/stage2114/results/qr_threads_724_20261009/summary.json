@@ -1,0 +1,697 @@
+{
+  "status": "finished_kernel_calibration_not_acceptance",
+  "recorded_at": "2026-10-09T20:14:05.451431+08:00",
+  "formal_30q_acceptance_complete": false,
+  "publishable_speedup": null,
+  "scope": "one exploratory exact QR sample per shape/thread setting; never an end-to-end speedup",
+  "budgets_per_job": {
+    "seconds": 45.0,
+    "rss_mib": 4096.0,
+    "reserve_mib": 2048
+  },
+  "source_hashes": {
+    "benchmarks/asc_revision_cpu/probe_large_qr_threads.py": "bd3deaa22387ec4cbcd5a9d87b8725b836ea13cf6e28eeb50aa4fa4dbf9e35a4",
+    "src/qibotn/backends/_exact_numpy.py": "953de2012c268d85965ca33176c41e3f6f6e48ed76f5575ef3200a1e13da70fa",
+    "benchmarks/asc_revision_cpu/profile_fixed30_bounded.py": "d04dadb4da7e3236496bfa5010736be106d5daced5d4963b5dadae3e660ce5c4"
+  },
+  "python": "3.12.3 | packaged by Anaconda, Inc. | (main, May  6 2024, 19:46:43) [GCC 11.2.0]",
+  "versions": {
+    "numpy": "2.2.6",
+    "scipy": "1.17.1",
+    "threadpoolctl": "3.7.0",
+    "psutil": "5.9.8"
+  },
+  "memory": {
+    "available_bytes": 63009333248,
+    "cgroup_limit_bytes": 64424509440,
+    "cgroup_used_bytes": 1415176192,
+    "host_available_bytes": 343159349248
+  },
+  "rows": [
+    {
+      "shape": [
+        4096,
+        1024
+      ],
+      "threads": 1,
+      "exit_code": 0,
+      "stop_reason": null,
+      "wall_s": 4.349357537925243,
+      "peak_process_tree_rss_bytes": 419221504,
+      "result": {
+        "status": "pass_kernel_calibration_not_acceptance",
+        "shape": [
+          4096,
+          1024
+        ],
+        "dtype": "complex128",
+        "threads_requested": 1,
+        "input_sha256": "289a5752af0636004185929d335cb04cf837ef7b3599242e00f3322b0ef51ed7",
+        "affinity": [
+          160,
+          161,
+          162,
+          163,
+          164,
+          165,
+          166,
+          167,
+          168,
+          169,
+          170,
+          171,
+          172,
+          173,
+          174,
+          175,
+          176,
+          177,
+          178,
+          179,
+          180,
+          181,
+          182,
+          183,
+          184,
+          185,
+          186,
+          187,
+          188,
+          189,
+          190,
+          191
+        ],
+        "formal_30q_acceptance_complete": false,
+        "publishable_speedup": null,
+        "threadpools": [
+          {
+            "user_api": "blas",
+            "internal_api": "openblas",
+            "num_threads": 1,
+            "prefix": "libscipy_openblas",
+            "filepath": "/root/autodl-tmp/qibotn_diagnostic_env_20261009/lib/python3.12/site-packages/scipy.libs/libscipy_openblas-6cdc3b4a.so",
+            "version": "0.3.30",
+            "threading_layer": "pthreads",
+            "architecture": "SkylakeX"
+          },
+          {
+            "user_api": "blas",
+            "internal_api": "openblas",
+            "num_threads": 1,
+            "prefix": "libscipy_openblas",
+            "filepath": "/root/autodl-tmp/qibotn_diagnostic_env_20261009/lib/python3.12/site-packages/numpy.libs/libscipy_openblas64_-56d6093b.so",
+            "version": "0.3.29",
+            "threading_layer": "pthreads",
+            "architecture": "SkylakeX"
+          }
+        ],
+        "runtime_s": 2.090628333389759,
+        "projection_relative_residual": 9.51407615209231e-16,
+        "projection_orthogonality_residual": 5.595414649262409e-16,
+        "numerical_check_scope": "four deterministic random projections, not full matrix or circuit validation"
+      }
+    },
+    {
+      "shape": [
+        4096,
+        1024
+      ],
+      "threads": 4,
+      "exit_code": 0,
+      "stop_reason": null,
+      "wall_s": 3.340182200074196,
+      "peak_process_tree_rss_bytes": 456863744,
+      "result": {
+        "status": "pass_kernel_calibration_not_acceptance",
+        "shape": [
+          4096,
+          1024
+        ],
+        "dtype": "complex128",
+        "threads_requested": 4,
+        "input_sha256": "289a5752af0636004185929d335cb04cf837ef7b3599242e00f3322b0ef51ed7",
+        "affinity": [
+          160,
+          161,
+          162,
+          163,
+          164,
+          165,
+          166,
+          167,
+          168,
+          169,
+          170,
+          171,
+          172,
+          173,
+          174,
+          175,
+          176,
+          177,
+          178,
+          179,
+          180,
+          181,
+          182,
+          183,
+          184,
+          185,
+          186,
+          187,
+          188,
+          189,
+          190,
+          191
+        ],
+        "formal_30q_acceptance_complete": false,
+        "publishable_speedup": null,
+        "threadpools": [
+          {
+            "user_api": "blas",
+            "internal_api": "openblas",
+            "num_threads": 4,
+            "prefix": "libscipy_openblas",
+            "filepath": "/root/autodl-tmp/qibotn_diagnostic_env_20261009/lib/python3.12/site-packages/numpy.libs/libscipy_openblas64_-56d6093b.so",
+            "version": "0.3.29",
+            "threading_layer": "pthreads",
+            "architecture": "SkylakeX"
+          },
+          {
+            "user_api": "blas",
+            "internal_api": "openblas",
+            "num_threads": 4,
+            "prefix": "libscipy_openblas",
+            "filepath": "/root/autodl-tmp/qibotn_diagnostic_env_20261009/lib/python3.12/site-packages/scipy.libs/libscipy_openblas-6cdc3b4a.so",
+            "version": "0.3.30",
+            "threading_layer": "pthreads",
+            "architecture": "SkylakeX"
+          }
+        ],
+        "runtime_s": 1.020721472799778,
+        "projection_relative_residual": 9.55837714359264e-16,
+        "projection_orthogonality_residual": 5.519895600393356e-16,
+        "numerical_check_scope": "four deterministic random projections, not full matrix or circuit validation"
+      }
+    },
+    {
+      "shape": [
+        4096,
+        1024
+      ],
+      "threads": 8,
+      "exit_code": 0,
+      "stop_reason": null,
+      "wall_s": 2.936013236641884,
+      "peak_process_tree_rss_bytes": 494456832,
+      "result": {
+        "status": "pass_kernel_calibration_not_acceptance",
+        "shape": [
+          4096,
+          1024
+        ],
+        "dtype": "complex128",
+        "threads_requested": 8,
+        "input_sha256": "289a5752af0636004185929d335cb04cf837ef7b3599242e00f3322b0ef51ed7",
+        "affinity": [
+          160,
+          161,
+          162,
+          163,
+          164,
+          165,
+          166,
+          167,
+          168,
+          169,
+          170,
+          171,
+          172,
+          173,
+          174,
+          175,
+          176,
+          177,
+          178,
+          179,
+          180,
+          181,
+          182,
+          183,
+          184,
+          185,
+          186,
+          187,
+          188,
+          189,
+          190,
+          191
+        ],
+        "formal_30q_acceptance_complete": false,
+        "publishable_speedup": null,
+        "threadpools": [
+          {
+            "user_api": "blas",
+            "internal_api": "openblas",
+            "num_threads": 8,
+            "prefix": "libscipy_openblas",
+            "filepath": "/root/autodl-tmp/qibotn_diagnostic_env_20261009/lib/python3.12/site-packages/scipy.libs/libscipy_openblas-6cdc3b4a.so",
+            "version": "0.3.30",
+            "threading_layer": "pthreads",
+            "architecture": "SkylakeX"
+          },
+          {
+            "user_api": "blas",
+            "internal_api": "openblas",
+            "num_threads": 8,
+            "prefix": "libscipy_openblas",
+            "filepath": "/root/autodl-tmp/qibotn_diagnostic_env_20261009/lib/python3.12/site-packages/numpy.libs/libscipy_openblas64_-56d6093b.so",
+            "version": "0.3.29",
+            "threading_layer": "pthreads",
+            "architecture": "SkylakeX"
+          }
+        ],
+        "runtime_s": 0.6728581339120865,
+        "projection_relative_residual": 9.55837714359264e-16,
+        "projection_orthogonality_residual": 5.519895600393356e-16,
+        "numerical_check_scope": "four deterministic random projections, not full matrix or circuit validation"
+      }
+    },
+    {
+      "shape": [
+        4096,
+        1024
+      ],
+      "threads": 16,
+      "exit_code": 0,
+      "stop_reason": null,
+      "wall_s": 2.628552757203579,
+      "peak_process_tree_rss_bytes": 423723008,
+      "result": {
+        "status": "pass_kernel_calibration_not_acceptance",
+        "shape": [
+          4096,
+          1024
+        ],
+        "dtype": "complex128",
+        "threads_requested": 16,
+        "input_sha256": "289a5752af0636004185929d335cb04cf837ef7b3599242e00f3322b0ef51ed7",
+        "affinity": [
+          160,
+          161,
+          162,
+          163,
+          164,
+          165,
+          166,
+          167,
+          168,
+          169,
+          170,
+          171,
+          172,
+          173,
+          174,
+          175,
+          176,
+          177,
+          178,
+          179,
+          180,
+          181,
+          182,
+          183,
+          184,
+          185,
+          186,
+          187,
+          188,
+          189,
+          190,
+          191
+        ],
+        "formal_30q_acceptance_complete": false,
+        "publishable_speedup": null,
+        "threadpools": [
+          {
+            "user_api": "blas",
+            "internal_api": "openblas",
+            "num_threads": 16,
+            "prefix": "libscipy_openblas",
+            "filepath": "/root/autodl-tmp/qibotn_diagnostic_env_20261009/lib/python3.12/site-packages/scipy.libs/libscipy_openblas-6cdc3b4a.so",
+            "version": "0.3.30",
+            "threading_layer": "pthreads",
+            "architecture": "SkylakeX"
+          },
+          {
+            "user_api": "blas",
+            "internal_api": "openblas",
+            "num_threads": 16,
+            "prefix": "libscipy_openblas",
+            "filepath": "/root/autodl-tmp/qibotn_diagnostic_env_20261009/lib/python3.12/site-packages/numpy.libs/libscipy_openblas64_-56d6093b.so",
+            "version": "0.3.29",
+            "threading_layer": "pthreads",
+            "architecture": "SkylakeX"
+          }
+        ],
+        "runtime_s": 0.4833549037575722,
+        "projection_relative_residual": 9.574206092664469e-16,
+        "projection_orthogonality_residual": 5.538143930006889e-16,
+        "numerical_check_scope": "four deterministic random projections, not full matrix or circuit validation"
+      }
+    },
+    {
+      "shape": [
+        8192,
+        2048
+      ],
+      "threads": 1,
+      "exit_code": 0,
+      "stop_reason": null,
+      "wall_s": 22.340666502714157,
+      "peak_process_tree_rss_bytes": 1140609024,
+      "result": {
+        "status": "pass_kernel_calibration_not_acceptance",
+        "shape": [
+          8192,
+          2048
+        ],
+        "dtype": "complex128",
+        "threads_requested": 1,
+        "input_sha256": "8c0fb2e41a7a3c00893f642882b43e72f03d3c880e857d77ff756333e472374f",
+        "affinity": [
+          160,
+          161,
+          162,
+          163,
+          164,
+          165,
+          166,
+          167,
+          168,
+          169,
+          170,
+          171,
+          172,
+          173,
+          174,
+          175,
+          176,
+          177,
+          178,
+          179,
+          180,
+          181,
+          182,
+          183,
+          184,
+          185,
+          186,
+          187,
+          188,
+          189,
+          190,
+          191
+        ],
+        "formal_30q_acceptance_complete": false,
+        "publishable_speedup": null,
+        "threadpools": [
+          {
+            "user_api": "blas",
+            "internal_api": "openblas",
+            "num_threads": 1,
+            "prefix": "libscipy_openblas",
+            "filepath": "/root/autodl-tmp/qibotn_diagnostic_env_20261009/lib/python3.12/site-packages/scipy.libs/libscipy_openblas-6cdc3b4a.so",
+            "version": "0.3.30",
+            "threading_layer": "pthreads",
+            "architecture": "SkylakeX"
+          },
+          {
+            "user_api": "blas",
+            "internal_api": "openblas",
+            "num_threads": 1,
+            "prefix": "libscipy_openblas",
+            "filepath": "/root/autodl-tmp/qibotn_diagnostic_env_20261009/lib/python3.12/site-packages/numpy.libs/libscipy_openblas64_-56d6093b.so",
+            "version": "0.3.29",
+            "threading_layer": "pthreads",
+            "architecture": "SkylakeX"
+          }
+        ],
+        "runtime_s": 17.969546131789684,
+        "projection_relative_residual": 1.010107496437476e-15,
+        "projection_orthogonality_residual": 5.958194654566544e-16,
+        "numerical_check_scope": "four deterministic random projections, not full matrix or circuit validation"
+      }
+    },
+    {
+      "shape": [
+        8192,
+        2048
+      ],
+      "threads": 4,
+      "exit_code": 0,
+      "stop_reason": null,
+      "wall_s": 10.048409216105938,
+      "peak_process_tree_rss_bytes": 1115729920,
+      "result": {
+        "status": "pass_kernel_calibration_not_acceptance",
+        "shape": [
+          8192,
+          2048
+        ],
+        "dtype": "complex128",
+        "threads_requested": 4,
+        "input_sha256": "8c0fb2e41a7a3c00893f642882b43e72f03d3c880e857d77ff756333e472374f",
+        "affinity": [
+          160,
+          161,
+          162,
+          163,
+          164,
+          165,
+          166,
+          167,
+          168,
+          169,
+          170,
+          171,
+          172,
+          173,
+          174,
+          175,
+          176,
+          177,
+          178,
+          179,
+          180,
+          181,
+          182,
+          183,
+          184,
+          185,
+          186,
+          187,
+          188,
+          189,
+          190,
+          191
+        ],
+        "formal_30q_acceptance_complete": false,
+        "publishable_speedup": null,
+        "threadpools": [
+          {
+            "user_api": "blas",
+            "internal_api": "openblas",
+            "num_threads": 4,
+            "prefix": "libscipy_openblas",
+            "filepath": "/root/autodl-tmp/qibotn_diagnostic_env_20261009/lib/python3.12/site-packages/scipy.libs/libscipy_openblas-6cdc3b4a.so",
+            "version": "0.3.30",
+            "threading_layer": "pthreads",
+            "architecture": "SkylakeX"
+          },
+          {
+            "user_api": "blas",
+            "internal_api": "openblas",
+            "num_threads": 4,
+            "prefix": "libscipy_openblas",
+            "filepath": "/root/autodl-tmp/qibotn_diagnostic_env_20261009/lib/python3.12/site-packages/numpy.libs/libscipy_openblas64_-56d6093b.so",
+            "version": "0.3.29",
+            "threading_layer": "pthreads",
+            "architecture": "SkylakeX"
+          }
+        ],
+        "runtime_s": 6.108969271183014,
+        "projection_relative_residual": 1.0129431106831008e-15,
+        "projection_orthogonality_residual": 5.953148813410943e-16,
+        "numerical_check_scope": "four deterministic random projections, not full matrix or circuit validation"
+      }
+    },
+    {
+      "shape": [
+        8192,
+        2048
+      ],
+      "threads": 8,
+      "exit_code": 0,
+      "stop_reason": null,
+      "wall_s": 7.8067610412836075,
+      "peak_process_tree_rss_bytes": 1116319744,
+      "result": {
+        "status": "pass_kernel_calibration_not_acceptance",
+        "shape": [
+          8192,
+          2048
+        ],
+        "dtype": "complex128",
+        "threads_requested": 8,
+        "input_sha256": "8c0fb2e41a7a3c00893f642882b43e72f03d3c880e857d77ff756333e472374f",
+        "affinity": [
+          160,
+          161,
+          162,
+          163,
+          164,
+          165,
+          166,
+          167,
+          168,
+          169,
+          170,
+          171,
+          172,
+          173,
+          174,
+          175,
+          176,
+          177,
+          178,
+          179,
+          180,
+          181,
+          182,
+          183,
+          184,
+          185,
+          186,
+          187,
+          188,
+          189,
+          190,
+          191
+        ],
+        "formal_30q_acceptance_complete": false,
+        "publishable_speedup": null,
+        "threadpools": [
+          {
+            "user_api": "blas",
+            "internal_api": "openblas",
+            "num_threads": 8,
+            "prefix": "libscipy_openblas",
+            "filepath": "/root/autodl-tmp/qibotn_diagnostic_env_20261009/lib/python3.12/site-packages/numpy.libs/libscipy_openblas64_-56d6093b.so",
+            "version": "0.3.29",
+            "threading_layer": "pthreads",
+            "architecture": "SkylakeX"
+          },
+          {
+            "user_api": "blas",
+            "internal_api": "openblas",
+            "num_threads": 8,
+            "prefix": "libscipy_openblas",
+            "filepath": "/root/autodl-tmp/qibotn_diagnostic_env_20261009/lib/python3.12/site-packages/scipy.libs/libscipy_openblas-6cdc3b4a.so",
+            "version": "0.3.30",
+            "threading_layer": "pthreads",
+            "architecture": "SkylakeX"
+          }
+        ],
+        "runtime_s": 3.84012558311224,
+        "projection_relative_residual": 1.0129431106831008e-15,
+        "projection_orthogonality_residual": 5.953148813410943e-16,
+        "numerical_check_scope": "four deterministic random projections, not full matrix or circuit validation"
+      }
+    },
+    {
+      "shape": [
+        8192,
+        2048
+      ],
+      "threads": 16,
+      "exit_code": 0,
+      "stop_reason": null,
+      "wall_s": 6.5971460565924644,
+      "peak_process_tree_rss_bytes": 1120415744,
+      "result": {
+        "status": "pass_kernel_calibration_not_acceptance",
+        "shape": [
+          8192,
+          2048
+        ],
+        "dtype": "complex128",
+        "threads_requested": 16,
+        "input_sha256": "8c0fb2e41a7a3c00893f642882b43e72f03d3c880e857d77ff756333e472374f",
+        "affinity": [
+          160,
+          161,
+          162,
+          163,
+          164,
+          165,
+          166,
+          167,
+          168,
+          169,
+          170,
+          171,
+          172,
+          173,
+          174,
+          175,
+          176,
+          177,
+          178,
+          179,
+          180,
+          181,
+          182,
+          183,
+          184,
+          185,
+          186,
+          187,
+          188,
+          189,
+          190,
+          191
+        ],
+        "formal_30q_acceptance_complete": false,
+        "publishable_speedup": null,
+        "threadpools": [
+          {
+            "user_api": "blas",
+            "internal_api": "openblas",
+            "num_threads": 16,
+            "prefix": "libscipy_openblas",
+            "filepath": "/root/autodl-tmp/qibotn_diagnostic_env_20261009/lib/python3.12/site-packages/numpy.libs/libscipy_openblas64_-56d6093b.so",
+            "version": "0.3.29",
+            "threading_layer": "pthreads",
+            "architecture": "SkylakeX"
+          },
+          {
+            "user_api": "blas",
+            "internal_api": "openblas",
+            "num_threads": 16,
+            "prefix": "libscipy_openblas",
+            "filepath": "/root/autodl-tmp/qibotn_diagnostic_env_20261009/lib/python3.12/site-packages/scipy.libs/libscipy_openblas-6cdc3b4a.so",
+            "version": "0.3.30",
+            "threading_layer": "pthreads",
+            "architecture": "SkylakeX"
+          }
+        ],
+        "runtime_s": 2.638767085969448,
+        "projection_relative_residual": 1.014763169966738e-15,
+        "projection_orthogonality_residual": 5.884436405891496e-16,
+        "numerical_check_scope": "four deterministic random projections, not full matrix or circuit validation"
+      }
+    }
+  ],
+  "source_unchanged": true
+}

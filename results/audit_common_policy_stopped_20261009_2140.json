@@ -1,0 +1,30 @@
+{
+  "status": "incomplete_or_failed",
+  "supplement30_suite_complete": false,
+  "original30_complete": false,
+  "all_contest_tasks_complete": false,
+  "source_snapshots_verified": 14,
+  "cases": [
+    {
+      "kind": "chain",
+      "pass": false,
+      "rows": 4,
+      "means_s": null,
+      "stdev_s": null,
+      "speedups_vs_official_common_qr_policy": null
+    }
+  ],
+  "failures": [
+    "suite incomplete",
+    "case summaries missing/reordered",
+    "chain: not a complete formal case",
+    "chain: source candidate did not execute rank2 splits",
+    "chain: incomplete/reordered 12 planned rows",
+    "chain: stop/exit not clean",
+    "ring: no result",
+    "nonlocal_mixed: no result"
+  ],
+  "aggregate_speedups_vs_official_common_qr_policy": null,
+  "scope": "three predeclared six-bridge exact30 inputs; not generic high-entanglement original30",
+  "auditor_sha256": "f1a966760a022d6bc799d964e975bffcc8204ef1366012d8163c7d74085a707f"
+}

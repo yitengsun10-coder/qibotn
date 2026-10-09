@@ -1,0 +1,127 @@
+{
+  "kind": "original30",
+  "qubits": 30,
+  "gates": 9998,
+  "depth": 449,
+  "input_sha256": "1ea5c95ebdcc651a1291dadfb7a193009377732bba8d03a01ac37ef7b82b37d4",
+  "input_file": "input.qasm",
+  "replaces_original30": false,
+  "status": "running",
+  "formal_30q_acceptance_complete": false,
+  "publishable_speedup": null,
+  "instrumented_not_formal_timing": true,
+  "precision": "complex128",
+  "cutoff": 0,
+  "max_bond": null,
+  "smoke_test_only": false,
+  "candidate": "adaptive",
+  "affinity": [
+    160,
+    161,
+    162,
+    163,
+    164,
+    165,
+    166,
+    167,
+    168,
+    169,
+    170,
+    171,
+    172,
+    173,
+    174,
+    175
+  ],
+  "threads": 16,
+  "max_bond_observed": 4096,
+  "controlled_rank2_splits": 102,
+  "completed_apply_gate_calls": 768,
+  "threadpools": [
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 16,
+      "prefix": "libscipy_openblas",
+      "filepath": "/root/autodl-tmp/qibotn_diagnostic_env_20261009/lib/python3.12/site-packages/scipy.libs/libscipy_openblas-6cdc3b4a.so",
+      "version": "0.3.30",
+      "threading_layer": "pthreads",
+      "architecture": "SkylakeX"
+    },
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 16,
+      "prefix": "libscipy_openblas",
+      "filepath": "/root/autodl-tmp/qibotn_diagnostic_env_20261009/lib/python3.12/site-packages/numpy.libs/libscipy_openblas64_-56d6093b.so",
+      "version": "0.3.29",
+      "threading_layer": "pthreads",
+      "architecture": "SkylakeX"
+    }
+  ],
+  "instrumented_elapsed_s": 177.38361260294914,
+  "stages": {
+    "apply_gate_raw_inclusive": {
+      "calls": 420,
+      "completed_calls": 420,
+      "inclusive_s": 9.179517686367035,
+      "exclusive_s": 9.179517686367035,
+      "max_completed_s": 1.05801360309124,
+      "max_input_bytes": 0,
+      "largest_input_shape": null
+    },
+    "apply_gate_inclusive": {
+      "calls": 349,
+      "completed_calls": 348,
+      "inclusive_s": 164.0685619264841,
+      "exclusive_s": 28.531864546239376,
+      "max_completed_s": 22.266393765807152,
+      "max_input_bytes": 0,
+      "largest_input_shape": null
+    },
+    "exact.isometric_factor": {
+      "calls": 784,
+      "completed_calls": 784,
+      "inclusive_s": 32.26174673438072,
+      "exclusive_s": 0.08445683866739273,
+      "max_completed_s": 8.77507246285677,
+      "max_input_bytes": 536870912,
+      "largest_input_shape": [
+        8192,
+        4096
+      ]
+    },
+    "exact.reduced_qr": {
+      "calls": 842,
+      "completed_calls": 841,
+      "inclusive_s": 116.93756665289402,
+      "exclusive_s": 116.93756665289402,
+      "max_completed_s": 9.639655992388725,
+      "max_input_bytes": 536870912,
+      "largest_input_shape": [
+        8192,
+        4096
+      ]
+    },
+    "controlled_rank2.two_site": {
+      "calls": 348,
+      "completed_calls": 348,
+      "inclusive_s": 54.773449413478374,
+      "exclusive_s": 18.51467388868332,
+      "max_completed_s": 11.465122573077679,
+      "max_input_bytes": 0,
+      "largest_input_shape": null
+    }
+  },
+  "in_flight_stages": [
+    "apply_gate_inclusive",
+    "exact.reduced_qr"
+  ],
+  "memory": {
+    "available_bytes": 57503580160,
+    "cgroup_limit_bytes": 64424509440,
+    "cgroup_used_bytes": 6920929280,
+    "host_available_bytes": 336209334272
+  },
+  "current_process_rss_bytes": 5491707904
+}

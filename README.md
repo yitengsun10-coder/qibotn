@@ -18,7 +18,15 @@ The old 30q thread comparison in
 [`benchmarks/asc_large_cpu`](benchmarks/asc_large_cpu/README.md) is preserved
 as history, not accepted accurate optimization: its common truncated state
 lost substantial norm. It must not be presented as a current successful 7x
-result. No paid resource or new 30q long run has been started.
+result. The user has since rented a 32-vCPU / 60-GiB CPU instance. Bounded
+original-30q probes stopped at their declared time limits, not OOM, and have
+not completed acceptance. A new exact controlled-gate rank-two factorization
+is under supplementary evaluation, with identical QR thread scheduling for
+the official reference and both candidates. Supplementary six-bridge inputs
+do not replace the original high-entanglement input. See the
+[724 stage record](benchmarks/asc_revision_cpu/SERVER724_RANK2_STAGE_20261009.md)
+for scope, raw-evidence locations and remaining work; no new 30q speedup is
+accepted yet.
 
 ## Supported Computation
 

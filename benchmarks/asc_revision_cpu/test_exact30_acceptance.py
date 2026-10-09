@@ -1,9 +1,11 @@
 """Small helper tests are not a completed 30q simulation or speed result."""
 from copy import deepcopy
 import math
+from types import SimpleNamespace
 import pytest
 from benchmarks.asc_revision_cpu.exact30_acceptance import (
-    METHODS, export_state, make_plan, streamed_overlap, summarize_rows, validate_state)
+    METHODS, container_resource_plan, export_state, make_plan, streamed_overlap,
+    summarize_rows, validate_state)
 
 
 def rows():
@@ -27,6 +29,28 @@ def test_plan_can_admit_larger_cpu_without_claiming_pass():
 
 def test_plan_rejects_insufficient_disk():
     assert not make_plan(128 * 2**30, 120 * 2**30, 1 * 2**30, 96 * 2**30)['resources_admitted']
+
+
+def test_plan_rejects_60_gib_container_on_large_host(tmp_path):
+    (tmp_path / 'memory.max').write_text(str(60 * 2**30))
+    (tmp_path / 'memory.current').write_text(str(2 * 2**30))
+    memory = SimpleNamespace(total=377 * 2**30, available=329 * 2**30)
+    plan = container_resource_plan(memory, 50 * 2**30, 96 * 2**30, tmp_path)
+    assert not plan['resources_admitted']
+    assert plan['host_total_memory_bytes'] == 377 * 2**30
+    assert plan['effective_total_memory_bytes'] == 60 * 2**30
+    assert plan['effective_available_memory_bytes'] == 58 * 2**30
+    assert not plan['formal_30q_acceptance_complete']
+    assert not plan['allocation_forecast_complete']
+
+
+def test_plan_uses_host_memory_when_no_container_limit(tmp_path):
+    memory = SimpleNamespace(total=128 * 2**30, available=120 * 2**30)
+    plan = container_resource_plan(memory, 200 * 2**30, 96 * 2**30, tmp_path)
+    assert plan['resources_admitted']
+    assert plan['effective_available_memory_bytes'] == memory.available
+    assert plan['container_memory']['cgroup_limit_bytes'] is None
+    assert not plan['allocation_forecast_complete']
 
 
 def test_complete_fair_rows():

@@ -1,0 +1,644 @@
+{
+  "recorded_at": "2026-10-09T20:16:16.194193+08:00",
+  "status": "diagnosis_finished_not_acceptance",
+  "execute_requested": true,
+  "instrumented_not_formal_timing": true,
+  "formal_30q_acceptance_complete": false,
+  "publishable_speedup": null,
+  "smoke_test_only": true,
+  "methods": [
+    "upstream_typo_only",
+    "integrated",
+    "guarded_scaled_candidate"
+  ],
+  "threads_requested": 16,
+  "budgets_per_path": {
+    "seconds": 25.0,
+    "process_tree_memory_mib": 2048.0,
+    "effective_memory_reserve_mib": 2048.0
+  },
+  "workspace_guard_note": "4/5-array extra-space heuristic; conservative guard, not a measured allocation or proof of required RAM",
+  "source_hashes": {
+    "src/qibotn/backends/quimb.py": "9e2f24828e12f567fa8d23d35f4971b99390876ec8a8fc0c87de0b7dee201092",
+    "src/qibotn/backends/_exact_numpy.py": "953de2012c268d85965ca33176c41e3f6f6e48ed76f5575ef3200a1e13da70fa",
+    "src/qibotn/backends/_linear_cnot.py": "3c38cf9c91a8136798f8909dd841e2f66f85cf3b1d41c1916d50fa18fc3537c3",
+    "src/qibotn/backends/_structured_numpy.py": "e8c68fc4ac3d490d8acae48e7bfff603353d5a50de014fe09ebe297656d4bf08",
+    "src/qibotn/backends/_cnot_schedule.py": "49807da9550061c0f52a6e2d25a4441a0eabb1089371fd75db54a4714e7d0065",
+    "src/qibotn/backends/_mixed_schedule.py": "29217f62093d2d2f741cfedb011052c2da40a2def1f70bf6c41549c1f02d0fbd",
+    "benchmarks/asc_revision_cpu/profile_fixed30_bounded.py": "d04dadb4da7e3236496bfa5010736be106d5daced5d4963b5dadae3e660ce5c4",
+    "benchmarks/asc_revision_cpu/upstream_reference.py": "c7501c667f65509c7b375fd7c5291b3add074edfe3b6c5d0b76e5a7ae4d87aaa",
+    "benchmarks/asc_revision_cpu/candidate_guarded_scaled.py": "30d17b555ff6fe758737ef55a19db76a1656cf970ecb0ddcb7c8661514fedc67",
+    "benchmarks/asc_large_cpu/benchmark.py": "0da3e76c12e8bebb964a1fe3bd9097fabae8919e07f88def506d9842d9d95c29"
+  },
+  "memory_at_start": {
+    "available_bytes": 63009701888,
+    "cgroup_limit_bytes": 64424509440,
+    "cgroup_used_bytes": 1414807552,
+    "host_available_bytes": 341670137856
+  },
+  "environment": {
+    "python": "3.12.3 | packaged by Anaconda, Inc. | (main, May  6 2024, 19:46:43) [GCC 11.2.0]",
+    "python_executable": "/root/autodl-tmp/qibotn_diagnostic_env_20261009/bin/python",
+    "platform": "Linux-5.15.0-78-generic-x86_64-with-glibc2.35",
+    "host_logical_cpus": 192,
+    "allowed_affinity": [
+      160,
+      161,
+      162,
+      163,
+      164,
+      165,
+      166,
+      167,
+      168,
+      169,
+      170,
+      171,
+      172,
+      173,
+      174,
+      175,
+      176,
+      177,
+      178,
+      179,
+      180,
+      181,
+      182,
+      183,
+      184,
+      185,
+      186,
+      187,
+      188,
+      189,
+      190,
+      191
+    ],
+    "packages": {
+      "qibo": "0.3.2",
+      "quimb": "1.13.0",
+      "numpy": "2.2.6",
+      "scipy": "1.17.1",
+      "cotengra": "0.8.2",
+      "autoray": "0.11.0",
+      "psutil": "5.9.8",
+      "threadpoolctl": "3.7.0"
+    }
+  },
+  "paths": [
+    {
+      "method": "upstream_typo_only",
+      "exit_code": 0,
+      "supervisor_stop_reason": null,
+      "wall_s": 2.3001779541373253,
+      "peak_process_tree_rss_bytes": 291999744,
+      "profile": {
+        "status": "completed_instrumented_call_not_acceptance",
+        "method": "upstream_typo_only",
+        "qubits": 6,
+        "gates": 57,
+        "depth": 13,
+        "qasm_sha256": "51ea75dc3ca149e8c8a184f45981c7b81407ee32f969b7ee0de33be07b44715c",
+        "precision": "complex128",
+        "cutoff": 0,
+        "max_bond": null,
+        "affinity": [
+          160,
+          161,
+          162,
+          163,
+          164,
+          165,
+          166,
+          167,
+          168,
+          169,
+          170,
+          171,
+          172,
+          173,
+          174,
+          175
+        ],
+        "threads_requested": 16,
+        "reference": {
+          "commit": "7ebbd4d4a00f37b898c552922953591b78b0af7e",
+          "path": "src/qibotn/backends/quimb.py",
+          "original_sha256": "1e1ada931f9fb0f9228f7190cd46f5401328b1fbec9e42f40ba9dc7fca313aca",
+          "typo_only_sha256": "1a4e2e70c05e5015006ec2cdce3b81f6d2ba463ebbf604726fbb370fe4c9f472",
+          "sole_change": "contraction_optimizer -> contractions_optimizer at the observable contraction",
+          "extra_norm_contraction": false,
+          "state_preparations_per_call": 1,
+          "algorithm_or_backend_replacement": false
+        },
+        "instrumented_not_formal_timing": true,
+        "formal_30q_acceptance_complete": false,
+        "publishable_speedup": null,
+        "smoke_test_only": true,
+        "progress": {
+          "completed_apply_gate_calls": 57,
+          "completed_apply_gate_raw_calls": 0,
+          "max_bond_observed": 8,
+          "mps_array_bytes": 2688,
+          "identity_snapshot_bytes": 0,
+          "counter_note": "API calls, not original input gates; fusion/nesting differ by path",
+          "analytic_gauge_shifts": 0
+        },
+        "threadpools": [
+          {
+            "user_api": "blas",
+            "internal_api": "openblas",
+            "num_threads": 16,
+            "prefix": "libscipy_openblas",
+            "filepath": "/root/autodl-tmp/qibotn_diagnostic_env_20261009/lib/python3.12/site-packages/scipy.libs/libscipy_openblas-6cdc3b4a.so",
+            "version": "0.3.30",
+            "threading_layer": "pthreads",
+            "architecture": "SkylakeX"
+          },
+          {
+            "user_api": "blas",
+            "internal_api": "openblas",
+            "num_threads": 16,
+            "prefix": "libscipy_openblas",
+            "filepath": "/root/autodl-tmp/qibotn_diagnostic_env_20261009/lib/python3.12/site-packages/numpy.libs/libscipy_openblas64_-56d6093b.so",
+            "version": "0.3.29",
+            "threading_layer": "pthreads",
+            "architecture": "SkylakeX"
+          }
+        ],
+        "instrumented_elapsed_s": 0.18962091207504272,
+        "stages": {
+          "apply_gate_inclusive": {
+            "calls": 57,
+            "completed_calls": 57,
+            "inclusive_s": 0.09407836198806763,
+            "exclusive_s": 0.02761862426996231,
+            "max_completed_s": 0.03320780396461487,
+            "max_input_bytes": 0,
+            "largest_input_shape": null
+          },
+          "native.right_canonize_site": {
+            "calls": 19,
+            "completed_calls": 19,
+            "inclusive_s": 0.04249601811170578,
+            "exclusive_s": 0.04249601811170578,
+            "max_completed_s": 0.031041793525218964,
+            "max_input_bytes": 0,
+            "largest_input_shape": null
+          },
+          "native.gate_split_inplace": {
+            "calls": 15,
+            "completed_calls": 15,
+            "inclusive_s": 0.022614002227783203,
+            "exclusive_s": 0.022614002227783203,
+            "max_completed_s": 0.016582541167736053,
+            "max_input_bytes": 0,
+            "largest_input_shape": null
+          },
+          "native.left_canonize_site": {
+            "calls": 9,
+            "completed_calls": 9,
+            "inclusive_s": 0.001349717378616333,
+            "exclusive_s": 0.001349717378616333,
+            "max_completed_s": 0.0001665353775024414,
+            "max_input_bytes": 0,
+            "largest_input_shape": null
+          }
+        },
+        "in_flight_stages": [],
+        "memory": {
+          "available_bytes": 62831443968,
+          "cgroup_limit_bytes": 64424509440,
+          "cgroup_used_bytes": 1593065472,
+          "host_available_bytes": 341469999104
+        },
+        "current_process_rss_bytes": 291667968,
+        "bond_growth_milestones": [
+          {
+            "completed_apply_gate_calls": 19,
+            "completed_apply_gate_raw_calls": 0,
+            "max_bond_observed": 2,
+            "mps_array_bytes": 256,
+            "identity_snapshot_bytes": 0,
+            "counter_note": "API calls, not original input gates; fusion/nesting differ by path",
+            "analytic_gauge_shifts": 0,
+            "instrumented_elapsed_s": 0.07883604615926743,
+            "rss_bytes": 288997376
+          },
+          {
+            "completed_apply_gate_calls": 22,
+            "completed_apply_gate_raw_calls": 0,
+            "max_bond_observed": 4,
+            "mps_array_bytes": 768,
+            "identity_snapshot_bytes": 0,
+            "counter_note": "API calls, not original input gates; fusion/nesting differ by path",
+            "analytic_gauge_shifts": 0,
+            "instrumented_elapsed_s": 0.10773389041423798,
+            "rss_bytes": 291373056
+          },
+          {
+            "completed_apply_gate_calls": 39,
+            "completed_apply_gate_raw_calls": 0,
+            "max_bond_observed": 8,
+            "mps_array_bytes": 2688,
+            "identity_snapshot_bytes": 0,
+            "counter_note": "API calls, not original input gates; fusion/nesting differ by path",
+            "analytic_gauge_shifts": 0,
+            "instrumented_elapsed_s": 0.13245221227407455,
+            "rss_bytes": 291373056
+          }
+        ],
+        "observable": -0.05841411920839857,
+        "smoke_full_state_max_abs_error": 7.550332863779066e-16
+      }
+    },
+    {
+      "method": "integrated",
+      "exit_code": 0,
+      "supervisor_stop_reason": null,
+      "wall_s": 2.240479424595833,
+      "peak_process_tree_rss_bytes": 287817728,
+      "profile": {
+        "status": "completed_instrumented_call_not_acceptance",
+        "method": "integrated",
+        "qubits": 6,
+        "gates": 57,
+        "depth": 13,
+        "qasm_sha256": "51ea75dc3ca149e8c8a184f45981c7b81407ee32f969b7ee0de33be07b44715c",
+        "precision": "complex128",
+        "cutoff": 0,
+        "max_bond": null,
+        "affinity": [
+          160,
+          161,
+          162,
+          163,
+          164,
+          165,
+          166,
+          167,
+          168,
+          169,
+          170,
+          171,
+          172,
+          173,
+          174,
+          175
+        ],
+        "threads_requested": 16,
+        "reference": null,
+        "instrumented_not_formal_timing": true,
+        "formal_30q_acceptance_complete": false,
+        "publishable_speedup": null,
+        "smoke_test_only": true,
+        "progress": {
+          "completed_apply_gate_calls": 15,
+          "completed_apply_gate_raw_calls": 24,
+          "max_bond_observed": 8,
+          "mps_array_bytes": 2688,
+          "identity_snapshot_bytes": 0,
+          "counter_note": "API calls, not original input gates; fusion/nesting differ by path",
+          "analytic_gauge_shifts": 0
+        },
+        "threadpools": [
+          {
+            "user_api": "blas",
+            "internal_api": "openblas",
+            "num_threads": 16,
+            "prefix": "libscipy_openblas",
+            "filepath": "/root/autodl-tmp/qibotn_diagnostic_env_20261009/lib/python3.12/site-packages/numpy.libs/libscipy_openblas64_-56d6093b.so",
+            "version": "0.3.29",
+            "threading_layer": "pthreads",
+            "architecture": "SkylakeX"
+          },
+          {
+            "user_api": "blas",
+            "internal_api": "openblas",
+            "num_threads": 16,
+            "prefix": "libscipy_openblas",
+            "filepath": "/root/autodl-tmp/qibotn_diagnostic_env_20261009/lib/python3.12/site-packages/scipy.libs/libscipy_openblas-6cdc3b4a.so",
+            "version": "0.3.30",
+            "threading_layer": "pthreads",
+            "architecture": "SkylakeX"
+          }
+        ],
+        "instrumented_elapsed_s": 0.14525286853313446,
+        "stages": {
+          "apply_gate_raw_inclusive": {
+            "calls": 24,
+            "completed_calls": 24,
+            "inclusive_s": 0.002032637596130371,
+            "exclusive_s": 0.002032637596130371,
+            "max_completed_s": 0.00023814290761947632,
+            "max_input_bytes": 0,
+            "largest_input_shape": null
+          },
+          "apply_gate_inclusive": {
+            "calls": 15,
+            "completed_calls": 15,
+            "inclusive_s": 0.0737680196762085,
+            "exclusive_s": 0.06076102703809738,
+            "max_completed_s": 0.03137453645467758,
+            "max_input_bytes": 0,
+            "largest_input_shape": null
+          },
+          "exact.right_canonize_site": {
+            "calls": 19,
+            "completed_calls": 19,
+            "inclusive_s": 0.005917467176914215,
+            "exclusive_s": 0.004129581153392792,
+            "max_completed_s": 0.0005742162466049194,
+            "max_input_bytes": 0,
+            "largest_input_shape": null
+          },
+          "exact.left_isometric_factor": {
+            "calls": 43,
+            "completed_calls": 43,
+            "inclusive_s": 0.003720000386238098,
+            "exclusive_s": 0.0027601122856140137,
+            "max_completed_s": 0.0003107115626335144,
+            "max_input_bytes": 1024,
+            "largest_input_shape": [
+              8,
+              8
+            ]
+          },
+          "exact.reduced_qr": {
+            "calls": 17,
+            "completed_calls": 17,
+            "inclusive_s": 0.0009598881006240845,
+            "exclusive_s": 0.0009598881006240845,
+            "max_completed_s": 0.00015122443437576294,
+            "max_input_bytes": 1024,
+            "largest_input_shape": [
+              16,
+              4
+            ]
+          },
+          "exact.two_site": {
+            "calls": 15,
+            "completed_calls": 15,
+            "inclusive_s": 0.004086226224899292,
+            "exclusive_s": 0.0033513233065605164,
+            "max_completed_s": 0.00045718997716903687,
+            "max_input_bytes": 1024,
+            "largest_input_shape": [
+              8,
+              8
+            ]
+          },
+          "exact.left_canonize_site": {
+            "calls": 9,
+            "completed_calls": 9,
+            "inclusive_s": 0.0030032992362976074,
+            "exclusive_s": 0.0018060877919197083,
+            "max_completed_s": 0.0004066750407218933,
+            "max_input_bytes": 0,
+            "largest_input_shape": null
+          }
+        },
+        "in_flight_stages": [],
+        "memory": {
+          "available_bytes": 62833905664,
+          "cgroup_limit_bytes": 64424509440,
+          "cgroup_used_bytes": 1590603776,
+          "host_available_bytes": 341448941568
+        },
+        "current_process_rss_bytes": 287817728,
+        "bond_growth_milestones": [
+          {
+            "completed_apply_gate_calls": 1,
+            "completed_apply_gate_raw_calls": 12,
+            "max_bond_observed": 2,
+            "mps_array_bytes": 256,
+            "identity_snapshot_bytes": 0,
+            "counter_note": "API calls, not original input gates; fusion/nesting differ by path",
+            "analytic_gauge_shifts": 0,
+            "instrumented_elapsed_s": 0.09144115447998047,
+            "rss_bytes": 287817728
+          },
+          {
+            "completed_apply_gate_calls": 4,
+            "completed_apply_gate_raw_calls": 12,
+            "max_bond_observed": 4,
+            "mps_array_bytes": 768,
+            "identity_snapshot_bytes": 0,
+            "counter_note": "API calls, not original input gates; fusion/nesting differ by path",
+            "analytic_gauge_shifts": 0,
+            "instrumented_elapsed_s": 0.09563923627138138,
+            "rss_bytes": 287817728
+          },
+          {
+            "completed_apply_gate_calls": 9,
+            "completed_apply_gate_raw_calls": 18,
+            "max_bond_observed": 8,
+            "mps_array_bytes": 2688,
+            "identity_snapshot_bytes": 0,
+            "counter_note": "API calls, not original input gates; fusion/nesting differ by path",
+            "analytic_gauge_shifts": 0,
+            "instrumented_elapsed_s": 0.12851496785879135,
+            "rss_bytes": 287817728
+          }
+        ],
+        "observable": -0.05841411920839892,
+        "smoke_full_state_max_abs_error": 3.622208959480119e-16
+      }
+    },
+    {
+      "method": "guarded_scaled_candidate",
+      "exit_code": 0,
+      "supervisor_stop_reason": null,
+      "wall_s": 2.1379174292087555,
+      "peak_process_tree_rss_bytes": 287477760,
+      "profile": {
+        "status": "completed_instrumented_call_not_acceptance",
+        "method": "guarded_scaled_candidate",
+        "qubits": 6,
+        "gates": 57,
+        "depth": 13,
+        "qasm_sha256": "51ea75dc3ca149e8c8a184f45981c7b81407ee32f969b7ee0de33be07b44715c",
+        "precision": "complex128",
+        "cutoff": 0,
+        "max_bond": null,
+        "affinity": [
+          160,
+          161,
+          162,
+          163,
+          164,
+          165,
+          166,
+          167,
+          168,
+          169,
+          170,
+          171,
+          172,
+          173,
+          174,
+          175
+        ],
+        "threads_requested": 16,
+        "reference": null,
+        "instrumented_not_formal_timing": true,
+        "formal_30q_acceptance_complete": false,
+        "publishable_speedup": null,
+        "smoke_test_only": true,
+        "progress": {
+          "completed_apply_gate_calls": 15,
+          "completed_apply_gate_raw_calls": 24,
+          "max_bond_observed": 8,
+          "mps_array_bytes": 2688,
+          "identity_snapshot_bytes": 0,
+          "counter_note": "API calls, not original input gates; fusion/nesting differ by path",
+          "analytic_gauge_shifts": 0
+        },
+        "threadpools": [
+          {
+            "user_api": "blas",
+            "internal_api": "openblas",
+            "num_threads": 16,
+            "prefix": "libscipy_openblas",
+            "filepath": "/root/autodl-tmp/qibotn_diagnostic_env_20261009/lib/python3.12/site-packages/numpy.libs/libscipy_openblas64_-56d6093b.so",
+            "version": "0.3.29",
+            "threading_layer": "pthreads",
+            "architecture": "SkylakeX"
+          },
+          {
+            "user_api": "blas",
+            "internal_api": "openblas",
+            "num_threads": 16,
+            "prefix": "libscipy_openblas",
+            "filepath": "/root/autodl-tmp/qibotn_diagnostic_env_20261009/lib/python3.12/site-packages/scipy.libs/libscipy_openblas-6cdc3b4a.so",
+            "version": "0.3.30",
+            "threading_layer": "pthreads",
+            "architecture": "SkylakeX"
+          }
+        ],
+        "instrumented_elapsed_s": 0.07878100872039795,
+        "stages": {
+          "apply_gate_raw_inclusive": {
+            "calls": 24,
+            "completed_calls": 24,
+            "inclusive_s": 0.001988641917705536,
+            "exclusive_s": 0.001988641917705536,
+            "max_completed_s": 0.00021591037511825562,
+            "max_input_bytes": 0,
+            "largest_input_shape": null
+          },
+          "apply_gate_inclusive": {
+            "calls": 15,
+            "completed_calls": 15,
+            "inclusive_s": 0.031224064528942108,
+            "exclusive_s": 0.02200402319431305,
+            "max_completed_s": 0.017307676374912262,
+            "max_input_bytes": 0,
+            "largest_input_shape": null
+          },
+          "exact.right_canonize_site": {
+            "calls": 19,
+            "completed_calls": 19,
+            "inclusive_s": 0.004161722958087921,
+            "exclusive_s": 0.002878226339817047,
+            "max_completed_s": 0.00047767162322998047,
+            "max_input_bytes": 0,
+            "largest_input_shape": null
+          },
+          "exact.left_isometric_factor": {
+            "calls": 43,
+            "completed_calls": 43,
+            "inclusive_s": 0.002657577395439148,
+            "exclusive_s": 0.001778140664100647,
+            "max_completed_s": 0.0002463981509208679,
+            "max_input_bytes": 1024,
+            "largest_input_shape": [
+              8,
+              8
+            ]
+          },
+          "exact.reduced_qr": {
+            "calls": 17,
+            "completed_calls": 17,
+            "inclusive_s": 0.000879436731338501,
+            "exclusive_s": 0.000879436731338501,
+            "max_completed_s": 0.00014537572860717773,
+            "max_input_bytes": 1024,
+            "largest_input_shape": [
+              16,
+              4
+            ]
+          },
+          "exact.two_site": {
+            "calls": 15,
+            "completed_calls": 15,
+            "inclusive_s": 0.0029365122318267822,
+            "exclusive_s": 0.0024251192808151245,
+            "max_completed_s": 0.00030324608087539673,
+            "max_input_bytes": 1024,
+            "largest_input_shape": [
+              8,
+              8
+            ]
+          },
+          "exact.left_canonize_site": {
+            "calls": 9,
+            "completed_calls": 9,
+            "inclusive_s": 0.0021218061447143555,
+            "exclusive_s": 0.0012591183185577393,
+            "max_completed_s": 0.00029496848583221436,
+            "max_input_bytes": 0,
+            "largest_input_shape": null
+          }
+        },
+        "in_flight_stages": [],
+        "memory": {
+          "available_bytes": 62833856512,
+          "cgroup_limit_bytes": 64424509440,
+          "cgroup_used_bytes": 1590652928,
+          "host_available_bytes": 341434617856
+        },
+        "current_process_rss_bytes": 287477760,
+        "bond_growth_milestones": [
+          {
+            "completed_apply_gate_calls": 1,
+            "completed_apply_gate_raw_calls": 12,
+            "max_bond_observed": 2,
+            "mps_array_bytes": 256,
+            "identity_snapshot_bytes": 0,
+            "counter_note": "API calls, not original input gates; fusion/nesting differ by path",
+            "analytic_gauge_shifts": 0,
+            "instrumented_elapsed_s": 0.04044412821531296,
+            "rss_bytes": 287477760
+          },
+          {
+            "completed_apply_gate_calls": 4,
+            "completed_apply_gate_raw_calls": 12,
+            "max_bond_observed": 4,
+            "mps_array_bytes": 768,
+            "identity_snapshot_bytes": 0,
+            "counter_note": "API calls, not original input gates; fusion/nesting differ by path",
+            "analytic_gauge_shifts": 0,
+            "instrumented_elapsed_s": 0.04354187846183777,
+            "rss_bytes": 287477760
+          },
+          {
+            "completed_apply_gate_calls": 9,
+            "completed_apply_gate_raw_calls": 18,
+            "max_bond_observed": 8,
+            "mps_array_bytes": 2688,
+            "identity_snapshot_bytes": 0,
+            "counter_note": "API calls, not original input gates; fusion/nesting differ by path",
+            "analytic_gauge_shifts": 0,
+            "instrumented_elapsed_s": 0.06586664915084839,
+            "rss_bytes": 287477760
+          }
+        ],
+        "observable": -0.05841411920839892,
+        "smoke_full_state_max_abs_error": 3.622208959480119e-16
+      }
+    }
+  ],
+  "production_source_unchanged": true
+}

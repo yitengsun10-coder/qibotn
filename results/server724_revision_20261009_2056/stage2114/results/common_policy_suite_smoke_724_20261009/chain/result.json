@@ -1,0 +1,394 @@
+{
+  "kind": "chain",
+  "seed": 20261101,
+  "qubits": 9,
+  "gates": 207,
+  "depth": 35,
+  "input_sha256": "ce53df9d19881091e27625e8ce09a22687e58006b7847ccdfde26655f5f63479",
+  "input_format": "canonical JSON gate record; fSim is not supported by Qibo OpenQASM exporter",
+  "gate_counts": {
+    "h": 9,
+    "rx": 72,
+    "ry": 72,
+    "cx": 50,
+    "cz": 2,
+    "cy": 2
+  },
+  "distinct_two_qubit_edges": 8,
+  "bridge_gate_count": 6,
+  "group_size": 3,
+  "structure_limit": "three regions with six controlled bridge gates; bounded inter-region entanglement, not generic30",
+  "precision": "complex128",
+  "cutoff": 0,
+  "max_bond": null,
+  "replaces_original30": false,
+  "status": "pass_smoke_only",
+  "reference": {
+    "commit": "7ebbd4d4a00f37b898c552922953591b78b0af7e",
+    "path": "src/qibotn/backends/quimb.py",
+    "original_sha256": "1e1ada931f9fb0f9228f7190cd46f5401328b1fbec9e42f40ba9dc7fca313aca",
+    "typo_only_sha256": "1a4e2e70c05e5015006ec2cdce3b81f6d2ba463ebbf604726fbb370fe4c9f472",
+    "sole_change": "contraction_optimizer -> contractions_optimizer at the observable contraction",
+    "extra_norm_contraction": false,
+    "state_preparations_per_call": 1,
+    "algorithm_or_backend_replacement": false
+  },
+  "rows": [
+    {
+      "method": "upstream_typo_only",
+      "repeat": 0,
+      "runtime_s": 0.1224663257598877,
+      "value": -0.08676562353047824,
+      "abs_error": 2.3592239273284576e-16,
+      "qr_thread_call_counts": {
+        "1": 229,
+        "4": 0,
+        "8": 0,
+        "16": 0
+      }
+    },
+    {
+      "method": "integrated",
+      "repeat": 0,
+      "runtime_s": 0.02154397964477539,
+      "value": -0.08676562353047854,
+      "abs_error": 5.551115123125783e-17,
+      "qr_thread_call_counts": {
+        "1": 134,
+        "4": 0,
+        "8": 0,
+        "16": 0
+      }
+    },
+    {
+      "method": "controlled_rank2",
+      "repeat": 0,
+      "runtime_s": 0.02382972091436386,
+      "value": -0.0867656235304784,
+      "abs_error": 8.326672684688674e-17,
+      "qr_thread_call_counts": {
+        "1": 146,
+        "4": 0,
+        "8": 0,
+        "16": 0
+      }
+    },
+    {
+      "method": "controlled_rank2",
+      "repeat": 1,
+      "runtime_s": 0.023529723286628723,
+      "value": -0.0867656235304784,
+      "abs_error": 8.326672684688674e-17,
+      "qr_thread_call_counts": {
+        "1": 146,
+        "4": 0,
+        "8": 0,
+        "16": 0
+      }
+    },
+    {
+      "method": "integrated",
+      "repeat": 1,
+      "runtime_s": 0.0208461731672287,
+      "value": -0.08676562353047854,
+      "abs_error": 5.551115123125783e-17,
+      "qr_thread_call_counts": {
+        "1": 134,
+        "4": 0,
+        "8": 0,
+        "16": 0
+      }
+    },
+    {
+      "method": "upstream_typo_only",
+      "repeat": 1,
+      "runtime_s": 0.052054263651371,
+      "value": -0.08676562353047824,
+      "abs_error": 2.3592239273284576e-16,
+      "qr_thread_call_counts": {
+        "1": 229,
+        "4": 0,
+        "8": 0,
+        "16": 0
+      }
+    },
+    {
+      "method": "upstream_typo_only",
+      "repeat": 2,
+      "runtime_s": 0.05074140429496765,
+      "value": -0.08676562353047824,
+      "abs_error": 2.3592239273284576e-16,
+      "qr_thread_call_counts": {
+        "1": 229,
+        "4": 0,
+        "8": 0,
+        "16": 0
+      }
+    },
+    {
+      "method": "integrated",
+      "repeat": 2,
+      "runtime_s": 0.02107488363981247,
+      "value": -0.08676562353047854,
+      "abs_error": 5.551115123125783e-17,
+      "qr_thread_call_counts": {
+        "1": 134,
+        "4": 0,
+        "8": 0,
+        "16": 0
+      }
+    },
+    {
+      "method": "controlled_rank2",
+      "repeat": 2,
+      "runtime_s": 0.02442246675491333,
+      "value": -0.0867656235304784,
+      "abs_error": 8.326672684688674e-17,
+      "qr_thread_call_counts": {
+        "1": 146,
+        "4": 0,
+        "8": 0,
+        "16": 0
+      }
+    },
+    {
+      "method": "controlled_rank2",
+      "repeat": 3,
+      "runtime_s": 0.0234903022646904,
+      "value": -0.0867656235304784,
+      "abs_error": 8.326672684688674e-17,
+      "qr_thread_call_counts": {
+        "1": 146,
+        "4": 0,
+        "8": 0,
+        "16": 0
+      }
+    },
+    {
+      "method": "integrated",
+      "repeat": 3,
+      "runtime_s": 0.020826883614063263,
+      "value": -0.08676562353047854,
+      "abs_error": 5.551115123125783e-17,
+      "qr_thread_call_counts": {
+        "1": 134,
+        "4": 0,
+        "8": 0,
+        "16": 0
+      }
+    },
+    {
+      "method": "upstream_typo_only",
+      "repeat": 3,
+      "runtime_s": 0.05121878534555435,
+      "value": -0.08676562353047824,
+      "abs_error": 2.3592239273284576e-16,
+      "qr_thread_call_counts": {
+        "1": 229,
+        "4": 0,
+        "8": 0,
+        "16": 0
+      }
+    }
+  ],
+  "full_state": {
+    "upstream_typo_only": {
+      "oracle_norm_squared": 0.9999999999999984,
+      "mps_norm_squared": 0.9999999999999973,
+      "fidelity_vs_independent_block_sum": 1.0,
+      "phase_aligned_normalized_l2_squared": 0.0,
+      "full_state_comparison_pass": true,
+      "scope": "all 30 physical sites and all gates, untruncated independent block-sum oracle; not a 2**30 dense vector",
+      "oracle_branches": 64,
+      "oracle_factor_bytes": 24576,
+      "largest_blocked_mps_array_bytes": 8192,
+      "gates_applied": 207,
+      "overlap_real": 0.9999999999999979,
+      "overlap_imag": -1.0993810029003015e-16,
+      "max_bond_observed": 16,
+      "preparation": {
+        "engine": "pinned_official_math_unchanged"
+      }
+    },
+    "integrated": {
+      "oracle_norm_squared": 0.9999999999999984,
+      "mps_norm_squared": 0.9999999999999964,
+      "fidelity_vs_independent_block_sum": 0.9999999999999998,
+      "phase_aligned_normalized_l2_squared": 2.220446049250313e-16,
+      "full_state_comparison_pass": true,
+      "scope": "all 30 physical sites and all gates, untruncated independent block-sum oracle; not a 2**30 dense vector",
+      "oracle_branches": 64,
+      "oracle_factor_bytes": 24576,
+      "largest_blocked_mps_array_bytes": 8192,
+      "gates_applied": 207,
+      "overlap_real": 0.9999999999999973,
+      "overlap_imag": 8.14669512405608e-16,
+      "max_bond_observed": 16,
+      "preparation": {
+        "engine": "routed_exact",
+        "linear_compiler": {
+          "enabled": true,
+          "synthesis_family": "gaussian_and_section_patterns",
+          "cnot_blocks": 9,
+          "rewritten_blocks": 0,
+          "original_cnot_gates": 50,
+          "compiled_cnot_gates": 50,
+          "static_cost_before": 50,
+          "static_cost_after": 50,
+          "original_total_gates": 207,
+          "compiled_total_gates": 207,
+          "commutation_schedule": [],
+          "schedule_uses_amplitudes_or_outputs": false,
+          "schedule_gate_count_change": 0,
+          "schedule_policy": "no compiled block reaches bounded-search floor",
+          "mixed_commutation_schedule": [],
+          "mixed_schedule_uses_amplitudes_or_outputs": false,
+          "mixed_schedule_gate_count_change": 0,
+          "mixed_schedule_policy": "no eligible mixed block at the bounded-search size"
+        },
+        "routing_swaps": 0,
+        "restoration_swaps": 0,
+        "logical_to_position": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "max_bond_observed": 16,
+        "routing_policy": "six_gate_lookahead",
+        "kernel_policy": "exact_numpy",
+        "leftward_routes": 0,
+        "rightward_routes": 0
+      }
+    },
+    "controlled_rank2": {
+      "oracle_norm_squared": 0.9999999999999984,
+      "mps_norm_squared": 0.9999999999999974,
+      "fidelity_vs_independent_block_sum": 0.9999999999999997,
+      "phase_aligned_normalized_l2_squared": 2.220446049250313e-16,
+      "full_state_comparison_pass": true,
+      "scope": "all 30 physical sites and all gates, untruncated independent block-sum oracle; not a 2**30 dense vector",
+      "oracle_branches": 64,
+      "oracle_factor_bytes": 24576,
+      "largest_blocked_mps_array_bytes": 8192,
+      "gates_applied": 207,
+      "overlap_real": 0.9999999999999978,
+      "overlap_imag": 1.304728894369056e-15,
+      "max_bond_observed": 16,
+      "preparation": {
+        "engine": "routed_exact",
+        "linear_compiler": {
+          "enabled": true,
+          "synthesis_family": "gaussian_and_section_patterns",
+          "cnot_blocks": 9,
+          "rewritten_blocks": 0,
+          "original_cnot_gates": 50,
+          "compiled_cnot_gates": 50,
+          "static_cost_before": 50,
+          "static_cost_after": 50,
+          "original_total_gates": 207,
+          "compiled_total_gates": 207,
+          "commutation_schedule": [],
+          "schedule_uses_amplitudes_or_outputs": false,
+          "schedule_gate_count_change": 0,
+          "schedule_policy": "no compiled block reaches bounded-search floor",
+          "mixed_commutation_schedule": [],
+          "mixed_schedule_uses_amplitudes_or_outputs": false,
+          "mixed_schedule_gate_count_change": 0,
+          "mixed_schedule_policy": "no eligible mixed block at the bounded-search size"
+        },
+        "routing_swaps": 0,
+        "restoration_swaps": 0,
+        "logical_to_position": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "max_bond_observed": 16,
+        "routing_policy": "six_gate_lookahead",
+        "kernel_policy": "exact_numpy",
+        "leftward_routes": 0,
+        "rightward_routes": 0,
+        "research_candidate": "controlled_rank2",
+        "controlled_rank2_splits": 0
+      }
+    }
+  },
+  "smoke_only": true,
+  "affinity": [
+    160,
+    161,
+    162,
+    163,
+    164,
+    165,
+    166,
+    167,
+    168,
+    169,
+    170,
+    171,
+    172,
+    173,
+    174,
+    175
+  ],
+  "warmup_repeats": 1,
+  "measured_repeats": 3,
+  "formal_supplementary_30q_complete": false,
+  "original30_complete": false,
+  "all_contest_tasks_complete": false,
+  "common_thread_policy": "other BLAS=1; QR width<512:1,<1024:4,<2048:8,else16; shared by ALL methods",
+  "timing_scope": "new conversion/compiler + every gate + original four ZZ; oracle/imports/separate state checks excluded",
+  "outer_threadpools": [
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 1,
+      "prefix": "libscipy_openblas",
+      "filepath": "/root/autodl-tmp/qibotn_diagnostic_env_20261009/lib/python3.12/site-packages/scipy.libs/libscipy_openblas-6cdc3b4a.so",
+      "version": "0.3.30",
+      "threading_layer": "pthreads",
+      "architecture": "SkylakeX"
+    },
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 1,
+      "prefix": "libscipy_openblas",
+      "filepath": "/root/autodl-tmp/qibotn_diagnostic_env_20261009/lib/python3.12/site-packages/numpy.libs/libscipy_openblas64_-56d6093b.so",
+      "version": "0.3.29",
+      "threading_layer": "pthreads",
+      "architecture": "SkylakeX"
+    }
+  ],
+  "independent_observable": -0.08676562353047848,
+  "oracle_norm_squared": 0.9999999999999984,
+  "oracle_gates_applied": 207,
+  "means_s": {
+    "upstream_typo_only": 0.05133815109729767,
+    "integrated": 0.020915980140368145,
+    "controlled_rank2": 0.023814164102077484
+  },
+  "stdev_s": {
+    "upstream_typo_only": 0.0006645194199125338,
+    "integrated": 0.00013795203266741006,
+    "controlled_rank2": 0.0005271741574925797
+  },
+  "speedups_vs_official_common_qr_policy": {
+    "integrated": 2.4544941596217282,
+    "controlled_rank2": 2.155782200762573
+  },
+  "rank2_speedup_vs_integrated_common_qr_policy": 0.8782999920011255
+}
