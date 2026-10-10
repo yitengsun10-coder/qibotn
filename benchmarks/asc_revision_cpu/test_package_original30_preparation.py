@@ -57,3 +57,22 @@ def test_existing_delivery_never_overwritten(tmp_path):
     path=tmp_path/'keep.zip';path.write_bytes(b'existing user data')
     with pytest.raises(FileExistsError):packaging.package(tmp_path,'keep')
     assert path.read_bytes()==b'existing user data'
+
+
+@pytest.mark.parametrize('tamper',['none','formal','speed','rss','snapshot','input','source','chunk','peak'])
+def test_guard_microcheck_audit_does_not_promote_or_trust_changed_results(tmp_path,tamper):
+    from benchmarks.asc_revision_cpu.probe_identity_guard_memory import check
+    report=check(8,128)
+    if tamper=='formal':report['formal_30q_acceptance_complete']=True
+    if tamper=='speed':report['publishable_speedup']=7
+    if tamper=='rss':report['observed_process_rss']=True
+    if tamper=='snapshot':report['methods'][1]['attached_dense_guard_snapshot_bytes']=1
+    if tamper=='input':report['identity_matrix_sha256']='0'*64
+    if tamper=='source':report['source_hashes']={}
+    if tamper=='chunk':report['methods'][1]['live_guard_stats']['max_scan_chunk_bytes']=129
+    if tamper=='peak':report['methods'][1]['current_traced_extra_bytes']=report['methods'][1]['peak_traced_extra_bytes']+1
+    path=tmp_path/'guard.json';path.write_text(json.dumps(report),encoding='utf-8')
+    if tamper=='none':
+        assert packaging.validate_identity_probe(path)==report
+    else:
+        with pytest.raises(ValueError):packaging.validate_identity_probe(path)

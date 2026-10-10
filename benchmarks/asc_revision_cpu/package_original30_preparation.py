@@ -19,6 +19,7 @@ REPORT = HERE/'ORIGINAL30_LOCAL_PREPARATION_20261010.md'
 TEST_RECEIPT = ROOT/'results/validation_original30_local_preparation_20261010.xml'
 PACKAGE_TEST_RECEIPT = ROOT/'results/validation_original30_package_guards_20261010.xml'
 FORECAST = ROOT/'results/original30_shape_forecast_v3_20261010.json'
+IDENTITY_PROBE = ROOT/'results/identity_guard_memory_v2_20261010.json'
 HELPERS = (
     'candidate_short_cnot_rank2.py', 'test_short_cnot_rank2.py',
     'probe_short_cnot_rank2.py', 'launch_original30_probe.py',
@@ -85,7 +86,47 @@ def validate_forecast(path):
     return report
 
 
-def package(destination, stem, prior=PRIOR):
+def validate_identity_probe(path):
+    import numpy as np
+    from benchmarks.asc_revision_cpu.probe_identity_guard_memory import SOURCES
+    report=json.loads(path.read_text(encoding='utf-8'))
+    if (report['status']!='isolated_guard_allocation_check_only' or
+            report['quantum_circuit_executed'] is not False or
+            report['observed_process_rss'] is not False or
+            report['formal_30q_acceptance_complete'] is not False or
+            report['publishable_speedup'] is not None or
+            report['numpy_tracing_registration_checked'] is not True):
+        raise ValueError('Guard microcheck is not quantum acceptance, RSS or speed')
+    left,right,physical=report['synthetic_tensor_shape']
+    chunk=report['guard_chunk_bytes']
+    if not 1<=left<=1024 or right!=2*left or physical!=2 or not 32<=chunk<=1024*1024:
+        raise ValueError('Isolated guard input/budget differs')
+    matrix=np.eye(2*left,dtype=np.complex128)
+    if (report['tensor_bytes']!=matrix.nbytes or
+            report['identity_matrix_sha256']!=sha(memoryview(matrix).cast('B'))):
+        raise ValueError('Synthetic identity input hash/size differs')
+    expected={p.relative_to(ROOT).as_posix():sha(p.read_bytes()) for p in SOURCES}
+    if report['source_hashes']!=expected:
+        raise ValueError('Guard microcheck source bytes changed')
+    if len(report['methods'])!=2:
+        raise ValueError('Both guard methods are required')
+    legacy,analytic=report['methods']
+    if (legacy['method']!='legacy_dense_snapshot' or
+            analytic['method']!='analytic_weak_chunked' or
+            legacy['attached_dense_guard_snapshot_bytes']!=matrix.nbytes or
+            analytic['attached_dense_guard_snapshot_bytes']!=0):
+        raise ValueError('Guard snapshot allocation contract differs')
+    for row in (legacy,analytic):
+        if (row['exact_guard_accepted'] is not True or
+                not 0<=row['current_traced_extra_bytes']<=row['peak_traced_extra_bytes']):
+            raise ValueError('Invalid traced guard allocation result')
+    stats=analytic['live_guard_stats']
+    if stats['dense_guard_snapshot_allocations']!=0 or not 0<stats['max_scan_chunk_bytes']<=chunk:
+        raise ValueError('Chunk guard allocation policy differs')
+    return report
+
+
+def package(destination, stem, prior=PRIOR, analytic_identity=False):
     destination.mkdir(parents=True, exist_ok=True)
     archive_path = destination/(stem+'.zip')
     report_path = destination/(stem+'.md')
@@ -100,6 +141,15 @@ def package(destination, stem, prior=PRIOR):
         raise ValueError('Unexpected local regression test count')
     package_tests = test_totals(PACKAGE_TEST_RECEIPT)
     forecast = validate_forecast(FORECAST)
+    analytic_tests=identity_probe=None
+    selected_report=REPORT
+    if analytic_identity:
+        analytic_tests=test_totals(ROOT/'results/validation_original30_analytic_combined_v2_20261010.xml')
+        if analytic_tests['tests']!=235:
+            raise ValueError('Unexpected analytic combined regression count')
+        package_tests=test_totals(ROOT/'results/validation_analytic_package_guards_20261010.xml')
+        identity_probe=validate_identity_probe(IDENTITY_PROBE)
+        selected_report=HERE/'ANALYTIC_IDENTITY_STAGE_20261010.md'
 
     def add(path):
         resolved = path.resolve()
@@ -108,6 +158,13 @@ def package(destination, stem, prior=PRIOR):
 
     for name in HELPERS:
         add(HERE/name)
+    if analytic_identity:
+        for name in ('candidate_analytic_identity.py','test_analytic_identity.py',
+                     'probe_identity_guard_memory.py','ANALYTIC_IDENTITY_STAGE_20261010.md'):
+            add(HERE/name)
+        for pattern in ('validation_analytic*20261010.xml','validation_original30_analytic*20261010.xml',
+                        'identity_guard_memory*20261010.json'):
+            for path in (ROOT/'results').glob(pattern):add(path)
     add(ROOT/'.gitattributes')
     add(TEST_RECEIPT)
     add(PACKAGE_TEST_RECEIPT)
@@ -157,6 +214,10 @@ def package(destination, stem, prior=PRIOR):
         'last_remote_mps_pilot_final_status_verified':False,
         'unrelated_pyproject_edits_preserved':True,
         'forecast_scope':forecast['status'],
+        'analytic_identity_research_included':analytic_identity,
+        'analytic_combined_regression_tests':analytic_tests,
+        'identity_guard_probe_sha256':sha(IDENTITY_PROBE.read_bytes()) if identity_probe else None,
+        'identity_guard_microcheck_is_not_whole_circuit_peak_memory':True,
     }
     files['STAGE_RECEIPT.json'] = json.dumps(receipt,ensure_ascii=False,indent=2).encode('utf-8')
     manifest = {name:{'bytes':len(raw),'sha256':sha(raw)} for name,raw in sorted(files.items())}
@@ -176,7 +237,7 @@ def package(destination, stem, prior=PRIOR):
             if archive.read(name) != raw:
                 raise ValueError('New ZIP member bytes differ')
     with report_path.open('xb') as stream:
-        stream.write(REPORT.read_bytes())
+        stream.write(selected_report.read_bytes())
     receipt.update(zip_sha256=sha(archive_path.read_bytes()),crc_verified=True,
         member_hashes_verified=len(files),members_including_manifest=len(files)+1,
         archive=str(archive_path),report=str(report_path))
@@ -191,5 +252,6 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--destination',type=Path,default=Path('C:/Users/孙逸腾/Desktop/超算'))
     parser.add_argument('--stem',default='QiboTN_原30比特优化与资源预检阶段包_20261010')
+    parser.add_argument('--analytic-identity',action='store_true')
     args = parser.parse_args()
-    print(json.dumps(package(args.destination,args.stem),ensure_ascii=False,indent=2))
+    print(json.dumps(package(args.destination,args.stem,analytic_identity=args.analytic_identity),ensure_ascii=False,indent=2))

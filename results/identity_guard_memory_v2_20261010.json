@@ -1,0 +1,54 @@
+{
+  "status": "isolated_guard_allocation_check_only",
+  "recorded_at": "2026-10-10T15:06:39.385635+08:00",
+  "numpy_version": "2.2.6",
+  "synthetic_tensor_shape": [
+    512,
+    1024,
+    2
+  ],
+  "quimb_version": "1.13.0",
+  "tensor_bytes": 16777216,
+  "identity_matrix_sha256": "d102ca4214329e1e47ad3f3b59799ada36919250bf48259a031f728f43955411",
+  "guard_chunk_bytes": 1048576,
+  "numpy_tracing_registration_checked": true,
+  "methods": [
+    {
+      "method": "legacy_dense_snapshot",
+      "exact_guard_accepted": true,
+      "attached_dense_guard_snapshot_bytes": 16777216,
+      "current_traced_extra_bytes": 16778941,
+      "peak_traced_extra_bytes": 17959672,
+      "live_guard_stats": null
+    },
+    {
+      "method": "analytic_weak_chunked",
+      "exact_guard_accepted": true,
+      "attached_dense_guard_snapshot_bytes": 0,
+      "current_traced_extra_bytes": 3560,
+      "peak_traced_extra_bytes": 31992,
+      "live_guard_stats": {
+        "created_tags": 1,
+        "checks": 1,
+        "accepted_checks": 1,
+        "rejected_checks": 0,
+        "max_scan_chunk_bytes": 1048576,
+        "max_tagged_array_bytes": 16777216,
+        "dense_guard_snapshot_allocations": 0
+      }
+    }
+  ],
+  "quantum_circuit_executed": false,
+  "observed_process_rss": false,
+  "formal_30q_acceptance_complete": false,
+  "publishable_speedup": null,
+  "scope": "isolated guard allocations, not whole-circuit peak memory or speed",
+  "source_hashes": {
+    "benchmarks/asc_revision_cpu/probe_identity_guard_memory.py": "780cee6914611c14accc51d70ef3c47003a3d70992034f1d03f437d43f542e3f",
+    "benchmarks/asc_revision_cpu/candidate_analytic_identity.py": "080d0ef432b489ab7302de797770201d71b2442dd594678be8b7eb5864f26eba",
+    "benchmarks/asc_revision_cpu/candidate_controlled_rank2.py": "623d590ba7ff529b2026eaea5fe85bf40cd733225d7c6d70a66c8279c3ea8466",
+    "benchmarks/asc_revision_cpu/candidate_short_cnot_rank2.py": "7318ebe1b4b33a095e1101c88bf54afa454ed9d146af0a085b59ec050d7681d7",
+    "src/qibotn/backends/_structured_numpy.py": "e8c68fc4ac3d490d8acae48e7bfff603353d5a50de014fe09ebe297656d4bf08",
+    "src/qibotn/backends/_exact_numpy.py": "953de2012c268d85965ca33176c41e3f6f6e48ed76f5575ef3200a1e13da70fa"
+  }
+}

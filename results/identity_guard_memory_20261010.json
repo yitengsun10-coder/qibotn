@@ -1,0 +1,50 @@
+{
+  "status": "isolated_guard_allocation_check_only",
+  "recorded_at": "2026-10-10T15:03:04.204165+08:00",
+  "numpy_version": "2.2.6",
+  "synthetic_tensor_shape": [
+    512,
+    1024,
+    2
+  ],
+  "tensor_bytes": 16777216,
+  "identity_matrix_sha256": "d102ca4214329e1e47ad3f3b59799ada36919250bf48259a031f728f43955411",
+  "guard_chunk_bytes": 1048576,
+  "numpy_tracing_registration_checked": true,
+  "methods": [
+    {
+      "method": "legacy_dense_snapshot",
+      "exact_guard_accepted": true,
+      "attached_dense_guard_snapshot_bytes": 16777216,
+      "current_traced_extra_bytes": 16778941,
+      "peak_traced_extra_bytes": 17959672,
+      "live_guard_stats": null
+    },
+    {
+      "method": "analytic_weak_chunked",
+      "exact_guard_accepted": true,
+      "attached_dense_guard_snapshot_bytes": 0,
+      "current_traced_extra_bytes": 3560,
+      "peak_traced_extra_bytes": 31992,
+      "live_guard_stats": {
+        "created_tags": 1,
+        "checks": 1,
+        "accepted_checks": 1,
+        "rejected_checks": 0,
+        "max_scan_chunk_bytes": 1048576,
+        "max_tagged_array_bytes": 16777216,
+        "dense_guard_snapshot_allocations": 0
+      }
+    }
+  ],
+  "quantum_circuit_executed": false,
+  "observed_process_rss": false,
+  "formal_30q_acceptance_complete": false,
+  "publishable_speedup": null,
+  "scope": "isolated guard allocations, not whole-circuit peak memory or speed",
+  "source_hashes": {
+    "benchmarks/asc_revision_cpu/probe_identity_guard_memory.py": "836166b1cf2568e4c21c388c4b8f94b292a5a06d05d2ac30325b033899c89a9f",
+    "benchmarks/asc_revision_cpu/candidate_analytic_identity.py": "80d629fbdaf563fa2c894386edc7f5897f6c371c193947120655ec15c1fc235e",
+    "src/qibotn/backends/_structured_numpy.py": "e8c68fc4ac3d490d8acae48e7bfff603353d5a50de014fe09ebe297656d4bf08"
+  }
+}

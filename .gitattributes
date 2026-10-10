@@ -23,3 +23,5 @@ results/validation_chunk_transport_724* -text
 results/original30_pilot_20261009_2332/** -text
 results/*original30*20261010.* -text
 results/validation_short*20261009.xml -text
+results/identity_guard_memory*20261010.json -text
+results/validation_analytic*20261010.xml -text
