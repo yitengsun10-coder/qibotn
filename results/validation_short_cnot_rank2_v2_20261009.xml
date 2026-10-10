@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="22" time="4.115" timestamp="2026-10-09T23:25:49.645358+08:00" hostname="DESKTOP-ULHNQOT"><testcase classname="benchmarks.asc_revision_cpu.test_short_cnot_rank2" name="test_bounds_operator_gate_multiset_and_precedence[0]" time="0.001" /><testcase classname="benchmarks.asc_revision_cpu.test_short_cnot_rank2" name="test_bounds_operator_gate_multiset_and_precedence[1]" time="0.001" /><testcase classname="benchmarks.asc_revision_cpu.test_short_cnot_rank2" name="test_bounds_operator_gate_multiset_and_precedence[7]" time="0.001" /><testcase classname="benchmarks.asc_revision_cpu.test_short_cnot_rank2" name="test_bounds_operator_gate_multiset_and_precedence[8]" time="0.001" /><testcase classname="benchmarks.asc_revision_cpu.test_short_cnot_rank2" name="test_bounds_operator_gate_multiset_and_precedence[29]" time="0.002" /><testcase classname="benchmarks.asc_revision_cpu.test_short_cnot_rank2" name="test_bounds_operator_gate_multiset_and_precedence[32]" time="0.003" /><testcase classname="benchmarks.asc_revision_cpu.test_short_cnot_rank2" name="test_bounds_operator_gate_multiset_and_precedence[256]" time="0.017" /><testcase classname="benchmarks.asc_revision_cpu.test_short_cnot_rank2" name="test_bounds_operator_gate_multiset_and_precedence[257]" time="0.004" /><testcase classname="benchmarks.asc_revision_cpu.test_short_cnot_rank2" name="test_original30_plan_only_input_unchanged_all_blocks_checked" time="0.258" /><testcase classname="benchmarks.asc_revision_cpu.test_short_cnot_rank2" name="test_scaled_original_complete_state_and_scalar[8-4]" time="0.273" /><testcase classname="benchmarks.asc_revision_cpu.test_short_cnot_rank2" name="test_scaled_original_complete_state_and_scalar[10-4]" time="0.033" /><testcase classname="benchmarks.asc_revision_cpu.test_short_cnot_rank2" name="test_scaled_original_complete_state_and_scalar[10-8]" time="0.054" /><testcase classname="benchmarks.asc_revision_cpu.test_short_cnot_rank2" name="test_general_connectivity_complete_state[417-chain]" time="0.015" /><testcase classname="benchmarks.asc_revision_cpu.test_short_cnot_rank2" name="test_general_connectivity_complete_state[417-ring]" time="0.020" /><testcase classname="benchmarks.asc_revision_cpu.test_short_cnot_rank2" name="test_general_connectivity_complete_state[417-long_range]" time="0.018" /><testcase classname="benchmarks.asc_revision_cpu.test_short_cnot_rank2" name="test_general_connectivity_complete_state[417-all_to_all]" time="0.022" /><testcase classname="benchmarks.asc_revision_cpu.test_short_cnot_rank2" name="test_general_connectivity_complete_state[919-chain]" time="0.015" /><testcase classname="benchmarks.asc_revision_cpu.test_short_cnot_rank2" name="test_general_connectivity_complete_state[919-ring]" time="0.021" /><testcase classname="benchmarks.asc_revision_cpu.test_short_cnot_rank2" name="test_general_connectivity_complete_state[919-long_range]" time="0.016" /><testcase classname="benchmarks.asc_revision_cpu.test_short_cnot_rank2" name="test_general_connectivity_complete_state[919-all_to_all]" time="0.018" /><testcase classname="benchmarks.asc_revision_cpu.test_short_cnot_rank2" name="test_unsupported_gate_and_truncation_fallback" time="0.085" /><testcase classname="benchmarks.asc_revision_cpu.test_short_cnot_rank2" name="test_probe_snapshot_dispatch_and_failed_admission_never_launches" time="0.188"><failure message="NameError: name 'backend' is not defined">tmp_path = WindowsPath('C:/Users/孙逸腾/AppData/Local/Temp/pytest-of-孙逸腾/pytest-151/test_probe_snapshot_dispatch_a0')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x0000021704973F10&gt;
+
+    def test_probe_snapshot_dispatch_and_failed_admission_never_launches(tmp_path, monkeypatch):
+        import json
+        from types import SimpleNamespace
+        from benchmarks.asc_revision_cpu import probe_short_cnot_rank2 as probe
+        assert probe.suite.__globals__["__file__"] == probe.__file__
+        assert probe.HERE / "candidate_short_cnot_rank2.py" in probe.SOURCES
+        assert probe.HERE / "common_qr_thread_policy.py" in probe.SOURCES
+        def forbidden_launch(*args, **kwargs):
+            raise AssertionError("Worker must not launch after failed memory admission")
+        monkeypatch.setattr(probe.previous.subprocess, "Popen", forbidden_launch)
+        args = SimpleNamespace(output=tmp_path / "blocked", kind="original30", smoke=False,
+            candidate="short", threads=16, seconds=180., memory_mib=1e12,
+            reserve_mib=2048., execute=True)
+        with pytest.raises(ValueError, match="Memory admission failed"):
+            probe.suite(args)
+        report = json.loads((args.output / "summary.json").read_text(encoding="utf-8"))
+        assert report["input"]["input_sha256"] == QASM_SHA256
+        assert report["formal_30q_acceptance_complete"] is False
+        assert report["publishable_speedup"] is None
+        assert not (args.output / "run.log").exists()
+        for name, digest in report["source_hashes"].items():
+            assert hashlib.sha256((args.output / "source_snapshot" / name).read_bytes()).hexdigest() == digest
+&gt;       backend.configure_tn_simulation(max_bond_dimension=8, svd_cutoff=1e-10)
+        ^^^^^^^
+E       NameError: name 'backend' is not defined
+
+benchmarks\asc_revision_cpu\test_short_cnot_rank2.py:111: NameError</failure></testcase></testsuite></testsuites>

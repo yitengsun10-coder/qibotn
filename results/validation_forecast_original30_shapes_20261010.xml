@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="10" skipped="0" tests="15" time="9.203" timestamp="2026-10-10T14:34:58.198442+08:00" hostname="DESKTOP-ULHNQOT"><testcase classname="benchmarks.asc_revision_cpu.test_forecast_original30_shapes" name="test_every_cnot_shape_matches_actual_execution[False-6-4]" time="0.732"><failure message="AssertionError: assert 3 == 0&#10; +  where 0 = getattr(ControlledRank2MPS(tensors=6, indices=11, L=6, max_bond=8), 'controlled_rank2_splits', 3)">monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000001E724CD2B90&gt;
+n = 6, layers = 4, short = False
+
+    @pytest.mark.parametrize('n,layers',[(6,4),(8,5),(10,8),(12,8),(14,12)])
+    @pytest.mark.parametrize('short',[False,True])
+    def test_every_cnot_shape_matches_actual_execution(monkeypatch,n,layers,short):
+        original=build_circuit(Workload(n,layers))
+        circuit=compile_mixed(original)[0] if short else original
+        predicted=forecast(circuit,True,True)
+        observed=[]
+        method=ControlledRank2MPS._two_site
+        def record(self,G,i,j,absorb,reverse=False):
+            method(self,G,i,j,absorb,reverse=reverse)
+            observed.append([1,*[self.bond_size(k,k+1) for k in range(self.L-1)],1])
+        monkeypatch.setattr(ControlledRank2MPS,'_two_site',record)
+        backend=make_backend()
+        backend.configure_tn_simulation(max_bond_dimension=None,svd_cutoff=0,cnot_optimization=False)
+        state,_=prepare(backend,circuit)
+        assert observed==[row['bonds'] for row in predicted['trace']]
+&gt;       assert predicted['controlled_rank2_dimension_splits']==getattr(
+            state,'controlled_rank2_splits',predicted['controlled_rank2_dimension_splits'])
+E       AssertionError: assert 3 == 0
+E        +  where 0 = getattr(ControlledRank2MPS(tensors=6, indices=11, L=6, max_bond=8), 'controlled_rank2_splits', 3)
+
+benchmarks\asc_revision_cpu\test_forecast_original30_shapes.py:32: AssertionError</failure></testcase><testcase classname="benchmarks.asc_revision_cpu.test_forecast_original30_shapes" name="test_every_cnot_shape_matches_actual_execution[False-8-5]" time="0.036"><failure message="AssertionError: assert 6 == 0&#10; +  where 0 = getattr(ControlledRank2MPS(tensors=8, indices=15, L=8, max_bond=16), 'controlled_rank2_splits', 6)">monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000001E724D106D0&gt;
+n = 8, layers = 5, short = False
+
+    @pytest.mark.parametrize('n,layers',[(6,4),(8,5),(10,8),(12,8),(14,12)])
+    @pytest.mark.parametrize('short',[False,True])
+    def test_every_cnot_shape_matches_actual_execution(monkeypatch,n,layers,short):
+        original=build_circuit(Workload(n,layers))
+        circuit=compile_mixed(original)[0] if short else original
+        predicted=forecast(circuit,True,True)
+        observed=[]
+        method=ControlledRank2MPS._two_site
+        def record(self,G,i,j,absorb,reverse=False):
+            method(self,G,i,j,absorb,reverse=reverse)
+            observed.append([1,*[self.bond_size(k,k+1) for k in range(self.L-1)],1])
+        monkeypatch.setattr(ControlledRank2MPS,'_two_site',record)
+        backend=make_backend()
+        backend.configure_tn_simulation(max_bond_dimension=None,svd_cutoff=0,cnot_optimization=False)
+        state,_=prepare(backend,circuit)
+        assert observed==[row['bonds'] for row in predicted['trace']]
+&gt;       assert predicted['controlled_rank2_dimension_splits']==getattr(
+            state,'controlled_rank2_splits',predicted['controlled_rank2_dimension_splits'])
+E       AssertionError: assert 6 == 0
+E        +  where 0 = getattr(ControlledRank2MPS(tensors=8, indices=15, L=8, max_bond=16), 'controlled_rank2_splits', 6)
+
+benchmarks\asc_revision_cpu\test_forecast_original30_shapes.py:32: AssertionError</failure></testcase><testcase classname="benchmarks.asc_revision_cpu.test_forecast_original30_shapes" name="test_every_cnot_shape_matches_actual_execution[False-10-8]" time="0.071"><failure message="AssertionError: assert 10 == 0&#10; +  where 0 = getattr(ControlledRank2MPS(tensors=10, indices=19, L=10, max_bond=32), 'controlled_rank2_splits', 10)">monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000001E72856AE90&gt;
+n = 10, layers = 8, short = False
+
+    @pytest.mark.parametrize('n,layers',[(6,4),(8,5),(10,8),(12,8),(14,12)])
+    @pytest.mark.parametrize('short',[False,True])
+    def test_every_cnot_shape_matches_actual_execution(monkeypatch,n,layers,short):
+        original=build_circuit(Workload(n,layers))
+        circuit=compile_mixed(original)[0] if short else original
+        predicted=forecast(circuit,True,True)
+        observed=[]
+        method=ControlledRank2MPS._two_site
+        def record(self,G,i,j,absorb,reverse=False):
+            method(self,G,i,j,absorb,reverse=reverse)
+            observed.append([1,*[self.bond_size(k,k+1) for k in range(self.L-1)],1])
+        monkeypatch.setattr(ControlledRank2MPS,'_two_site',record)
+        backend=make_backend()
+        backend.configure_tn_simulation(max_bond_dimension=None,svd_cutoff=0,cnot_optimization=False)
+        state,_=prepare(backend,circuit)
+        assert observed==[row['bonds'] for row in predicted['trace']]
+&gt;       assert predicted['controlled_rank2_dimension_splits']==getattr(
+            state,'controlled_rank2_splits',predicted['controlled_rank2_dimension_splits'])
+E       AssertionError: assert 10 == 0
+E        +  where 0 = getattr(ControlledRank2MPS(tensors=10, indices=19, L=10, max_bond=32), 'controlled_rank2_splits', 10)
+
+benchmarks\asc_revision_cpu\test_forecast_original30_shapes.py:32: AssertionError</failure></testcase><testcase classname="benchmarks.asc_revision_cpu.test_forecast_original30_shapes" name="test_every_cnot_shape_matches_actual_execution[False-12-8]" time="0.099"><failure message="AssertionError: assert 15 == 0&#10; +  where 0 = getattr(ControlledRank2MPS(tensors=12, indices=23, L=12, max_bond=64), 'controlled_rank2_splits', 15)">monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000001E72862B910&gt;
+n = 12, layers = 8, short = False
+
+    @pytest.mark.parametrize('n,layers',[(6,4),(8,5),(10,8),(12,8),(14,12)])
+    @pytest.mark.parametrize('short',[False,True])
+    def test_every_cnot_shape_matches_actual_execution(monkeypatch,n,layers,short):
+        original=build_circuit(Workload(n,layers))
+        circuit=compile_mixed(original)[0] if short else original
+        predicted=forecast(circuit,True,True)
+        observed=[]
+        method=ControlledRank2MPS._two_site
+        def record(self,G,i,j,absorb,reverse=False):
+            method(self,G,i,j,absorb,reverse=reverse)
+            observed.append([1,*[self.bond_size(k,k+1) for k in range(self.L-1)],1])
+        monkeypatch.setattr(ControlledRank2MPS,'_two_site',record)
+        backend=make_backend()
+        backend.configure_tn_simulation(max_bond_dimension=None,svd_cutoff=0,cnot_optimization=False)
+        state,_=prepare(backend,circuit)
+        assert observed==[row['bonds'] for row in predicted['trace']]
+&gt;       assert predicted['controlled_rank2_dimension_splits']==getattr(
+            state,'controlled_rank2_splits',predicted['controlled_rank2_dimension_splits'])
+E       AssertionError: assert 15 == 0
+E        +  where 0 = getattr(ControlledRank2MPS(tensors=12, indices=23, L=12, max_bond=64), 'controlled_rank2_splits', 15)
+
+benchmarks\asc_revision_cpu\test_forecast_original30_shapes.py:32: AssertionError</failure></testcase><testcase classname="benchmarks.asc_revision_cpu.test_forecast_original30_shapes" name="test_every_cnot_shape_matches_actual_execution[False-14-12]" time="0.260"><failure message="AssertionError: assert 21 == 0&#10; +  where 0 = getattr(ControlledRank2MPS(tensors=14, indices=27, L=14, max_bond=128), 'controlled_rank2_splits', 21)">monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000001E72862A090&gt;
+n = 14, layers = 12, short = False
+
+    @pytest.mark.parametrize('n,layers',[(6,4),(8,5),(10,8),(12,8),(14,12)])
+    @pytest.mark.parametrize('short',[False,True])
+    def test_every_cnot_shape_matches_actual_execution(monkeypatch,n,layers,short):
+        original=build_circuit(Workload(n,layers))
+        circuit=compile_mixed(original)[0] if short else original
+        predicted=forecast(circuit,True,True)
+        observed=[]
+        method=ControlledRank2MPS._two_site
+        def record(self,G,i,j,absorb,reverse=False):
+            method(self,G,i,j,absorb,reverse=reverse)
+            observed.append([1,*[self.bond_size(k,k+1) for k in range(self.L-1)],1])
+        monkeypatch.setattr(ControlledRank2MPS,'_two_site',record)
+        backend=make_backend()
+        backend.configure_tn_simulation(max_bond_dimension=None,svd_cutoff=0,cnot_optimization=False)
+        state,_=prepare(backend,circuit)
+        assert observed==[row['bonds'] for row in predicted['trace']]
+&gt;       assert predicted['controlled_rank2_dimension_splits']==getattr(
+            state,'controlled_rank2_splits',predicted['controlled_rank2_dimension_splits'])
+E       AssertionError: assert 21 == 0
+E        +  where 0 = getattr(ControlledRank2MPS(tensors=14, indices=27, L=14, max_bond=128), 'controlled_rank2_splits', 21)
+
+benchmarks\asc_revision_cpu\test_forecast_original30_shapes.py:32: AssertionError</failure></testcase><testcase classname="benchmarks.asc_revision_cpu.test_forecast_original30_shapes" name="test_every_cnot_shape_matches_actual_execution[True-6-4]" time="0.022"><failure message="AssertionError: assert 3 == 0&#10; +  where 0 = getattr(ControlledRank2MPS(tensors=6, indices=11, L=6, max_bond=8), 'controlled_rank2_splits', 3)">monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000001E7286854D0&gt;
+n = 6, layers = 4, short = True
+
+    @pytest.mark.parametrize('n,layers',[(6,4),(8,5),(10,8),(12,8),(14,12)])
+    @pytest.mark.parametrize('short',[False,True])
+    def test_every_cnot_shape_matches_actual_execution(monkeypatch,n,layers,short):
+        original=build_circuit(Workload(n,layers))
+        circuit=compile_mixed(original)[0] if short else original
+        predicted=forecast(circuit,True,True)
+        observed=[]
+        method=ControlledRank2MPS._two_site
+        def record(self,G,i,j,absorb,reverse=False):
+            method(self,G,i,j,absorb,reverse=reverse)
+            observed.append([1,*[self.bond_size(k,k+1) for k in range(self.L-1)],1])
+        monkeypatch.setattr(ControlledRank2MPS,'_two_site',record)
+        backend=make_backend()
+        backend.configure_tn_simulation(max_bond_dimension=None,svd_cutoff=0,cnot_optimization=False)
+        state,_=prepare(backend,circuit)
+        assert observed==[row['bonds'] for row in predicted['trace']]
+&gt;       assert predicted['controlled_rank2_dimension_splits']==getattr(
+            state,'controlled_rank2_splits',predicted['controlled_rank2_dimension_splits'])
+E       AssertionError: assert 3 == 0
+E        +  where 0 = getattr(ControlledRank2MPS(tensors=6, indices=11, L=6, max_bond=8), 'controlled_rank2_splits', 3)
+
+benchmarks\asc_revision_cpu\test_forecast_original30_shapes.py:32: AssertionError</failure></testcase><testcase classname="benchmarks.asc_revision_cpu.test_forecast_original30_shapes" name="test_every_cnot_shape_matches_actual_execution[True-8-5]" time="0.035"><failure message="AssertionError: assert 6 == 0&#10; +  where 0 = getattr(ControlledRank2MPS(tensors=8, indices=15, L=8, max_bond=16), 'controlled_rank2_splits', 6)">monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000001E7286354D0&gt;
+n = 8, layers = 5, short = True
+
+    @pytest.mark.parametrize('n,layers',[(6,4),(8,5),(10,8),(12,8),(14,12)])
+    @pytest.mark.parametrize('short',[False,True])
+    def test_every_cnot_shape_matches_actual_execution(monkeypatch,n,layers,short):
+        original=build_circuit(Workload(n,layers))
+        circuit=compile_mixed(original)[0] if short else original
+        predicted=forecast(circuit,True,True)
+        observed=[]
+        method=ControlledRank2MPS._two_site
+        def record(self,G,i,j,absorb,reverse=False):
+            method(self,G,i,j,absorb,reverse=reverse)
+            observed.append([1,*[self.bond_size(k,k+1) for k in range(self.L-1)],1])
+        monkeypatch.setattr(ControlledRank2MPS,'_two_site',record)
+        backend=make_backend()
+        backend.configure_tn_simulation(max_bond_dimension=None,svd_cutoff=0,cnot_optimization=False)
+        state,_=prepare(backend,circuit)
+        assert observed==[row['bonds'] for row in predicted['trace']]
+&gt;       assert predicted['controlled_rank2_dimension_splits']==getattr(
+            state,'controlled_rank2_splits',predicted['controlled_rank2_dimension_splits'])
+E       AssertionError: assert 6 == 0
+E        +  where 0 = getattr(ControlledRank2MPS(tensors=8, indices=15, L=8, max_bond=16), 'controlled_rank2_splits', 6)
+
+benchmarks\asc_revision_cpu\test_forecast_original30_shapes.py:32: AssertionError</failure></testcase><testcase classname="benchmarks.asc_revision_cpu.test_forecast_original30_shapes" name="test_every_cnot_shape_matches_actual_execution[True-10-8]" time="0.066"><failure message="AssertionError: assert 10 == 0&#10; +  where 0 = getattr(ControlledRank2MPS(tensors=10, indices=19, L=10, max_bond=32), 'controlled_rank2_splits', 10)">monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000001E728647110&gt;
+n = 10, layers = 8, short = True
+
+    @pytest.mark.parametrize('n,layers',[(6,4),(8,5),(10,8),(12,8),(14,12)])
+    @pytest.mark.parametrize('short',[False,True])
+    def test_every_cnot_shape_matches_actual_execution(monkeypatch,n,layers,short):
+        original=build_circuit(Workload(n,layers))
+        circuit=compile_mixed(original)[0] if short else original
+        predicted=forecast(circuit,True,True)
+        observed=[]
+        method=ControlledRank2MPS._two_site
+        def record(self,G,i,j,absorb,reverse=False):
+            method(self,G,i,j,absorb,reverse=reverse)
+            observed.append([1,*[self.bond_size(k,k+1) for k in range(self.L-1)],1])
+        monkeypatch.setattr(ControlledRank2MPS,'_two_site',record)
+        backend=make_backend()
+        backend.configure_tn_simulation(max_bond_dimension=None,svd_cutoff=0,cnot_optimization=False)
+        state,_=prepare(backend,circuit)
+        assert observed==[row['bonds'] for row in predicted['trace']]
+&gt;       assert predicted['controlled_rank2_dimension_splits']==getattr(
+            state,'controlled_rank2_splits',predicted['controlled_rank2_dimension_splits'])
+E       AssertionError: assert 10 == 0
+E        +  where 0 = getattr(ControlledRank2MPS(tensors=10, indices=19, L=10, max_bond=32), 'controlled_rank2_splits', 10)
+
+benchmarks\asc_revision_cpu\test_forecast_original30_shapes.py:32: AssertionError</failure></testcase><testcase classname="benchmarks.asc_revision_cpu.test_forecast_original30_shapes" name="test_every_cnot_shape_matches_actual_execution[True-12-8]" time="0.092"><failure message="AssertionError: assert 15 == 0&#10; +  where 0 = getattr(ControlledRank2MPS(tensors=12, indices=23, L=12, max_bond=64), 'controlled_rank2_splits', 15)">monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000001E7286A9AD0&gt;
+n = 12, layers = 8, short = True
+
+    @pytest.mark.parametrize('n,layers',[(6,4),(8,5),(10,8),(12,8),(14,12)])
+    @pytest.mark.parametrize('short',[False,True])
+    def test_every_cnot_shape_matches_actual_execution(monkeypatch,n,layers,short):
+        original=build_circuit(Workload(n,layers))
+        circuit=compile_mixed(original)[0] if short else original
+        predicted=forecast(circuit,True,True)
+        observed=[]
+        method=ControlledRank2MPS._two_site
+        def record(self,G,i,j,absorb,reverse=False):
+            method(self,G,i,j,absorb,reverse=reverse)
+            observed.append([1,*[self.bond_size(k,k+1) for k in range(self.L-1)],1])
+        monkeypatch.setattr(ControlledRank2MPS,'_two_site',record)
+        backend=make_backend()
+        backend.configure_tn_simulation(max_bond_dimension=None,svd_cutoff=0,cnot_optimization=False)
+        state,_=prepare(backend,circuit)
+        assert observed==[row['bonds'] for row in predicted['trace']]
+&gt;       assert predicted['controlled_rank2_dimension_splits']==getattr(
+            state,'controlled_rank2_splits',predicted['controlled_rank2_dimension_splits'])
+E       AssertionError: assert 15 == 0
+E        +  where 0 = getattr(ControlledRank2MPS(tensors=12, indices=23, L=12, max_bond=64), 'controlled_rank2_splits', 15)
+
+benchmarks\asc_revision_cpu\test_forecast_original30_shapes.py:32: AssertionError</failure></testcase><testcase classname="benchmarks.asc_revision_cpu.test_forecast_original30_shapes" name="test_every_cnot_shape_matches_actual_execution[True-14-12]" time="0.202"><failure message="AssertionError: assert 21 == 0&#10; +  where 0 = getattr(ControlledRank2MPS(tensors=14, indices=27, L=14, max_bond=128), 'controlled_rank2_splits', 21)">monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000001E7287257D0&gt;
+n = 14, layers = 12, short = True
+
+    @pytest.mark.parametrize('n,layers',[(6,4),(8,5),(10,8),(12,8),(14,12)])
+    @pytest.mark.parametrize('short',[False,True])
+    def test_every_cnot_shape_matches_actual_execution(monkeypatch,n,layers,short):
+        original=build_circuit(Workload(n,layers))
+        circuit=compile_mixed(original)[0] if short else original
+        predicted=forecast(circuit,True,True)
+        observed=[]
+        method=ControlledRank2MPS._two_site
+        def record(self,G,i,j,absorb,reverse=False):
+            method(self,G,i,j,absorb,reverse=reverse)
+            observed.append([1,*[self.bond_size(k,k+1) for k in range(self.L-1)],1])
+        monkeypatch.setattr(ControlledRank2MPS,'_two_site',record)
+        backend=make_backend()
+        backend.configure_tn_simulation(max_bond_dimension=None,svd_cutoff=0,cnot_optimization=False)
+        state,_=prepare(backend,circuit)
+        assert observed==[row['bonds'] for row in predicted['trace']]
+&gt;       assert predicted['controlled_rank2_dimension_splits']==getattr(
+            state,'controlled_rank2_splits',predicted['controlled_rank2_dimension_splits'])
+E       AssertionError: assert 21 == 0
+E        +  where 0 = getattr(ControlledRank2MPS(tensors=14, indices=27, L=14, max_bond=128), 'controlled_rank2_splits', 21)
+
+benchmarks\asc_revision_cpu\test_forecast_original30_shapes.py:32: AssertionError</failure></testcase><testcase classname="benchmarks.asc_revision_cpu.test_forecast_original30_shapes" name="test_reversed_adjacent_controls_match_actual_shapes" time="0.035" /><testcase classname="benchmarks.asc_revision_cpu.test_forecast_original30_shapes" name="test_unsupported_input_fails_closed[gate0]" time="0.001" /><testcase classname="benchmarks.asc_revision_cpu.test_forecast_original30_shapes" name="test_unsupported_input_fails_closed[gate1]" time="0.001" /><testcase classname="benchmarks.asc_revision_cpu.test_forecast_original30_shapes" name="test_unsupported_input_fails_closed[gate2]" time="0.001" /><testcase classname="benchmarks.asc_revision_cpu.test_forecast_original30_shapes" name="test_original30_forecast_does_not_simulate_or_claim_acceptance" time="0.681" /></testsuite></testsuites>

@@ -1,0 +1,22 @@
+{
+  "status": "verified_local_preparation_not_final_acceptance",
+  "archive_name": "QiboTN_原30比特优化与资源预检阶段包_20261010_1455.zip",
+  "archive_sha256": "b625d3f8c9758705da75501053cc6c154cfbfe3666eb8cc8a8022b1f60875a22",
+  "members_including_manifest": 723,
+  "member_hashes_verified": 722,
+  "crc_verified": true,
+  "local_regression_tests": {"tests": 153, "failures": 0, "errors": 0, "skipped": 0},
+  "package_guard_tests": {"tests": 19, "failures": 0, "errors": 0, "skipped": 0},
+  "prior_archive_sha256": "7826ec23b914a79dee00dd4258de652d7ae792aa5974efa603fa0491c408fd38",
+  "forecast_sha256": "40102fd3a44ecec320cd59396e2189a7fd4e35be441f18cd4aaf51029d00d631",
+  "forecast_is_not_observed_rss": true,
+  "original30_complete": false,
+  "original30_publishable_speedup": null,
+  "supplement30_suite_complete": false,
+  "new_research_production_integrated": false,
+  "word_pdf_updated": false,
+  "submission_sent": false,
+  "unretrieved_remote_pilot_raw_evidence_included": false,
+  "last_remote_mps_pilot_final_status_verified": false,
+  "unrelated_pyproject_edits_preserved": true
+}

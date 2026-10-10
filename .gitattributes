@@ -19,3 +19,7 @@ results/validation_stage724* -text
 results/audit_common_policy_* -text
 results/validation_package_completed_chain* -text
 results/validation_chunk_transport_724* -text
+# Local original30 planning/guard receipts also use byte-exact manifests.
+results/original30_pilot_20261009_2332/** -text
+results/*original30*20261010.* -text
+results/validation_short*20261009.xml -text

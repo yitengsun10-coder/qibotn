@@ -1,0 +1,37 @@
+{
+  "status": "atomic_upload_sha256_verified",
+  "files": [
+    {
+      "file": "common_mps_thread_policy.py",
+      "bytes": 1431,
+      "sha256": "e33acbe3717512f43224b98e4124a71569e89f4503cca6a8831213aabaa95911",
+      "attempts": 1,
+      "prior_errors": []
+    },
+    {
+      "file": "probe_short_mps_policy.py",
+      "bytes": 2555,
+      "sha256": "a4ea86e4b009342f797db941c0e0711af1c4e707be288656c0b9038da38e3bb0",
+      "attempts": 2,
+      "prior_errors": [
+        "CalledProcessError"
+      ]
+    },
+    {
+      "file": "test_common_mps_policy.py",
+      "bytes": 3684,
+      "sha256": "ea9dc78fa96469efbcea1bcfba5a710176752971862050e7d2f463db96fe1274",
+      "attempts": 1,
+      "prior_errors": []
+    },
+    {
+      "file": "launch_original30_probe.py",
+      "bytes": 4076,
+      "sha256": "b5bd189b1a35bf720cbee6204d830775167a9f0c58ba5c6dd0ef63738276a2ae",
+      "attempts": 1,
+      "prior_errors": []
+    }
+  ],
+  "benchmark_started": false,
+  "prior_scp_timeout_preserved": true
+}
